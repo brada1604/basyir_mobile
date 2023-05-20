@@ -22,7 +22,7 @@ class App extends BaseConfig
      * explicitly and never rely on auto-guessing, especially in production
      * environments.
      */
-    public string $baseURL = 'http://192.168.75.107:8080/';
+    public string $baseURL = 'http://192.168.43.245:8080/';
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.

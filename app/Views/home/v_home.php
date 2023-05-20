@@ -1,7 +1,10 @@
         <div>
             <div id="DisplayClock" class="clock" onload="showTime()"></div>
-            <div><img src="<?= base_url();?>/assets/assets-mobile/icon-menu/notification.svg" alt="SVG Happyku" width="25em" height="25em"/></div>
+            <div>
+                <a href="/notifikasi"><img src="<?= base_url();?>/assets/assets-mobile/icon-menu/notification.svg" alt="SVG Happyku" width="25em" height="25em"/></a>
+            </div>
         </div>
+
         <!-- Menu Navbar -->
         <div class="container">
             <nav class="navbar navbar-dark navbar-expand border-top border-bottom border-left border-right d-md-none d-lg-none d-xl-none p-0" style="border-top-left-radius: 2rem !important; border-top-right-radius: 2rem !important; border-bottom-left-radius: 2rem !important; border-bottom-right-radius: 2rem !important; background: white;">

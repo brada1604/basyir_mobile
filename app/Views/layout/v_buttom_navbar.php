@@ -2,7 +2,7 @@
         <nav class="navbar navbar-dark bg-light navbar-expand border-top fixed-bottom d-md-none d-lg-none d-xl-none p-0">
             <ul class="navbar-nav nav-justified w-100">
                 <li class="nav-item">
-                    <a href="#" class="nav-link text-center">
+                    <a href="/" class="nav-link text-center">
                         <img src="<?= base_url();?>/assets/assets-mobile/icon-menu/home-button.svg" alt="SVG Happyku" width="25em" height="25em"/>
                         <span class="small d-block" style="color:#000000">Beranda</span>
                     </a>

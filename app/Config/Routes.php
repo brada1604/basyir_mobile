@@ -36,7 +36,14 @@ $routes->post('/kota', 'Home::index2');
 // ROUTE HOME PAGE - END
 
 
+// ROUTE NOTIFIKASI
+$routes->get('/notifikasi', 'NotifikasiController::index');
+// ROUTE NOTIFIKASI - END
 
+
+// ROUTE KALENDER
+$routes->get('/kalender', 'KalenderController::index');
+// ROUTE KALENDER - END
 
 
 
