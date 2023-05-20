@@ -46,6 +46,11 @@ $routes->get('/kalender', 'KalenderController::index');
 // ROUTE KALENDER - END
 
 
+// JADWAL SHOLAT
+$routes->get('/jadwal_sholat_wajib', 'JadwalSholatController::jadwal_sholat_wajib');
+// JADWAL SHOLAT - END
+
+
 
 
 
