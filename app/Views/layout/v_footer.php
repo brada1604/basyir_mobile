@@ -1,72 +1,43 @@
-			<!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Basyir 2023 - Booster Your Iman</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-        </div>
-        <!-- End of Content Wrapper -->
+        <script src="<?= base_url();?>/assets/assets-mobile/carousel-03/js/jquery.min.js"></script>
+        <script src="<?= base_url();?>/assets/assets-mobile/carousel-03/js/popper.js"></script>
+        <script src="<?= base_url();?>/assets/assets-mobile/carousel-03/js/bootstrap.min.js"></script>
+        <script src="<?= base_url();?>/assets/assets-mobile/carousel-03/js/owl.carousel.min.js"></script>
+        <script src="<?= base_url();?>/assets/assets-mobile/carousel-03/js/main.js"></script>
 
-    </div>
-    <!-- End of Page Wrapper -->
+        <script>
+            $('.dropdown-toggle').dropdown()
+        </script>
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
+        <script type="text/javascript">
+            function showTime(){
+                var date = new Date();
+                var dd = date.getDate();
+                var mm = date.getMonth();
+                var yyyy = date.getFullYear();
+                var h = date.getDay();
+                var m = date.getMinutes();
+                var s = date.getSeconds();
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Yakin akan Keluar Aplikasi?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Pilih "Logout" dibawah jika kamu siap mengakhiri sesi login terbaru kamu.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="\logout">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
+                dd = (dd<10) ? "0" + dd : dd;
+                dd = (dd<10) ? "0" + dd : dd;
+                h = (h<10) ? "0" + h : h;
+                m = (m<10) ? "0" + m : m;
+                s = (s<10) ? "0" + s : s;
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="<?= base_url();?>/assets/assets-admin/vendor/jquery/jquery.min.js"></script>
-    <script src="<?= base_url();?>/assets/assets-admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                var time = dd + "-" + mm + "-" + yyyy + " " + h + ":" + m + ":" + s ;
 
-    <!-- Core plugin JavaScript-->
-    <script src="<?= base_url();?>/assets/assets-admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+                document.getElementById("DisplayClock").innerText = time;
+                document.getElementById("DisplayClock").textContent = time;
 
-    <!-- Custom scripts for all pages-->
-    <script src="<?= base_url();?>/assets/assets-admin/js/sb-admin-2.min.js"></script>
+                setTimeout(showTime, 1000);
+            }
 
-    <!-- Page level plugins -->
-    <script src="<?= base_url();?>/assets/assets-admin/vendor/chart.js/Chart.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="<?= base_url();?>/assets/assets-admin/js/demo/chart-area-demo.js"></script>
-    <script src="<?= base_url();?>/assets/assets-admin/js/demo/chart-pie-demo.js"></script>
-
-    <!-- Page level plugins -->
-    <script src="<?= base_url();?>/assets/assets-admin/vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="<?= base_url();?>/assets/assets-admin/vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="<?= base_url();?>/assets/assets-admin/js/demo/datatables-demo.js"></script>
-
-    <script>
-     	CKEDITOR.replace( 'editor1' );
- 	</script>
-
-</body>
-
+            showTime();
+        </script>
+  
+    </body>
 </html>
