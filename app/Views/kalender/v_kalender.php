@@ -1,4 +1,5 @@
-ini kalender
+<a href="/"><img src="<?= base_url();?>/assets/assets-mobile/icon-menu/notification.svg" alt="SVG Happyku" width="25em" height="25em"/></a>
+Kalender
 
 		<section class="ftco-section">
 			<div class="container">
