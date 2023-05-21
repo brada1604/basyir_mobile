@@ -49,6 +49,7 @@ $routes->post('/rencana_kegiatan/update', 'RencanaKegiatanController::update');
 
 //ROUTE BERITA PAGE
 $routes->get('/berita', 'BeritaController::index');
+$routes->get('/detail_berita', 'BeritaController::index2');
 //ROUTE BERITA PAGE
 
 //ROUTE PENGATURAN PAGE

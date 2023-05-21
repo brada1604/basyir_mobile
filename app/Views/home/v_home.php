@@ -86,7 +86,7 @@
         <!-- <section class="ftco-section"> -->
         <div class="container">
             <div class="row">
-                <div class="col-md-15 ">
+                <div class="col-md-15">
                     <nav class="navbar navbar-expand-lg navbar-light">
                         <a href="/berita" class="navbar-brand">
                             <h4 class="heading-section mb-0" style="color: #629C87;">Berita Terkini</h4>
@@ -100,9 +100,9 @@
                         foreach ($getBeritaLandingPage as $gblp) :
                         ?>
                             <div class="card">
-                                <img src="<?= base_url($gblp->gambar_berita); ?>" alt="Berita" style="width:100%">
+                                <img src="<?= base_url($gblp->gambar_berita); ?>" alt="Berita" style="width:100%;">
                                 <div class="container">
-                                    <p><?= $gblp->judul_berita; ?></p>
+                                    <p><?= $gblp->judul_berita; ?> cek</p>
                                 </div>
                             </div>
                         <?php endforeach; ?>

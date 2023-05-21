@@ -25,12 +25,14 @@
                             $nomor = 1;
                             foreach ($getBeritaLandingPage as $gblp) :
                             ?>
+                            <a href="/detail_berita">
                                 <div class="card">
                                     <img src="<?= base_url($gblp->gambar_berita); ?>" alt="Berita" style="width:100%">
                                     <div class="container">
                                         <p><?= $gblp->judul_berita; ?></p>
                                     </div>
                                 </div>
+                            </a>
                             <?php endforeach; ?>
                         </div>
                     </div>
