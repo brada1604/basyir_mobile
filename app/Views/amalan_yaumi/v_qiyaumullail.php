@@ -8,7 +8,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-2 text-center">
-                    <h2 class="heading-section mb-5  bold-text" style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;">Qiyaumulail</h2>
+                    <h2 class="heading-section mb-5  bold-text" style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;">Qiyaumullail</h2>
                 </div>
                 <div class="col-md-6">
                     <div class="d-flex align-items-end justify-content-center" style="background-color: white; border-radius: 20px; height: 280px;">
@@ -21,7 +21,10 @@
                         </div>
                     </div>
                     <a href="/yaumi/muhasabah">
-                        <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/next.png" alt="SVG Happyku" width="30em" height="30em" style="margin-left:320px; margin-top:100px" />
+                        <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/next.png" alt="SVG Happyku" width="30em" height="30em" style="margin-left:320px;" />
+                    </a>
+                    <a href="/yaumi/al_matsurat">
+                        <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/Back.png" alt="SVG Happyku" width="30em" height="30em" style="margin-right:320px;" />
                     </a>
                 </div>
             </div>

@@ -24,7 +24,7 @@
                         </div>
                     </div>
                     <a href="/yaumi/muhasabah">
-                        <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/next.png" alt="SVG Happyku" width="30em" height="30em" style="margin-left:320px; margin-top:100px" />
+                        <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/Back.png" alt="SVG Happyku" width="30em" height="30em" style="margin-right:320px;" />
                     </a>
                 </div>
             </div>

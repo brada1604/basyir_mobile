@@ -58,7 +58,7 @@ class AmalanYaumiController extends BaseController
         echo view('layout/v_footer');
     }
 
-    public function qiyaumulail()
+    public function qiyaumullail()
     {
         $model = new AmalanYaumiModel;
         $data['session'] = session();
@@ -66,7 +66,7 @@ class AmalanYaumiController extends BaseController
 
         echo view('layout/v_header');
         echo view('layout/v_buttom_navbar');
-        echo view('amalan_yaumi/v_qiyaumulail', $data);
+        echo view('amalan_yaumi/v_qiyaumullail', $data);
         echo view('layout/v_footer');
     }
 
