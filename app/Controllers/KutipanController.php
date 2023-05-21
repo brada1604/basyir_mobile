@@ -10,6 +10,19 @@ class KutipanController extends BaseController
     public function index()
     {
         $model = new KutipanModel;
+        // $data['session'] = session();
+        $data['title'] = 'Data Kutipan';
+        $data['getKutipan'] = $model->getKutipan();
+
+        echo view('layout/v_header');
+        echo view('layout/v_buttom_navbar');
+        echo view('kutipan/v_kutipan', $data);
+        echo view('layout/v_footer');
+    }
+
+    public function index2()
+    {
+        $model = new KutipanModel;
         $data['session'] = session();
         $data['title'] = 'Data Kutipan';
         $data['getKutipan'] = $model->getKutipan();
@@ -21,7 +34,8 @@ class KutipanController extends BaseController
         echo view('layout/v_footer');
     }
 
-    public function add(){
+    public function add()
+    {
         $data['title'] = 'Data Kutipan - Add';
         $data['session'] = session();
 
@@ -32,15 +46,16 @@ class KutipanController extends BaseController
         echo view('layout/v_footer');
     }
 
-    public function save(){
+    public function save()
+    {
         $data['session'] = session();
         $rules = [
             'judul_kutipan' => 'required',
             'deskripsi_kutipan' => 'required',
             'sumber_kutipan' => 'required'
         ];
-     
-        if($this->validate($rules)){
+
+        if ($this->validate($rules)) {
             $model = new KutipanModel();
 
             $data = [
@@ -48,11 +63,10 @@ class KutipanController extends BaseController
                 'deskripsi_kutipan' => $this->request->getVar('deskripsi_kutipan'),
                 'sumber_kutipan' => $this->request->getVar('sumber_kutipan'),
             ];
-             
+
             $model->save($data);
-     
+
             return redirect()->to('/kutipan_master');
-     
         } else {
             $data['validation'] = $this->validator;
             $data['title'] = 'Data Kutipan';
@@ -65,7 +79,8 @@ class KutipanController extends BaseController
         }
     }
 
-    public function edit($id){
+    public function edit($id)
+    {
         $model = new KutipanModel;
         $data['session'] = session();
         $data['title'] = 'Data Kutipan - Edit';
@@ -96,32 +111,32 @@ class KutipanController extends BaseController
                 </script>';
     }
 
-    public function update(){
+    public function update()
+    {
         $data['session'] = session();
         $rules = [
             'judul_kutipan' => 'required',
             'deskripsi_kutipan' => 'required',
             'sumber_kutipan' => 'required'
         ];
-     
-        if($this->validate($rules)){
+
+        if ($this->validate($rules)) {
             $model = new KutipanModel();
             $id_kutipan = $this->request->getVar('id_kutipan');
 
-                $data = [
-                    'judul_kutipan' => $this->request->getVar('judul_kutipan'),
-                    'deskripsi_kutipan' => $this->request->getVar('deskripsi_kutipan'),
-                    'sumber_kutipan' => $this->request->getVar('sumber_kutipan'),
-                ];
+            $data = [
+                'judul_kutipan' => $this->request->getVar('judul_kutipan'),
+                'deskripsi_kutipan' => $this->request->getVar('deskripsi_kutipan'),
+                'sumber_kutipan' => $this->request->getVar('sumber_kutipan'),
+            ];
 
-                $model->update($id_kutipan, $data);
-         
-                echo '<script>
+            $model->update($id_kutipan, $data);
+
+            echo '<script>
                     alert("Selamat! Berhasil Mengubah Data Kutipan");
                     window.location="' . base_url('kutipan_master') . '"
                 </script>';
-            }
-        else {
+        } else {
             $data['validation'] = $this->validator;
             $data['title'] = 'Data Kutipan';
 
@@ -130,10 +145,10 @@ class KutipanController extends BaseController
             echo view('kutipan/add', $data);
             echo view('layout/v_footer');
         }
-
     }
 
-    public function delete($id){
+    public function delete($id)
+    {
         $model = new KutipanModel;
         $model->delete($id);
         echo '<script>

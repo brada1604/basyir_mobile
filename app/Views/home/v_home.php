@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <title>Document</title> -->
+    <title>Home</title>
     <div class="container" style="background-image: url('/assets/image/home/Background_atas.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;">
         <nav class="navbar navbar-expand-lg navbar-light">
             <h4 id="DisplayClock" class="clock" onload="showTime()" style="color: white;"></h4>
             <!-- <time id="DisplayClock" class="clock"></time> -->
             <!-- <h4 style="color: white;"><?= date('d, m Y H:i:s') ?></h4> -->
             <div>
-                <a href="/notifikasi"><img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/notification.svg" alt="SVG Happyku" width="50em" height="50em" style="color: white;" /></a>
+                <a href="/notifikasi"><img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/notification_putih.png" alt="SVG Happyku" width="50em" height="50em" style="color: white;" /></a>
             </div>
         </nav>
 

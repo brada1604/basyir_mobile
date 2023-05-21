@@ -35,6 +35,9 @@ $routes->get('/', 'Home::index');
 $routes->post('/kota', 'Home::index2');
 // ROUTE HOME PAGE - END
 
+//ROUTE KUTIPAN PAGE
+$routes->get('/kutipan', 'KutipanController::index');
+//ROUTE KUTIPAN - END
 
 // ROUTE NOTIFIKASI
 $routes->get('/notifikasi', 'NotifikasiController::index');
