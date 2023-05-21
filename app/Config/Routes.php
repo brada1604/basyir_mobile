@@ -71,6 +71,10 @@ $routes->get('/kalender', 'KalenderController::index');
 $routes->get('/jadwal_sholat_wajib', 'JadwalSholatController::jadwal_sholat_wajib');
 // JADWAL SHOLAT - END
 
+//ROUTE MENU LAINNYA PAGE
+$routes->get('/home/menu_lainnya', 'MenuLainnyaController::index');
+//ROUTE MENU LAINNYA - END
+
 
 // JADWAL AMALAN YAUMI
 $routes->get('/yaumi', 'AmalanYaumiController::index');
