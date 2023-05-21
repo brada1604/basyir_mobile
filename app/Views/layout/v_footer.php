@@ -22,7 +22,7 @@
                 var dd = date.getDate();
                 var mm = date.getMonth()+1;
                 var yyyy = date.getFullYear();
-                var h = date.getDay()+14;
+                var h = date.getDay();
                 var m = date.getMinutes();
                 var s = date.getSeconds();
 
