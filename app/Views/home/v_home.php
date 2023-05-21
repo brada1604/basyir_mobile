@@ -1,7 +1,7 @@
         <div>
             <div id="DisplayClock" class="clock" onload="showTime()"></div>
             <div>
-                <a href="/notifikasi"><img src="<?= base_url();?>/assets/assets-mobile/icon-menu/notification.svg" alt="SVG Happyku" width="25em" height="25em"/></a>
+                <a href="/notifikasi"><img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/notification.svg" alt="SVG Happyku" width="25em" height="25em" /></a>
             </div>
         </div>
 
@@ -11,25 +11,25 @@
                 <ul class="navbar-nav nav-justified w-100">
                     <li class="nav-item">
                         <a href="/jadwal_sholat_wajib" class="nav-link text-center">
-                            <img src="<?= base_url();?>/assets/assets-mobile/icon-menu/prayer-mat.png" alt="SVG Happyku" width="60em" height="60em"/>
+                            <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/prayer-mat.png" alt="SVG Happyku" width="60em" height="60em" />
                             <!-- <span class="small d-block" style="color:#000000">Beranda</span> -->
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="/dzikir" class="nav-link text-center">
-                            <img src="<?= base_url();?>/assets/assets-mobile/icon-menu/tasbih.png" alt="SVG Happyku" width="60em" height="60em"/>
+                            <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/tasbih.png" alt="SVG Happyku" width="60em" height="60em" />
                             <!-- <span class="small d-block" style="color:#000000">Kutipan</span> -->
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="/berita" class="nav-link text-center">
-                            <img src="<?= base_url();?>/assets/assets-mobile/icon-menu/dua.png" alt="SVG Happyku" width="60em" height="60em"/>
+                            <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/dua.png" alt="SVG Happyku" width="60em" height="60em" />
                             <!-- <span class="small d-block" style="color:#000000">Berita</span> -->
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="/home/menu_lainnya" class="nav-link text-center">
-                            <img src="<?= base_url();?>/assets/assets-mobile/icon-menu/more.png" alt="SVG Happyku" width="60em" height="60em"/>
+                            <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/more.png" alt="SVG Happyku" width="60em" height="60em" />
                             <!-- <span class="small d-block" style="color:#000000">Berita</span> -->
                         </a>
                     </li>
@@ -38,31 +38,32 @@
         </div>
 
         <div>
-        <section class="ftco-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h2 class="heading-section mb-5">Event</h2>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="featured-carousel owl-carousel">                            
-                            <div class="item">
-                                <div class="work">
-                                    <div class="img d-flex align-items-end justify-content-center" style="background-image: url(<?= base_url();?>/assets/assets-mobile/carousel-03/images/work-1.jpg);">
-                                        <div class="text w-100">
-                                            <span class="cat">Web Design</span>
-                                            <h3><a href="#">Working Spaces for Startups Freelancer</a></h3>
+            <section class="ftco-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h2 class="heading-section mb-5">Event</h2>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="featured-carousel owl-carousel">
+                                <div class="item">
+                                    <div class="work">
+                                        <div class="img d-flex align-items-end justify-content-center" style="background-image: url(<?= base_url(); ?>/assets/assets-mobile/carousel-03/images/work-1.jpg);">
+                                            <div class="text w-100">
+                                                <span class="cat">Web Design</span>
+                                                <h3><a href="#">Working Spaces for Startups Freelancer</a></h3>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="item">
-                                <div class="work">
-                                    <div class="img d-flex align-items-end justify-content-center" style="background-image: url(<?= base_url();?>/assets/assets-mobile/carousel-03/images/work-2.jpg);">
-                                        <div class="text w-100">
-                                            <span class="cat">Web Design</span>
-                                            <h3><a href="#">Working Spaces for Startups Freelancer</a></h3>
+                                <div class="item">
+                                    <div class="work">
+                                        <div class="img d-flex align-items-end justify-content-center" style="background-image: url(<?= base_url(); ?>/assets/assets-mobile/carousel-03/images/work-2.jpg);">
+                                            <div class="text w-100">
+                                                <span class="cat">Web Design</span>
+                                                <h3><a href="#">Working Spaces for Startups Freelancer</a></h3>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -70,35 +71,34 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
         </div>
 
         <div>
-        <section class="ftco-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h2 class="heading-section mb-5">Berita Terkini</h2>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="featured-carousel owl-carousel">
-                            <?php 
-                                $nomor = 1; 
-                                foreach($getBeritaLandingPage as $gblp):
-                            ?>
-                                <div class="card">
-                                    <img src="<?=base_url($gblp->gambar_berita);?>" alt="Berita" style="width:100%">
-                                    <div class="container">
-                                        <p><?= $gblp->judul_berita;?></p>
+            <section class="ftco-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h2 class="heading-section mb-5">Berita Terkini</h2>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="featured-carousel owl-carousel">
+                                <?php
+                                $nomor = 1;
+                                foreach ($getBeritaLandingPage as $gblp) :
+                                ?>
+                                    <div class="card">
+                                        <img src="<?= base_url($gblp->gambar_berita); ?>" alt="Berita" style="width:100%">
+                                        <div class="container">
+                                            <p><?= $gblp->judul_berita; ?></p>
+                                        </div>
                                     </div>
-                                </div>
-                            <?php endforeach; ?>
+                                <?php endforeach; ?>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
         </div>
 
         <div class="wawasan_islami">
@@ -109,17 +109,17 @@
                             <h2 class="heading-section mb-5">Wawasan Islami</h2>
                         </div>
                         <div class="col-md-12">
-                            <div class="featured-carousel owl-carousel">    
-                                <?php 
-                                    $nomor = 1; 
-                                    foreach($getWawasanIslamiLandingPage as $gwil):
+                            <div class="featured-carousel owl-carousel">
+                                <?php
+                                $nomor = 1;
+                                foreach ($getWawasanIslamiLandingPage as $gwil) :
                                 ?>
                                     <div class="item">
                                         <div class="work">
-                                            <div class="img d-flex align-items-end justify-content-center" style="background-image: url(<?= base_url($gwil->gambar_wawasan_islami);?>">
+                                            <div class="img d-flex align-items-end justify-content-center" style="background-image: url(<?= base_url($gwil->gambar_wawasan_islami); ?>">
                                                 <div class="text w-100">
                                                     <span class="cat">Kategori</span>
-                                                    <h3><a href="#"><?= $gwil->judul_wawasan_islami;?></a></h3>
+                                                    <h3><a href="#"><?= $gwil->judul_wawasan_islami; ?></a></h3>
                                                 </div>
                                             </div>
                                         </div>
