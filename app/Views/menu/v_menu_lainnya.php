@@ -35,7 +35,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/home/amalan_yaumi" class="nav-link text-center">
+                                    <a href="/yaumi" class="nav-link text-center">
                                         <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/amalan.png" alt="SVG Happyku" width="60em" height="60em" />
                                         <span class="small d-block" style="color:#629C87">Amalan Yaumi</span>
                                     </a>

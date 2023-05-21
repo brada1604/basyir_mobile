@@ -78,12 +78,6 @@ $routes->get('/home/menu_lainnya', 'MenuLainnyaController::index');
 
 // JADWAL AMALAN YAUMI
 $routes->get('/yaumi', 'AmalanYaumiController::index');
-$routes->get('/yaumi/tilawah', 'AmalanYaumiController::tilawah');
-$routes->get('/yaumi/infaq', 'AmalanYaumiController::infaq');
-$routes->get('/yaumi/al_matsurat', 'AmalanYaumiController::al_matsurat');
-$routes->get('/yaumi/qiyaumullail', 'AmalanYaumiController::qiyaumullail');
-$routes->get('/yaumi/muhasabah', 'AmalanYaumiController::muhasabah');
-$routes->get('/yaumi/shaum_sunnah', 'AmalanYaumiController::puasa');
 // JADWAL AMALAN YAUMI - END
 
 // JADWAL SYAHADAT
