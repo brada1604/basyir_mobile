@@ -20,14 +20,14 @@
             function showTime(){
                 var date = new Date();
                 var dd = date.getDate();
-                var mm = date.getMonth();
+                var mm = date.getMonth()+1;
                 var yyyy = date.getFullYear();
-                var h = date.getDay();
+                var h = date.getDay()+14;
                 var m = date.getMinutes();
                 var s = date.getSeconds();
 
                 dd = (dd<10) ? "0" + dd : dd;
-                dd = (dd<10) ? "0" + dd : dd;
+                mm = (mm<10) ? "0" + mm : mm;
                 h = (h<10) ? "0" + h : h;
                 m = (m<10) ? "0" + m : m;
                 s = (s<10) ? "0" + s : s;
