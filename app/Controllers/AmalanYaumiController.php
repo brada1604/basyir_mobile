@@ -22,6 +22,77 @@ class AmalanYaumiController extends BaseController
         echo view('layout/v_footer');
     }
 
+    public function tilawah()
+    {
+        $model = new AmalanYaumiModel;
+        $data['session'] = session();
+        $data['title'] = 'Data Amalan Yaumi';
+
+        echo view('layout/v_header');
+        echo view('layout/v_buttom_navbar');
+        echo view('amalan_yaumi/v_tilawah', $data);
+        echo view('layout/v_footer');
+    }
+
+    public function infaq()
+    {
+        $model = new AmalanYaumiModel;
+        $data['session'] = session();
+        $data['title'] = 'Data Amalan Yaumi';
+
+        echo view('layout/v_header');
+        echo view('layout/v_buttom_navbar');
+        echo view('amalan_yaumi/v_infaq', $data);
+        echo view('layout/v_footer');
+    }
+
+    public function al_matsurat()
+    {
+        $model = new AmalanYaumiModel;
+        $data['session'] = session();
+        $data['title'] = 'Data Amalan Yaumi';
+
+        echo view('layout/v_header');
+        echo view('layout/v_buttom_navbar');
+        echo view('amalan_yaumi/v_al_matsurat', $data);
+        echo view('layout/v_footer');
+    }
+
+    public function qiyaumulail()
+    {
+        $model = new AmalanYaumiModel;
+        $data['session'] = session();
+        $data['title'] = 'Data Amalan Yaumi';
+
+        echo view('layout/v_header');
+        echo view('layout/v_buttom_navbar');
+        echo view('amalan_yaumi/v_qiyaumulail', $data);
+        echo view('layout/v_footer');
+    }
+
+    public function muhasabah()
+    {
+        $model = new AmalanYaumiModel;
+        $data['session'] = session();
+        $data['title'] = 'Data Amalan Yaumi';
+
+        echo view('layout/v_header');
+        echo view('layout/v_buttom_navbar');
+        echo view('amalan_yaumi/v_muhasabah', $data);
+        echo view('layout/v_footer');
+    }
+
+    public function puasa()
+    {
+        $model = new AmalanYaumiModel;
+        $data['session'] = session();
+        $data['title'] = 'Data Amalan Yaumi';
+
+        echo view('layout/v_header');
+        echo view('layout/v_buttom_navbar');
+        echo view('amalan_yaumi/v_shaum_sunnah', $data);
+        echo view('layout/v_footer');
+    }
     // public function add(){
     //     $data['title'] = 'Data Amalan Yaumi - Add';
     //     $data['session'] = session();

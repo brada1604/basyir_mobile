@@ -74,6 +74,12 @@ $routes->get('/jadwal_sholat_wajib', 'JadwalSholatController::jadwal_sholat_waji
 
 // JADWAL AMALAN YAUMI
 $routes->get('/yaumi', 'AmalanYaumiController::index');
+$routes->get('/yaumi/tilawah', 'AmalanYaumiController::tilawah');
+$routes->get('/yaumi/infaq', 'AmalanYaumiController::infaq');
+$routes->get('/yaumi/al_matsurat', 'AmalanYaumiController::al_matsurat');
+$routes->get('/yaumi/qiyaumulail', 'AmalanYaumiController::qiyaumulail');
+$routes->get('/yaumi/muhasabah', 'AmalanYaumiController::muhasabah');
+$routes->get('/yaumi/shaum_sunnah', 'AmalanYaumiController::puasa');
 // JADWAL AMALAN YAUMI - END
 
 
