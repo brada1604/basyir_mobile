@@ -47,10 +47,13 @@ $routes->get('/rencana_kegiatan/edit', 'RencanaKegiatanController::edit');
 $routes->post('/rencana_kegiatan/update', 'RencanaKegiatanController::update');
 //ROUTE RENCANA KEGIATAN - END
 
-
 //ROUTE BERITA PAGE
 $routes->get('/berita', 'BeritaController::index');
 //ROUTE BERITA PAGE
+
+//ROUTE PENGATURAN PAGE
+$routes->get('/pengaturan', 'PengaturanController::index');
+//ROUTE PENGATURAN - END
 
 // ROUTE NOTIFIKASI
 $routes->get('/notifikasi', 'NotifikasiController::index');

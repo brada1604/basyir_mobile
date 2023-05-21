@@ -7,14 +7,14 @@ use CodeIgniter\Model;
 class PengaturanModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'pengaturans';
-    protected $primaryKey       = 'id';
+    protected $table            = 'tbl_pengaturans';
+    protected $primaryKey       = 'id_pengaturan';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['id_user', 'status_notifikasi', 'status_broadcast'];
 
     // Dates
     protected $useTimestamps = false;
