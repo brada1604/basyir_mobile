@@ -39,6 +39,19 @@ $routes->post('/kota', 'Home::index2');
 $routes->get('/kutipan', 'KutipanController::index');
 //ROUTE KUTIPAN - END
 
+//ROUTE RENCANA KEGIATAN PAGE
+$routes->get('/rencana_kegiatan', 'RencanaKegiatanController::index');
+$routes->get('/rencana_kegiatan/add', 'RencanaKegiatanController::add');
+$routes->post('/rencana_kegiatan/save', 'RencanaKegiatanController::save');
+$routes->get('/rencana_kegiatan/edit', 'RencanaKegiatanController::edit');
+$routes->post('/rencana_kegiatan/update', 'RencanaKegiatanController::update');
+//ROUTE RENCANA KEGIATAN - END
+
+
+//ROUTE BERITA PAGE
+$routes->get('/berita', 'BeritaController::index');
+//ROUTE BERITA PAGE
+
 // ROUTE NOTIFIKASI
 $routes->get('/notifikasi', 'NotifikasiController::index');
 // ROUTE NOTIFIKASI - END

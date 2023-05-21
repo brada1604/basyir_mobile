@@ -67,8 +67,8 @@
                                 <div class="work">
                                     <div class="img d-flex align-items-end justify-content-center" style="background-image: url(<?= base_url(); ?>/assets/assets-mobile/carousel-03/images/work-1.jpg);">
                                         <div class="text w-100">
-                                            <span class="cat">Web Design</span>
-                                            <h3><a href="#">Working Spaces for Startups Freelancer</a></h3>
+                                            <span class="cat">ATTENTION</span>
+                                            <h3><a href="#">Didieu Tempatna Cowndown!!!</a></h3>
                                         </div>
                                     </div>
                                 </div>

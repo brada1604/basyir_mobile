@@ -1,6 +1,6 @@
 <body style="background-image: url('/assets/image/Background.png');  background-position: center; background-size: cover;">
     <div>
-        <nav class=" navbar navbar-expand-lg navbar-light">
+        <nav class=" navbar navbar-expand-lg navbar-light" style="margin-top: 20px;">
             <a href="/" class="nav-link text-center">
                 <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/Back.png" alt="SVG Happyku" width="30em" height="30em" />
             </a>
@@ -39,7 +39,7 @@
         </div>
     </div>
     <h6 class="text-center" style="font-family: 'Inter',Arial, sans-serif; color: white; margin-top: 20px;">Geser Untuk Lihat Lainnya</h6>
-    <nav class="navbar" style="margin-top: 235px;">
+    <nav class="navbar" style="margin-top: 200px;">
         <div>
             <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/buku_kiri.png" alt="Buku Kiri" width="195em" height="180em" style="margin-left: -17px; " />
         </div>

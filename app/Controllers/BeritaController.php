@@ -4,10 +4,31 @@ namespace App\Controllers;
 
 use App\Models\BeritaModel;
 use App\Controllers\BaseController;
+use App\Models\WawasanIslamiModel;
 
 class BeritaController extends BaseController
 {
     public function index()
+    {
+        $model = new BeritaModel;
+        $data['title'] = 'Data Berita';
+        // Ambil Berita
+        $model_berita = new BeritaModel;
+        $data['getBeritaLandingPage'] = $model_berita->getBeritaLandingPage();
+        // Ambil Berita - End
+
+        // Ambil Wawasan Islami
+        $model_wawasan_islami = new WawasanIslamiModel;
+        $data['getWawasanIslamiLandingPage'] = $model_wawasan_islami->getWawasanIslamiLandingPage();
+        // Ambil Wawasan Islami - End
+
+        echo view('layout/v_header');
+        echo view('layout/v_buttom_navbar');
+        echo view('berita/v_berita', $data);
+        echo view('layout/v_footer');
+    }
+
+    public function index2()
     {
         $model = new BeritaModel;
         $data['session'] = session();
