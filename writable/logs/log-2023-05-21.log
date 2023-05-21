@@ -6,6 +6,7 @@ INFO - 2023-05-21 07:20:59 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-05-21 07:21:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-21 07:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-21 07:22:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+<<<<<<< Updated upstream
 INFO - 2023-05-21 07:27:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-21 08:27:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2023-05-21 08:27:49 --> Invalid file: "kutipan/v_wawasan_islami.php"
@@ -599,3 +600,6 @@ INFO - 2023-05-21 18:20:00 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-05-21 18:28:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-21 18:35:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-21 18:44:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+=======
+INFO - 2023-05-21 18:43:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+>>>>>>> Stashed changes
