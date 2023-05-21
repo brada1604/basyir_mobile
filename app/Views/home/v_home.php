@@ -8,7 +8,8 @@
     <title>Home</title>
     <div class="container" style="background-image: url('/assets/image/home/Background_atas.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <h4 id="DisplayClock" class="clock" onload="showTime()" style="color: white;"></h4>
+            <!-- <h4 id="DisplayClock" class="clock" onload="showTime()" style="color: white;"></h4> -->
+            <h5 style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;">Sabtu, 14 Januari <br> 12:00 WIB </h5>
             <!-- <time id="DisplayClock" class="clock"></time> -->
             <!-- <h4 style="color: white;"><?= date('d, m Y H:i:s') ?></h4> -->
             <div>
@@ -40,7 +41,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/home/menu_lainnya" class="nav-link text-center">
+                        <a href="/menu_lainnya" class="nav-link text-center">
                             <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/more.png" alt="SVG Happyku" width="60em" height="60em" />
                             <!-- <span class="small d-block" style="color:#000000">Berita</span> -->
                         </a>
@@ -55,40 +56,30 @@
 
 <body>
     <div>
-        <section class="ftco-section">
-            <div class="container">
-                <div class="row">
-                    <!-- <div class="col-md-12 text-center">
-                        <h2 class="heading-section mb-5">Event</h2>
-                    </div> -->
-                    <div class="col-md-12">
-                        <div class="featured-carousel owl-carousel">
-                            <div class="item">
-                                <div class="work">
-                                    <div class="img d-flex align-items-end justify-content-center" style="background-image: url(<?= base_url(); ?>/assets/assets-mobile/carousel-03/images/work-1.jpg);">
-                                        <div class="text w-100">
-                                            <span class="cat">ATTENTION</span>
-                                            <h3><a href="#">Didieu Tempatna Cowndown!!!</a></h3>
-                                        </div>
-                                    </div>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="featured-carousel owl-carousel">
+                        <div class="d-flex align-items-end" style="background-image: url('/assets/image/Background.png'); border-radius: 20px; ">
+                            <nav class="navbar navbar-dark navbar-expand d-md-none d-lg-none d-xl-none p-0">
+                                <div class="text w-100">
+                                    <h5 class="container" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #ffff; ">Waktu Sholat</h5>
+                                    <h6 class="container" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #ffff;">“Dzuhur <br> 00:07:59”</h6>
                                 </div>
-                            </div>
-
-                            <div class="item">
-                                <div class="work">
-                                    <div class="img d-flex align-items-end justify-content-center" style="background-image: url(<?= base_url(); ?>/assets/assets-mobile/carousel-03/images/work-2.jpg);">
-                                        <div class="text w-100">
-                                            <span class="cat">Web Design</span>
-                                            <h3><a href="#">Working Spaces for Startups Freelancer</a></h3>
-                                        </div>
-                                    </div>
-                                </div>
+                                <img src="/assets/assets-mobile/icon-menu/adzan.png" alt="orang adzan" height="100px" style="margin-right: -35%;">
+                            </nav>
+                        </div>
+                        <div class=" d-flex align-items-end justify-content-center" style="background-image: url('/assets/image/Background.png'); border-radius: 20px; ">
+                            <div class="text w-100">
+                                <h4 class="container" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #ffff; ">Q.S. Ar-Rum : 60</h4>
+                                <h5 class="container" style="font-family: 'Inter',Arial, sans-serif; color: #ffff;">“Dan bersabarlah kamu, sesungguhnya janji Allah adalah benar”</h5>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </div>
 
     <div>

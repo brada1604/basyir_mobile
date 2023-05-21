@@ -72,7 +72,7 @@ $routes->get('/jadwal_sholat_wajib', 'JadwalSholatController::jadwal_sholat_waji
 // JADWAL SHOLAT - END
 
 //ROUTE MENU LAINNYA PAGE
-$routes->get('/home/menu_lainnya', 'MenuLainnyaController::index');
+$routes->get('menu_lainnya', 'MenuLainnyaController::index');
 //ROUTE MENU LAINNYA - END
 
 
