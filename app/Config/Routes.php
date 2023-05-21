@@ -53,6 +53,8 @@ $routes->get('/berita', 'BeritaController::index');
 
 //ROUTE PENGATURAN PAGE
 $routes->get('/pengaturan', 'PengaturanController::index');
+$routes->get('/pengaktifan', 'PengaturanNotifikasiController::index');
+$routes->get('/broadcast', 'PengaturanBroadcastController::index');
 //ROUTE PENGATURAN - END
 
 // ROUTE NOTIFIKASI
@@ -68,6 +70,11 @@ $routes->get('/kalender', 'KalenderController::index');
 // JADWAL SHOLAT
 $routes->get('/jadwal_sholat_wajib', 'JadwalSholatController::jadwal_sholat_wajib');
 // JADWAL SHOLAT - END
+
+
+// JADWAL AMALAN YAUMI
+$routes->get('/yaumi', 'AmalanYaumiController::index');
+// JADWAL AMALAN YAUMI - END
 
 
 
