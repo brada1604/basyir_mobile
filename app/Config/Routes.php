@@ -49,7 +49,7 @@ $routes->post('/rencana_kegiatan/update', 'RencanaKegiatanController::update');
 
 //ROUTE BERITA PAGE
 $routes->get('/berita', 'BeritaController::index');
-$routes->get('/detail_berita', 'BeritaController::index2');
+$routes->get('/berita/detail_berita/(:segment)', 'BeritaController::index2/$1');
 //ROUTE BERITA PAGE
 
 //ROUTE PENGATURAN PAGE
@@ -85,6 +85,10 @@ $routes->get('/yaumi', 'AmalanYaumiController::index');
 $routes->get('/syahadat', 'SyahadatController::index');
 // JADWAL SYAHADAT - END
 
+//ROUTE WAWASAN ISLAMI PAGE
+$routes->get('/wawasan_islami', 'WawasanIslamiController::index');
+$routes->get('/wawasan_islami/detail_wawasan_islami/(:segment)', 'WawasanIslamiController::index2/$1');
+//ROUTE WAWASAN ISLAMI PAGE
 
 
 

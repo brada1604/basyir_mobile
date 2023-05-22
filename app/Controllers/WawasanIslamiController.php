@@ -3,11 +3,48 @@
 namespace App\Controllers;
 
 use App\Models\WawasanIslamiModel;
+use App\Models\KategoriWawasanIslamiModel;
 use App\Controllers\BaseController;
 
 class WawasanIslamiController extends BaseController
 {
+    
     public function index()
+    {
+        $model = new WawasanIslamiModel;
+        $data['title'] = 'Data Wawasan Islami';
+
+        // Ambil Wawasan Islami
+        $model_berita = new WawasanIslamiModel;
+        $data['getWawasanIslamiByStatus'] = $model_berita->getWawasanIslamiByStatus();
+        // Ambil Wawasan Islami - End
+
+        // Ambil Wawasan Islami
+        $model_kategori_berita = new KategoriWawasanIslamiModel;
+        $data['getKategoriWawasanIslamiForm'] = $model_kategori_berita->getKategoriWawasanIslamiForm();
+        // Ambil Wawasan Islami - End
+
+        
+        echo view('layout/v_header');
+        echo view('layout/v_buttom_navbar');
+        echo view('wawasan_islami/v_wawasan_islami', $data);
+        echo view('layout/v_footer');
+    }
+
+    public function index2($id)
+    {
+        $model = new WawasanIslamiModel;
+        $data['session'] = session();
+        $data['title'] = 'Data Wawasan Islami';
+        $data['getWawasanIslamiByStatus'] = $model->getWawasanIslamiByStatus($id);
+
+        echo view('layout/v_header');
+        echo view('layout/v_buttom_navbar');
+        echo view('wawasan_islami/v_detail_wawasan_islami', $data);
+        echo view('layout/v_footer');
+    }
+
+    public function index3()
     {
         $model = new WawasanIslamiModel;
         $data['session'] = session();

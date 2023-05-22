@@ -23,21 +23,23 @@
                         <div class="featured-carousel owl-carousel">
                             <?php
                             $nomor = 1;
-                            foreach ($getBeritaLandingPage as $gblp) :
+                            foreach ($getBeritaByStatus as $row) :
                             ?>
-                            <a href="/detail_berita">
+                            
                                 <div class="card">
-                                    <img src="<?= base_url($gblp->gambar_berita); ?>" alt="Berita" style="width:100%">
+                                    <img src="<?= base_url($row->gambar_berita); ?>" alt="Berita" style="width:100%">
                                     <div class="container">
-                                        <p><?= $gblp->judul_berita; ?></p>
+                                        <a href="/berita/detail_berita/<?= $row->id_berita; ?>"><p><?= $row->judul_berita; ?></p></a>
                                     </div>
                                 </div>
-                            </a>
+                            
                             <?php endforeach; ?>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <?php foreach ($getKategoriBeritaForm as $gkbf) :?>
             <!-- </section> -->
             <section class="ftco-section">
                 <div class="container">
@@ -45,56 +47,31 @@
                         <div class="col-md-15 ">
                             <nav class="navbar navbar-expand-lg navbar-light">
                                 <a href="/berita" class="navbar-brand">
-                                    <h4 class="heading-section mb-0" style="color: white;">Hari Besar</h4>
+                                    <h4 class="heading-section mb-0" style="color: white;"><?= $gkbf->nama_kategori_berita; ?></h4>
                                 </a>
                             </nav>
                         </div>
                         <div class="col-md-12">
                             <div class="featured-carousel owl-carousel">
                                 <?php
-                                $nomor = 1;
-                                foreach ($getBeritaLandingPage as $gblp) :
+                                    $nomor = 1;
+                                    foreach ($getBeritaByStatus as $gbbs) :
                                 ?>
-                                    <div class="card">
-                                        <img src="<?= base_url($gblp->gambar_berita); ?>" alt="Berita" style="width:100%">
-                                        <div class="container">
-                                            <p><?= $gblp->judul_berita; ?></p>
+                                        <div class="card">
+                                            <img src="<?= base_url($gbbs->gambar_berita); ?>" alt="Berita" style="width:100%">
+                                            <div class="container">
+                                                <a href="/berita/detail_berita/<?= $gbbs->id_berita; ?>"><p><?= $gbbs->judul_berita; ?></p></a>
+                                            </div>
                                         </div>
-                                    </div>
                                 <?php endforeach; ?>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- <section class="ftco-section"> -->
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-15 ">
-                        <nav class="navbar navbar-expand-lg navbar-light">
-                            <a href="/berita" class="navbar-brand">
-                                <h4 class="heading-section mb-0" style="color: white;">Berita Harian</h4>
-                            </a>
-                        </nav>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="featured-carousel owl-carousel">
-                            <?php
-                            $nomor = 1;
-                            foreach ($getBeritaLandingPage as $gblp) :
-                            ?>
-                                <div class="card">
-                                    <img src="<?= base_url($gblp->gambar_berita); ?>" alt="Berita" style="width:100%">
-                                    <div class="container">
-                                        <p><?= $gblp->judul_berita; ?></p>
-                                    </div>
-                                </div>
-                            <?php endforeach; ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- </section> -->
+            <?php endforeach; ?>
+
+            
         </div>
 
     </div>

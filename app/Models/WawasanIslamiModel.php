@@ -14,7 +14,7 @@ class WawasanIslamiModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ["id_user", "judul_wawasan_islami", "ringkasan_wawasan_islami", "konten_wawasan_islami", "gambar_wawasan_islami", "video_wawasan_islami", "status_wawasan_islami",];
+    protected $allowedFields    = ["id_user", "id_kategori_wawasan_islami","judul_wawasan_islami", "slug_wawasan_islami", "ringkasan_wawasan_islami", "konten_wawasan_islami", "gambar_wawasan_islami", "video_wawasan_islami", "status_wawasan_islami"];
 
     // Dates
     protected $useTimestamps = false;
@@ -71,14 +71,14 @@ class WawasanIslamiModel extends Model
             // return $this->findAll();
 
             // Manual atau Query Builder
-            $query = $this->db->query("SELECT * FROM tbl_wawasan_islami where status_wawasan_islami = '2' ORDER BY created_at desc limit 3");
+            $query = $this->db->query("SELECT * FROM tbl_wawasan_islami as a INNER JOIN tbl_user as b on a.id_user = b.id INNER join tbl_kategori_wawasan_islami as c on a.id_kategori_wawasan_islami = c.id_kategori_wawasan_islami where a.status_wawasan_islami = '2' ORDER BY a.created_at desc limit 3");
             return $query->getResult(); // return berupa array objek
 
         } else {
             // return $this->getWhere(['id' => $id]);
 
             // Manual atau Query Builder
-            $query = $this->db->query("SELECT * FROM tbl_wawasan_islami where id_wawasan_islami = '$id' ");
+            $query = $this->db->query("SELECT * FROM tbl_wawasan_islami as a INNER JOIN tbl_user as b on a.id_user = b.id INNER join tbl_kategori_wawasan_islami as c on a.id_kategori_wawasan_islami = c.id_kategori_wawasan_islami where a.id_wawasan_islami = '$id' ");
             return $query->getResult(); // return berupa array objek
         }
     }
@@ -95,7 +95,23 @@ class WawasanIslamiModel extends Model
         }
 
         return $query->getResult(); // return berupa array objek
+    }
 
+    public function getWawasanIslamiByStatus($id = false)
+    {
+        if ($id === false) {
+            // return $this->findAll();
 
+            // Manual atau Query Builder
+            $query = $this->db->query("SELECT * FROM tbl_wawasan_islami as a INNER JOIN tbl_user as b on a.id_user = b.id INNER join tbl_kategori_wawasan_islami as c on a.id_kategori_wawasan_islami = c.id_kategori_wawasan_islami where a.status_wawasan_islami = '2' ORDER BY a.created_at desc ");
+            return $query->getResult(); // return berupa array objek
+
+        } else {
+            // return $this->getWhere(['id' => $id]);
+
+            // Manual atau Query Builder
+            $query = $this->db->query("SELECT * FROM tbl_wawasan_islami as a INNER JOIN tbl_user as b on a.id_user = b.id INNER join tbl_kategori_wawasan_islami as c on a.id_kategori_wawasan_islami = c.id_kategori_wawasan_islami where a.id_wawasan_islami = '$id' ");
+            return $query->getResult(); // return berupa array objek
+        }
     }
 }

@@ -6,10 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+</head>
+
+<body>
     <div class="container" style="background-image: url('/assets/image/home/Background_atas.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <!-- <h4 id="DisplayClock" class="clock" onload="showTime()" style="color: white;"></h4> -->
-            <h5 style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;">Sabtu, 14 Januari <br> 12:00 WIB </h5>
+            <h5 style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;"><?= date('l, d M');?> <br> <p id="DisplayClock" class="clock" onload="showTime()"></p> </h5>
+            <!-- <h5 style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;" id="DisplayClock" class="clock" onload="showTime()" style="color: white;"></h5> -->
             <!-- <time id="DisplayClock" class="clock"></time> -->
             <!-- <h4 style="color: white;"><?= date('d, m Y H:i:s') ?></h4> -->
             <div>
@@ -52,9 +55,6 @@
     </div>
 
 
-</head>
-
-<body>
     <div>
         <br>
         <div class="container">
@@ -70,12 +70,14 @@
                                 <img src="/assets/assets-mobile/icon-menu/adzan.png" alt="orang adzan" height="100px" style="margin-right: -35%;">
                             </nav>
                         </div>
+                        <?php foreach ($getKutipanLandingPage as $gklp) :?>
                         <div class=" d-flex align-items-end justify-content-center" style="background-image: url('/assets/image/Background.png'); border-radius: 20px; ">
                             <div class="text w-100">
-                                <h4 class="container" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #ffff; ">Q.S. Ar-Rum : 60</h4>
-                                <h5 class="container" style="font-family: 'Inter',Arial, sans-serif; color: #ffff;">“Dan bersabarlah kamu, sesungguhnya janji Allah adalah benar”</h5>
+                                <h4 class="container" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #ffff; "><?= $gklp->sumber_kutipan; ?></h4>
+                                <h5 class="container" style="font-family: 'Inter',Arial, sans-serif; color: #ffff;"><?= $gklp->deskripsi_kutipan; ?></h5>
                             </div>
                         </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
@@ -102,7 +104,7 @@
                             <div class="card">
                                 <img src="<?= base_url($gblp->gambar_berita); ?>" alt="Berita" style="width:100%;">
                                 <div class="container">
-                                    <p><?= $gblp->judul_berita; ?> cek</p>
+                                    <a href="/berita/detail_berita/<?= $gblp->id_berita; ?>"><p><?= $gblp->judul_berita; ?></p></a>
                                 </div>
                             </div>
                         <?php endforeach; ?>
@@ -119,8 +121,8 @@
                 <div class="row">
                     <div class="col-md-15 ">
                         <nav class="navbar navbar-expand-lg navbar-light">
-                            <a href="/wawasan" class="navbar-brand">
-                                <h4 class="heading-section mb-0" style="color: #629C87;">Wawasan Islam</h4>
+                            <a href="/wawasan_islami" class="navbar-brand">
+                                <h4 class="heading-section mb-0" style="color: #629C87;">Wawasan Islami</h4>
                             </a>
                         </nav>
                     </div>
@@ -134,8 +136,9 @@
                                     <div class="work">
                                         <div class="img d-flex align-items-end justify-content-center" style="background-image: url(<?= base_url($gwil->gambar_wawasan_islami); ?>">
                                             <div class="text w-100">
-                                                <span class="cat">Kategori</span>
-                                                <h3><a href="#"><?= $gwil->judul_wawasan_islami; ?></a></h3>
+                                                <span class="cat"><?= $gwil->nama_kategori_wawasan_islami; ?></span>
+                                                <h3><a href="/wawasan_islami/detail_wawasan_islami/<?= $gwil->id_wawasan_islami; ?>"><p><?= $gwil->judul_wawasan_islami; ?></p></a></h3>
+
                                             </div>
                                         </div>
                                     </div>

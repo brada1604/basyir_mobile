@@ -4,17 +4,17 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class KutipanModel extends Model
+class KategoriBeritaModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'tbl_kutipan';
-    protected $primaryKey       = 'id_kutipan';
+    protected $table            = 'tbl_kategori_berita';
+    protected $primaryKey       = 'id_kategori_berita';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['id_user', 'judul_kutipan', 'deskripsi_kutipan', 'sumber_kutipan', 'status_kutipan'];
+    protected $allowedFields    = ['nama_kategori_berita', 'status_kategori_berita'];
 
     // Dates
     protected $useTimestamps = false;
@@ -40,45 +40,39 @@ class KutipanModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
-    public function getKutipan($id = false)
+    public function getKategoriBerita($id = false)
     {
         if ($id === false) {
             // return $this->findAll();
 
             // Manual atau Query Builder
-            $query = $this->db->query("SELECT * FROM tbl_kutipan");
+            $query = $this->db->query("SELECT * FROM tbl_kategori_berita");
             return $query->getResult(); // return berupa array objek
 
         } else {
             // return $this->getWhere(['id' => $id]);
 
             // Manual atau Query Builder
-            $query = $this->db->query("SELECT * FROM tbl_kutipan where id_kutipan = '$id' ");
+            $query = $this->db->query("SELECT * FROM tbl_kategori_berita where id_kategori_berita = '$id' ");
             return $query->getResult(); // return berupa array objek
         }
     }
 
-    public function getKutipanByStatus($id = false)
+    public function getKategoriBeritaForm($id = false)
     {
         if ($id === false) {
             // return $this->findAll();
 
             // Manual atau Query Builder
-            $query = $this->db->query("SELECT * FROM tbl_kutipan where status_kutipan='1' ");
+            $query = $this->db->query("SELECT * FROM tbl_kategori_berita where status_kategori_berita = '1'");
             return $query->getResult(); // return berupa array objek
 
         } else {
             // return $this->getWhere(['id' => $id]);
 
             // Manual atau Query Builder
-            $query = $this->db->query("SELECT * FROM tbl_kutipan where status_kutipan='1' AND id_kutipan = '$id' ");
+            $query = $this->db->query("SELECT * FROM tbl_kategori_berita where status_kategori_berita = '1' AND id_kategori_berita = '$id' ");
             return $query->getResult(); // return berupa array objek
         }
-    }
-
-    public function getKutipanLandingPage()
-    {
-        $query = $this->db->query("SELECT * FROM tbl_kutipan where status_kutipan = '1' ORDER BY created_at desc limit 1");
-        return $query->getResult(); // return berupa array objek
     }
 }

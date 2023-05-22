@@ -12,7 +12,7 @@ class KutipanController extends BaseController
         $model = new KutipanModel;
         // $data['session'] = session();
         $data['title'] = 'Data Kutipan';
-        $data['getKutipan'] = $model->getKutipan();
+        $data['getKutipanByStatus'] = $model->getKutipanByStatus();
 
         echo view('layout/v_header');
         echo view('layout/v_buttom_navbar');

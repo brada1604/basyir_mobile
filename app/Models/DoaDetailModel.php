@@ -4,17 +4,17 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class KutipanModel extends Model
+class DoaDetailModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'tbl_kutipan';
-    protected $primaryKey       = 'id_kutipan';
+    protected $table            = 'tbl_doa_detail';
+    protected $primaryKey       = 'id_doa_detail';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['id_user', 'judul_kutipan', 'deskripsi_kutipan', 'sumber_kutipan', 'status_kutipan'];
+    protected $allowedFields    = ['id_doa', 'konten_doa', 'konten_latin_doa', 'status_doa_detail'];
 
     // Dates
     protected $useTimestamps = false;
@@ -40,45 +40,23 @@ class KutipanModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
-    public function getKutipan($id = false)
+
+    public function getDoaDetail($id_doa, $id = false)
     {
         if ($id === false) {
             // return $this->findAll();
 
             // Manual atau Query Builder
-            $query = $this->db->query("SELECT * FROM tbl_kutipan");
+            $query = $this->db->query("SELECT * FROM tbl_doa_detail where id_doa = '$id_doa'");
             return $query->getResult(); // return berupa array objek
 
         } else {
             // return $this->getWhere(['id' => $id]);
 
             // Manual atau Query Builder
-            $query = $this->db->query("SELECT * FROM tbl_kutipan where id_kutipan = '$id' ");
+            $query = $this->db->query("SELECT * FROM tbl_doa_detail where id_doa = '$id_doa' AND id_doa_detail = '$id' ");
             return $query->getResult(); // return berupa array objek
         }
     }
 
-    public function getKutipanByStatus($id = false)
-    {
-        if ($id === false) {
-            // return $this->findAll();
-
-            // Manual atau Query Builder
-            $query = $this->db->query("SELECT * FROM tbl_kutipan where status_kutipan='1' ");
-            return $query->getResult(); // return berupa array objek
-
-        } else {
-            // return $this->getWhere(['id' => $id]);
-
-            // Manual atau Query Builder
-            $query = $this->db->query("SELECT * FROM tbl_kutipan where status_kutipan='1' AND id_kutipan = '$id' ");
-            return $query->getResult(); // return berupa array objek
-        }
-    }
-
-    public function getKutipanLandingPage()
-    {
-        $query = $this->db->query("SELECT * FROM tbl_kutipan where status_kutipan = '1' ORDER BY created_at desc limit 1");
-        return $query->getResult(); // return berupa array objek
-    }
 }

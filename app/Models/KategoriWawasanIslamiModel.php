@@ -4,17 +4,17 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class KutipanModel extends Model
+class KategoriWawasanIslamiModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'tbl_kutipan';
-    protected $primaryKey       = 'id_kutipan';
+    protected $table            = 'tbl_kategori_wawasan_islami';
+    protected $primaryKey       = 'id_kategori_wawasan_islami';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['id_user', 'judul_kutipan', 'deskripsi_kutipan', 'sumber_kutipan', 'status_kutipan'];
+    protected $allowedFields    = ['nama_kategori_wawasan_islami', 'status_kategori_wawasan_islami'];
 
     // Dates
     protected $useTimestamps = false;
@@ -40,45 +40,39 @@ class KutipanModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
-    public function getKutipan($id = false)
+    public function getKategoriWawasanIslami($id = false)
     {
         if ($id === false) {
             // return $this->findAll();
 
             // Manual atau Query Builder
-            $query = $this->db->query("SELECT * FROM tbl_kutipan");
+            $query = $this->db->query("SELECT * FROM tbl_kategori_wawasan_islami");
             return $query->getResult(); // return berupa array objek
 
         } else {
             // return $this->getWhere(['id' => $id]);
 
             // Manual atau Query Builder
-            $query = $this->db->query("SELECT * FROM tbl_kutipan where id_kutipan = '$id' ");
+            $query = $this->db->query("SELECT * FROM tbl_kategori_wawasan_islami where id_kategori_wawasan_islami = '$id' ");
             return $query->getResult(); // return berupa array objek
         }
     }
 
-    public function getKutipanByStatus($id = false)
+    public function getKategoriWawasanIslamiForm($id = false)
     {
         if ($id === false) {
             // return $this->findAll();
 
             // Manual atau Query Builder
-            $query = $this->db->query("SELECT * FROM tbl_kutipan where status_kutipan='1' ");
+            $query = $this->db->query("SELECT * FROM tbl_kategori_wawasan_islami where status_kategori_wawasan_islami = '1'");
             return $query->getResult(); // return berupa array objek
 
         } else {
             // return $this->getWhere(['id' => $id]);
 
             // Manual atau Query Builder
-            $query = $this->db->query("SELECT * FROM tbl_kutipan where status_kutipan='1' AND id_kutipan = '$id' ");
+            $query = $this->db->query("SELECT * FROM tbl_kategori_wawasan_islami where status_kategori_wawasan_islami = '1' AND id_kategori_wawasan_islami = '$id' ");
             return $query->getResult(); // return berupa array objek
         }
-    }
-
-    public function getKutipanLandingPage()
-    {
-        $query = $this->db->query("SELECT * FROM tbl_kutipan where status_kutipan = '1' ORDER BY created_at desc limit 1");
-        return $query->getResult(); // return berupa array objek
     }
 }

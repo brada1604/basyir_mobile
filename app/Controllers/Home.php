@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\BeritaModel;
 use App\Models\WawasanIslamiModel;
+use App\Models\KutipanModel;
 
 class Home extends BaseController
 {
@@ -18,6 +19,11 @@ class Home extends BaseController
         $model_wawasan_islami = new WawasanIslamiModel;
         $data['getWawasanIslamiLandingPage'] = $model_wawasan_islami->getWawasanIslamiLandingPage();
         // Ambil Wawasan Islami - End
+
+        // Ambil Kutipan
+        $model_kutipan = new KutipanModel;
+        $data['getKutipanLandingPage'] = $model_kutipan->getKutipanLandingPage();
+        // Ambil Kutipan - End
 
         echo view('layout/v_header');
         echo view('layout/v_buttom_navbar');

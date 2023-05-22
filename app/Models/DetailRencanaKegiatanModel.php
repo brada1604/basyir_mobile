@@ -4,17 +4,17 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class KutipanModel extends Model
+class DetailRencanaKegiatanModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'tbl_kutipan';
-    protected $primaryKey       = 'id_kutipan';
+    protected $table            = 'tbl_detail_rencana_kegiatan';
+    protected $primaryKey       = 'id_detail_rencana_kegiatan';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['id_user', 'judul_kutipan', 'deskripsi_kutipan', 'sumber_kutipan', 'status_kutipan'];
+    protected $allowedFields    = ['id_rencana_kegiatan', 'rencana_jadwal', 'realisasi_jadwal'];
 
     // Dates
     protected $useTimestamps = false;
@@ -40,45 +40,21 @@ class KutipanModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
-    public function getKutipan($id = false)
+    public function getDetailRencanaKegiatan($id_rencana_kegiatan, $id = false)
     {
         if ($id === false) {
             // return $this->findAll();
 
             // Manual atau Query Builder
-            $query = $this->db->query("SELECT * FROM tbl_kutipan");
+            $query = $this->db->query("SELECT * FROM tbl_detail_rencana_kegiatan where id_rencana_kegiatan = '$id_rencana_kegiatan'");
             return $query->getResult(); // return berupa array objek
 
         } else {
             // return $this->getWhere(['id' => $id]);
 
             // Manual atau Query Builder
-            $query = $this->db->query("SELECT * FROM tbl_kutipan where id_kutipan = '$id' ");
+            $query = $this->db->query("SELECT * FROM tbl_detail_rencana_kegiatan where id_rencana_kegiatan = '$id_rencana_kegiatan' AND id_detail_rencana_kegiatan = '$id' ");
             return $query->getResult(); // return berupa array objek
         }
-    }
-
-    public function getKutipanByStatus($id = false)
-    {
-        if ($id === false) {
-            // return $this->findAll();
-
-            // Manual atau Query Builder
-            $query = $this->db->query("SELECT * FROM tbl_kutipan where status_kutipan='1' ");
-            return $query->getResult(); // return berupa array objek
-
-        } else {
-            // return $this->getWhere(['id' => $id]);
-
-            // Manual atau Query Builder
-            $query = $this->db->query("SELECT * FROM tbl_kutipan where status_kutipan='1' AND id_kutipan = '$id' ");
-            return $query->getResult(); // return berupa array objek
-        }
-    }
-
-    public function getKutipanLandingPage()
-    {
-        $query = $this->db->query("SELECT * FROM tbl_kutipan where status_kutipan = '1' ORDER BY created_at desc limit 1");
-        return $query->getResult(); // return berupa array objek
     }
 }

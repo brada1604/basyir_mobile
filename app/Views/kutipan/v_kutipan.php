@@ -15,24 +15,14 @@
                 </div>
                 <div class="col-md-6">
                     <div class="featured-carousel owl-carousel">
+                        <?php foreach ($getKutipanByStatus as $row) :?>
                         <div class="d-flex align-items-end justify-content-center" style="background-color: white; border-radius: 20px; ">
                             <div class="text w-100">
-                                <h4 class="container" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #629C87; ">Q.S. Ar-Rum : 60</h4>
-                                <h5 class="container" style="font-family: 'Inter',Arial, sans-serif; color: #629C87;">“Dan bersabarlah kamu, sesungguhnya janji Allah adalah benar”</h5>
+                                <h4 class="container" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #629C87; "><?= $row->sumber_kutipan; ?></h4>
+                                <h5 class="container" style="font-family: 'Inter',Arial, sans-serif; color: #629C87;"><?= $row->deskripsi_kutipan; ?></h5>
                             </div>
                         </div>
-                        <div class="d-flex align-items-end justify-content-center" style="background-color: white; border-radius: 20px; ">
-                            <div class="text w-100">
-                                <h4 class="container" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #629C87;">Q.S. Ar-Rum : 60</h4>
-                                <h5 class="container" style="font-family: 'Inter',Arial, sans-serif; color: #629C87;">“Dan bersabarlah kamu, sesungguhnya janji Allah adalah benar”</h5>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-end justify-content-center" style="background-color: white; border-radius: 20px; ">
-                            <div class="text w-100">
-                                <h4 class="container" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #629C87;">Q.S. Ar-Rum : 60</h4>
-                                <h5 class="container" style="font-family: 'Inter',Arial, sans-serif; color: #629C87;">“Dan bersabarlah kamu, sesungguhnya janji Allah adalah benar”</h5>
-                            </div>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>

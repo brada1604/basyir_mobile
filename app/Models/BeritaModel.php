@@ -14,7 +14,7 @@ class BeritaModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['id_user', 'judul_berita', 'ringkasan_berita', 'konten_berita', 'gambar_berita', 'video_berita', 'status_berita'];
+    protected $allowedFields    = ['id_user', 'id_kategori_berita', 'judul_berita', 'slug_berita', 'ringkasan_berita', 'konten_berita', 'gambar_berita', 'video_berita', 'status_berita'];
 
     // Dates
     protected $useTimestamps = false;
@@ -68,7 +68,7 @@ class BeritaModel extends Model
 
     public function getBeritaLandingPage($id = false)
     {
-        $id_user = session()->get('role');
+        // $id_user = session()->get('role');
         if ($id === false) {
             // return $this->findAll();
 
@@ -81,6 +81,25 @@ class BeritaModel extends Model
 
             // Manual atau Query Builder
             $query = $this->db->query("SELECT * FROM tbl_berita where id_berita = '$id' ");
+            return $query->getResult(); // return berupa array objek
+        }
+    }
+
+    public function getBeritaByStatus($id = false)
+    {
+        // $id_user = session()->get('role');
+        if ($id === false) {
+            // return $this->findAll();
+
+            // Manual atau Query Builder
+            $query = $this->db->query("SELECT * FROM tbl_berita as a INNER JOIN tbl_user as b on a.id_user = b.id INNER join tbl_kategori_berita as c on a.id_kategori_berita = c.id_kategori_berita where a.status_berita = '2' ORDER BY a.created_at DESC");
+            return $query->getResult(); // return berupa array objek
+
+        } else {
+            // return $this->getWhere(['id' => $id]);
+
+            // Manual atau Query Builder
+            $query = $this->db->query("SELECT * FROM tbl_berita as a INNER JOIN tbl_user as b on a.id_user = b.id INNER join tbl_kategori_berita as c on a.id_kategori_berita = c.id_kategori_berita where a.id_berita = '$id' ");
             return $query->getResult(); // return berupa array objek
         }
     }
