@@ -41,10 +41,11 @@ $routes->get('/kutipan', 'KutipanController::index');
 
 //ROUTE RENCANA KEGIATAN PAGE
 $routes->get('/rencana_kegiatan', 'RencanaKegiatanController::index', ['filter' => 'auth']);
-$routes->get('/rencana_kegiatan/add', 'RencanaKegiatanController::add');
+$routes->get('/rencana_kegiatan/add/(:segment)', 'RencanaKegiatanController::add/$1');
 $routes->post('/rencana_kegiatan/save', 'RencanaKegiatanController::save');
 $routes->get('/rencana_kegiatan/edit', 'RencanaKegiatanController::edit');
 $routes->post('/rencana_kegiatan/update', 'RencanaKegiatanController::update');
+$routes->get('/rencana_kegiatan/delete/(:segment)', 'RencanaKegiatanController::delete/$1', ['filter' => 'auth']); // (:segment) = parameter, $1 = parameter pertama yang di ambil
 //ROUTE RENCANA KEGIATAN - END
 
 //ROUTE BERITA PAGE
@@ -99,6 +100,15 @@ $routes->get('/wawasan_islami/detail_wawasan_islami/(:segment)', 'WawasanIslamiC
 // ROUTE DZIKIR
 $routes->get('/dzikir', 'DzikirController::index');
 // ROUTE DZIKIR - END
+
+
+// JADWAL SHOLAT
+$routes->get('/jadwal_sholat_wajib', 'JadwalSholatController::jadwal_sholat_wajib');
+$routes->get('/waktu_sholat_sunnah', 'JadwalSholatController::sholat_sunnah');
+$routes->get('/waktu_sholat_sunnah/dhuha', 'JadwalSholatController::dhuha');
+$routes->get('/waktu_sholat_sunnah/rawatib', 'JadwalSholatController::rawatib');
+$routes->get('/waktu_sholat_sunnah/tahajud', 'JadwalSholatController::tahajud');
+// JADWAL SHOLAT
 
 
 
@@ -173,7 +183,7 @@ $routes->post('/rencana_kegiatan/save', 'RencanaKegiatanController::save'); // u
 $routes->get('/rencana_kegiatan/(:segment)', 'RencanaKegiatanController::detail/$1', ['filter' => 'auth']); // (:segment) = parameter, $1 = parameter pertama yang di ambil
 $routes->get('/rencana_kegiatan/edit/(:segment)', 'RencanaKegiatanController::edit/$1', ['filter' => 'auth']); // (:segment) = parameter, $1 = parameter pertama yang di ambil
 $routes->post('/rencana_kegiatan/update', 'RencanaKegiatanController::update'); // untuk mengupdate data
-$routes->get('/rencana_kegiatan/delete/(:segment)', 'RencanaKegiatanController::delete/$1', ['filter' => 'auth']); // (:segment) = parameter, $1 = parameter pertama yang di ambil
+
 $routes->post('/rencana_kegiatan/search', 'RencanaKegiatanController::search'); // untuk mencari data berdasarkan variable tertentu
 
 

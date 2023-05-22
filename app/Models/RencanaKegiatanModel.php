@@ -58,4 +58,23 @@ class RencanaKegiatanModel extends Model
             return $query->getResult(); // return berupa array objek
         }
     }
+
+    public function getRencanaKegiatanByIdUser($id = false)
+    {
+        $id_user = session()->get('id');
+        if ($id === false) {
+            // return $this->findAll();
+
+            // Manual atau Query Builder
+            $query = $this->db->query("SELECT * FROM tbl_rencana_kegiatan as a inner join tbl_amalan_yaumi as b on a.id_amalan_yaumi = b.id_amalan_yaumi where a.id_user='$id_user' ");
+            return $query->getResult(); // return berupa array objek
+
+        } else {
+            // return $this->getWhere(['id' => $id]);
+
+            // Manual atau Query Builder
+            $query = $this->db->query("SELECT * FROM tbl_rencana_kegiatan as a inner join tbl_amalan_yaumi as b on a.id_amalan_yaumi = b.id_amalan_yaumi where a.id_user='$id_user' AND a.id_rencana_kegiatan = '$id' ");
+            return $query->getResult(); // return berupa array objek
+        }
+    }
 }

@@ -9,9 +9,10 @@ class RencanaKegiatanController extends BaseController
 {
     public function index()
     {
+        $data['session'] = session();
         $model = new RencanaKegiatanModel;
         $data['title'] = 'Data Rencana Kegiatan';
-        $data['getRencanaKegiatan'] = $model->getRencanaKegiatan();
+        $data['getRencanaKegiatan'] = $model->getRencanaKegiatanByIdUser();
 
         echo view('layout/v_header');
         echo view('layout/v_buttom_navbar');
@@ -33,15 +34,17 @@ class RencanaKegiatanController extends BaseController
         echo view('layout/v_footer');
     }
 
-    public function add()
+    public function add($id)
     {
+        $data['session'] = session();
         $model = new RencanaKegiatanModel;
         $data['title'] = 'Data Rencana Kegiatan';
         $data['getRencanaKegiatan'] = $model->getRencanaKegiatan();
+        $data['id_amalan_yaumi'] = $id;
 
         echo view('layout/v_header');
         echo view('layout/v_buttom_navbar');
-        echo view('rencana_kegiatan/add');
+        echo view('rencana_kegiatan/add', $data);
         echo view('layout/v_footer');
     }
 
@@ -63,7 +66,7 @@ class RencanaKegiatanController extends BaseController
 
             $model->save($data);
 
-            return redirect()->to('/rencana_kegiatan_master');
+            return redirect()->to('/rencana_kegiatan');
         } else {
             $data['validation'] = $this->validator;
             $data['title'] = 'Data Rencana Kegiatan';
@@ -128,8 +131,8 @@ class RencanaKegiatanController extends BaseController
         $model = new RencanaKegiatanModel;
         $model->delete($id);
         echo '<script>
-                alert("Selamat! Berhasil Menghapus Data Kutipan");
-                window.location="' . base_url('/rencana_kegiatan_master') . '"
+                alert("Selamat! Berhasil Menghapus Data Rencana kegiatan");
+                window.location="' . base_url('/rencana_kegiatan') . '"
             </script>';
     }
 }

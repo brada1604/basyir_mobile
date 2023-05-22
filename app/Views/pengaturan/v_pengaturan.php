@@ -26,7 +26,11 @@
                                     <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/next.png" alt="SVG Happyku" width="25em" height="25em" style="margin-bottom: 365px;" />
                                 </a>
                             </nav>
-                            <a href="/logout"><center><button type="button" class="btn btn-sm btn-danger">Logout</button></center></a>
+                            <?php if (!empty($session->get('name'))): ?>
+                                <a href="/logout"><center><button type="button" class="btn btn-sm btn-danger">Logout</button></center></a>
+                            <?php else: ?>
+                                <a href="/login"><center><button type="button" class="btn btn-sm btn-success">Login</button></center></a>
+                            <?php endif ?>
                         </div>
                     </div>
                 </div>

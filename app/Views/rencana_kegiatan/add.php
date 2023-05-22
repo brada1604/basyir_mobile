@@ -45,7 +45,7 @@
                                                 </div>
                                             </div>
                                             <div class="col mb-8pt mb-md-0">
-                                                <input name="id_amalan_yaumi" value="<?= old('id_amalan_yaumi') ?>" type="text" class="form-control" placeholder="Masukan ID Amalan Yaumi" required />
+                                                <input name="id_amalan_yaumi" value="<?= $id_amalan_yaumi ?>" type="text" class="form-control" placeholder="Masukan ID Amalan Yaumi" readonly />
                                             </div>
                                         </div>
                                     </div>

@@ -10,7 +10,8 @@ class PengaturanController extends BaseController
     public function index()
     {
         $model = new PengaturanModel();
-        $data['title'] = 'Data Rencana Kegiatan';
+        $data['session'] = session();
+        $data['title'] = 'Data Pengaturan';
         // $data['getPengaturan'] = $model->getPengaturanLandingPage();
 
         echo view('layout/v_header');

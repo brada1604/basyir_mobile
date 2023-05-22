@@ -52,8 +52,14 @@ class AuthController extends BaseController
                         'logged_in' => TRUE
                     ]; // proses pembuatan data session
 
-                    $session->set($sess_data); // proses input data session
-                    return redirect()->to('/');
+                    if ($data[0]->role == 4) {
+                        $session->set($sess_data); // proses input data session
+                        return redirect()->to('/');
+                    }
+                    else{
+                        $session->setFlashdata('msg', 'Selain User Basyir tidak bisa login di Mobile !');
+                    return redirect()->to('/login');
+                    }
                 }else{
                     $session->setFlashdata('msg', 'Password salah !');
                     return redirect()->to('/login');

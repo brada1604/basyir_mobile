@@ -10,7 +10,7 @@
                 <?php foreach ($getAmalanYaumiByStatus as $row) :?>
                 <div class="row">
                     <div class="col-md-2 text-center">
-                        <h2 class="heading-section mb-5  bold-text" style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;"><?= $row->judul_amalan_yaumi?></h2>
+                        <h2 class="heading-section mb-5  bold-text" style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;"><a href="/rencana_kegiatan/add/<?= $row->id_amalan_yaumi?>"><?= $row->judul_amalan_yaumi?></a></h2>
                     </div>
                     <div class="col-md-6">
                         <div class="d-flex align-items-end justify-content-center" style="background-color: white; border-radius: 20px; height: 230px;">

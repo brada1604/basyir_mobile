@@ -55,4 +55,48 @@ class JadwalSholatController extends BaseController
         echo view('jadwal_sholat/v_jadwal_sholat_wajib', $data);
         echo view('layout/v_footer');
     }
+
+    public function sholat_sunnah(){
+
+        $data['session'] = session();
+        $data['title'] = 'Sholat Sunnah';
+
+        echo view('layout/v_header');
+        echo view('layout/v_buttom_navbar');
+        echo view('jadwal_sholat/v_jadwal_sholat_sunnah', $data);
+        echo view('layout/v_footer');
+    }
+
+    public function dhuha(){
+
+        $data['session'] = session();
+        $data['title'] = 'Sholat Sunnah';
+
+        echo view('layout/v_header');
+        echo view('layout/v_buttom_navbar');
+        echo view('jadwal_sholat/v_dhuha', $data);
+        echo view('layout/v_footer');
+    }
+
+    public function rawatib(){
+
+        $data['session'] = session();
+        $data['title'] = 'Sholat Sunnah';
+
+        echo view('layout/v_header');
+        echo view('layout/v_buttom_navbar');
+        echo view('jadwal_sholat/v_rawatib', $data);
+        echo view('layout/v_footer');
+    }
+
+    public function tahajud(){
+
+        $data['session'] = session();
+        $data['title'] = 'Sholat Sunnah';
+
+        echo view('layout/v_header');
+        echo view('layout/v_buttom_navbar');
+        echo view('jadwal_sholat/v_tahajud', $data);
+        echo view('layout/v_footer');
+    }
 }

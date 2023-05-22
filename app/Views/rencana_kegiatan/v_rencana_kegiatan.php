@@ -3,10 +3,10 @@
         <a href="/" class="nav-link text-center" style="margin-top: 60px;">
             <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/Back.png" alt="SVG Happyku" width="30em" height="30em" />
         </a>
-        <a href="rencana_kegiatan/add" style="margin-top: 60px; margin-right:-150px;">
+        <a href="/amalan_yaumi" style="margin-top: 60px; margin-right:-150px;">
             <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/tambah.png" alt="SVG Happyku" width="30em" height="30em" style="color: white;" />
         </a>
-        <a href="rencana_kegiatan/edit" style="margin-top: 60px">
+        <a href="#" style="margin-top: 60px">
             <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/edit.png" alt="SVG Happyku" width="30em" height="30em" style="color: white;" />
         </a>
 
@@ -17,3 +17,23 @@
     <br>
     <br>
 </div>
+<table class="table">
+    <tbody>
+        <tr>
+            <td><?= $session->get('name')?> : </td>
+            <td><?= $session->get('email')?></td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="table">
+    <tbody>
+        <?php $nomor = 1; foreach ($getRencanaKegiatan as $row) :?>
+        <tr>
+            <!-- <th scope="row"><?= $nomor++;?></th> -->
+            <td><?= $row->judul_amalan_yaumi?></td>
+            <td><a class="hapus" class="btn btn-danger" href="/rencana_kegiatan/delete/<?= $row->id_rencana_kegiatan; ?>"><button type="button" class="btn btn-danger">Hapus</button></a></td>
+        </tr>
+    <?php endforeach; ?>
+    </tbody>
+</table> 
