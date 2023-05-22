@@ -40,7 +40,7 @@ $routes->get('/kutipan', 'KutipanController::index');
 //ROUTE KUTIPAN - END
 
 //ROUTE RENCANA KEGIATAN PAGE
-$routes->get('/rencana_kegiatan', 'RencanaKegiatanController::index');
+$routes->get('/rencana_kegiatan', 'RencanaKegiatanController::index', ['filter' => 'auth']);
 $routes->get('/rencana_kegiatan/add', 'RencanaKegiatanController::add');
 $routes->post('/rencana_kegiatan/save', 'RencanaKegiatanController::save');
 $routes->get('/rencana_kegiatan/edit', 'RencanaKegiatanController::edit');
