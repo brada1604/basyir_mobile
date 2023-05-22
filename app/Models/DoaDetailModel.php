@@ -59,4 +59,24 @@ class DoaDetailModel extends Model
         }
     }
 
+    public function getDoaDetailByStatus($id_doa, $id = false)
+    {
+        if ($id === false) {
+            // return $this->findAll();
+
+            // Manual atau Query Builder
+            $query = $this->db->query("SELECT * FROM tbl_doa_detail where id_doa = '$id_doa' AND status_doa_detail='1' ");
+            return $query->getResult(); // return berupa array objek
+
+        } else {
+            // return $this->getWhere(['id' => $id]);
+
+            // Manual atau Query Builder
+            $query = $this->db->query("SELECT * FROM tbl_doa_detail where id_doa = '$id_doa' AND status_doa_detail='1' AND id_doa_detail = '$id' ");
+            return $query->getResult(); // return berupa array objek
+        }
+    }
+
+
+
 }

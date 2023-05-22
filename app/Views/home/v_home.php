@@ -38,7 +38,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/berita" class="nav-link text-center">
+                        <a href="/doa_harian" class="nav-link text-center">
                             <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/dua.png" alt="SVG Happyku" width="60em" height="60em" />
                             <!-- <span class="small d-block" style="color:#000000">Berita</span> -->
                         </a>

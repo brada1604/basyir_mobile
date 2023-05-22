@@ -4,17 +4,17 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class DoaModel extends Model
+class NotifikasiModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'tbl_doa';
-    protected $primaryKey       = 'id_doa';
+    protected $table            = 'tbl_notifikasi';
+    protected $primaryKey       = 'id_notifikasi';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ["judul_doa", "ringkasan_doa", "ringkasan_latin_doa", "status_doa",];
+    protected $allowedFields    = ['judul_notifikasi', 'pesan_notifikasi', 'gambar_notifikasi', 'link_tujuan_notifikasi'];
 
     // Dates
     protected $useTimestamps = false;
@@ -40,41 +40,21 @@ class DoaModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
-    public function getDoa($id = false)
+    public function getNotifikasi($id = false)
     {
         if ($id === false) {
             // return $this->findAll();
 
             // Manual atau Query Builder
-            $query = $this->db->query("SELECT * FROM tbl_doa");
+            $query = $this->db->query("SELECT * FROM tbl_notifikasi");
             return $query->getResult(); // return berupa array objek
 
         } else {
             // return $this->getWhere(['id' => $id]);
 
             // Manual atau Query Builder
-            $query = $this->db->query("SELECT * FROM tbl_doa where id_doa = '$id' ");
-            return $query->getResult(); // return berupa array objek
-        }
-    }
-
-    public function getDoaByStatus($id = false)
-    {
-        if ($id === false) {
-            // return $this->findAll();
-
-            // Manual atau Query Builder
-            $query = $this->db->query("SELECT * FROM tbl_doa where status_doa='1' ");
-            return $query->getResult(); // return berupa array objek
-
-        } else {
-            // return $this->getWhere(['id' => $id]);
-
-            // Manual atau Query Builder
-            $query = $this->db->query("SELECT * FROM tbl_doa where status_doa='1' AND id_doa = '$id' ");
+            $query = $this->db->query("SELECT * FROM tbl_notifikasi where id_notifikasi = '$id' ");
             return $query->getResult(); // return berupa array objek
         }
     }
 }
-
-

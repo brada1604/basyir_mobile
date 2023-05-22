@@ -1,7 +1,7 @@
 <body style="background-image: url('/assets/image/Background.png');  background-position: center; background-size: cover;">
     <div>
         <nav class=" navbar navbar-expand-lg navbar-light" style="margin-top: 20px;">
-            <a href="/" class="nav-link text-center">
+            <a href="/doa_harian" class="nav-link text-center">
                 <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/Back.png" alt="SVG Happyku" width="30em" height="30em" />
             </a>
             <a href="/search">
@@ -9,20 +9,24 @@
             </a>
         </nav>
         <div>
+        	<?php foreach ($getDoaByStatus as $row1) :?><center><h2><?= $row1->judul_doa?></h2></center><?php endforeach; ?>
           	<table class="table">
 			  	<tbody>
-			  		<?php foreach ($getNotifikasi as $row) :?>
+			  		<?php $nomor = 1; foreach ($getDoaDetailByStatus as $row) :?>
 			    	<tr>
-			      		<th scope="row"><img src="<?= base_url();?>/assets/assets-mobile/icon-menu/notification.svg" alt="SVG Happyku" width="25em" height="25em"/></th>
-			    	  	<td><?= $row->pesan_notifikasi?></td>
+			    	  	<td style="text-align: right;"><?= $row->konten_doa?></td>
+			    	</tr>
+
+			    	<tr>
+			    	  	<td><?= $row->konten_latin_doa?></a></td>
 			    	</tr>
 			    	<?php endforeach; ?>
-			    	
-
 			  	</tbody>
-			</table>
-
-            
+			</table> 
+			<br>
+			<br>
+			<br>
+			<br>
         </div>
 
     </div>

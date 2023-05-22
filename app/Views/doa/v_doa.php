@@ -11,18 +11,19 @@
         <div>
           	<table class="table">
 			  	<tbody>
-			  		<?php foreach ($getNotifikasi as $row) :?>
+			  		<?php $nomor = 1; foreach ($getDoaByStatus as $row) :?>
 			    	<tr>
-			      		<th scope="row"><img src="<?= base_url();?>/assets/assets-mobile/icon-menu/notification.svg" alt="SVG Happyku" width="25em" height="25em"/></th>
-			    	  	<td><?= $row->pesan_notifikasi?></td>
+			      		<th scope="row"><?= $nomor++;?></th>
+			    	  	<td><a href="/doa_harian/detail_doa_harian/<?= $row->id_doa?>" style="color: black;"><?= $row->judul_doa?></a></td>
+			    	  	<td style="text-align: right;"><?= $row->ringkasan_doa?></td>
 			    	</tr>
 			    	<?php endforeach; ?>
-			    	
-
 			  	</tbody>
-			</table>
-
-            
+			</table> 
+			<br>
+			<br>
+			<br>
+			<br>
         </div>
 
     </div>

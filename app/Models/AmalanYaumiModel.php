@@ -57,6 +57,24 @@ class AmalanYaumiModel extends Model
             return $query->getResult(); // return berupa array objek
         }
     }
+
+    public function getAmalanYaumiByStatus($id = false)
+    {
+        if ($id === false) {
+            // return $this->findAll();
+
+            // Manual atau Query Builder
+            $query = $this->db->query("SELECT * FROM tbl_amalan_yaumi where status_amalan_yaumi='1' ");
+            return $query->getResult(); // return berupa array objek
+
+        } else {
+            // return $this->getWhere(['id' => $id]);
+
+            // Manual atau Query Builder
+            $query = $this->db->query("SELECT * FROM tbl_amalan_yaumi where status_amalan_yaumi='1' AND id_amalan_yaumi = '$id' ");
+            return $query->getResult(); // return berupa array objek
+        }
+    }
 }
 
 

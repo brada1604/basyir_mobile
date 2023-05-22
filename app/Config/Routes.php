@@ -52,6 +52,11 @@ $routes->get('/berita', 'BeritaController::index');
 $routes->get('/berita/detail_berita/(:segment)', 'BeritaController::index2/$1');
 //ROUTE BERITA PAGE
 
+//ROUTE BERITA PAGE
+$routes->get('/doa_harian', 'DoaController::index');
+$routes->get('/doa_harian/detail_doa_harian/(:segment)', 'DoaController::index2/$1');
+//ROUTE BERITA PAGE
+
 //ROUTE PENGATURAN PAGE
 $routes->get('/pengaturan', 'PengaturanController::index');
 $routes->get('/pengaktifan', 'PengaturanNotifikasiController::index');
@@ -78,7 +83,7 @@ $routes->get('menu_lainnya', 'MenuLainnyaController::index');
 
 
 // JADWAL AMALAN YAUMI
-$routes->get('/yaumi', 'AmalanYaumiController::index');
+$routes->get('/amalan_yaumi', 'AmalanYaumiController::index');
 // JADWAL AMALAN YAUMI - END
 
 // JADWAL SYAHADAT
@@ -89,6 +94,11 @@ $routes->get('/syahadat', 'SyahadatController::index');
 $routes->get('/wawasan_islami', 'WawasanIslamiController::index');
 $routes->get('/wawasan_islami/detail_wawasan_islami/(:segment)', 'WawasanIslamiController::index2/$1');
 //ROUTE WAWASAN ISLAMI PAGE
+
+
+// ROUTE DZIKIR
+$routes->get('/dzikir', 'DzikirController::index');
+// ROUTE DZIKIR - END
 
 
 

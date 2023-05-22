@@ -3,11 +3,45 @@
 namespace App\Controllers;
 
 use App\Models\DoaModel;
+use App\Models\DoaDetailModel;
 use App\Controllers\BaseController;
 
 class DoaController extends BaseController
 {
     public function index()
+    {
+        $model = new DoaModel;
+        $data['title'] = 'Data Doa';
+
+        // Ambil Doa
+        $model_berita = new DoaModel;
+        $data['getDoaByStatus'] = $model_berita->getDoaByStatus();
+        // Ambil Doa - End
+        
+        echo view('layout/v_header');
+        echo view('layout/v_buttom_navbar');
+        echo view('doa/v_doa', $data);
+        echo view('layout/v_footer');
+    }
+
+    public function index2($id)
+    {
+        $data['session'] = session();
+        $data['title'] = 'Data Doa';
+
+        $model_doa = new DoaModel;
+        $data['getDoaByStatus'] = $model_doa->getDoaByStatus($id);
+
+        $model_doa_detail = new DoaDetailModel;
+        $data['getDoaDetailByStatus'] = $model_doa_detail->getDoaDetailByStatus($id,false);
+
+        echo view('layout/v_header');
+        echo view('layout/v_buttom_navbar');
+        echo view('doa/v_detail_doa', $data);
+        echo view('layout/v_footer');
+    }
+
+    public function index3()
     {
         $model = new DoaModel;
         $data['session'] = session();
