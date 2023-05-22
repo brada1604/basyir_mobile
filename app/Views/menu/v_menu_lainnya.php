@@ -73,9 +73,9 @@
                     <nav class="navbar navbar-expand">
                         <ul class="navbar-nav nav-justified w-100">
                             <li class="nav-item">
-                                <a href="/list_kegiatan" class="nav-link text-center">
+                                <a href="/rencana_kegiatan" class="nav-link text-center">
                                     <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/list_kegiatan.png" alt="SVG Happyku" width="60em" height="60em" />
-                                    <span class="small d-block" style="color:#629C87">List Kegiatan</span>
+                                    <span class="small d-block" style="color:#629C87">Rencana Ibadah</span>
                                 </a>
                             </li>
                             <li class="nav-item">

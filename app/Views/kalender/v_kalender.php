@@ -1,7 +1,17 @@
-<a href="/"><img src="<?= base_url();?>/assets/assets-mobile/icon-menu/notification.svg" alt="SVG Happyku" width="25em" height="25em"/></a>
-Kalender
+<body style="background-image: url('/assets/image/Background.png');  background-position: center; background-size: cover;">
+    <div>
+        <nav class=" navbar navbar-expand-lg navbar-light" style="margin-top: 20px;">
+            <a href="/" class="nav-link text-center">
+                <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/Back.png" alt="SVG Happyku" width="30em" height="30em" />
+            </a>
+            <a href="/search">
+                <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/search.png" alt="SVG Happyku" width="40em" height="30em" style="color: white;" />
+            </a>
+        </nav>
+        <div>
+        	<center><h2>Kalender</h2></center>
 
-		<section class="ftco-section">
+          	<section class="ftco-section">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -47,16 +57,16 @@ Kalender
 				              </tbody> 
 					          </table>
 					        </div> 
-					        <button class="button" id="add-button">Add Event</button>
+					        <button class="button" id="add-button">Tambah Kegiatan</button>
 					      </div>
 					    </div>
 					    <div class="events-container">
 					    </div>
 					    <div class="dialog" id="dialog">
-					        <h2 class="dialog-header"> Add New Event </h2>
+					        <h2 class="dialog-header"> Tambah Kegiatan Baru </h2>
 					        <form class="form" id="form">
 					          <div class="form-container" align="center">
-					            <label class="form-label" id="valueFromMyButton" for="name">Event name</label>
+					            <label class="form-label" id="valueFromMyButton" for="name">Nama Kegiatan</label>
 					            <input class="input" type="text" id="name" maxlength="36">
 					            <label class="form-label" id="valueFromMyButton" for="count">Number of people to invite</label>
 					            <input class="input" type="number" id="count" min="0" max="1000000" maxlength="7">
@@ -71,3 +81,12 @@ Kalender
 			</div>
 		</section>
 
+			<br>
+			<br>
+			<br>
+			<br>
+        </div>
+
+    </div>
+
+</body>
