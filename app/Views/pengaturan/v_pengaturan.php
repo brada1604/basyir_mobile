@@ -21,16 +21,22 @@
                             </nav>
                             <br>
                             <nav class=" navbar container">
-                                <h5 style="font-family: 'Inter',Arial, sans-serif; color: #629C87; margin-bottom: 365px;">Izinkan Untuk Melakukan <br> Broadcast Email</h5>
+                                <h5 style="font-family: 'Inter',Arial, sans-serif; color: #629C87; margin-bottom: 10%;">Izinkan Untuk Melakukan <br> Broadcast Email</h5>
                                 <a href="/broadcast">
-                                    <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/next.png" alt="SVG Happyku" width="25em" height="25em" style="margin-bottom: 365px;" />
+                                    <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/next.png" alt="SVG Happyku" width="25em" height="25em" style="margin-bottom: 55%;" />
                                 </a>
                             </nav>
-                            <?php if (!empty($session->get('name'))): ?>
-                                <a href="/logout"><center><button type="button" class="btn btn-sm btn-danger">Logout</button></center></a>
-                            <?php else: ?>
-                                <a href="/login"><center><button type="button" class="btn btn-sm btn-success">Login</button></center></a>
-                            <?php endif ?>
+                            <nav class=" navbar container">
+                                <?php if (!empty($session->get('name'))) : ?>
+                                    <a href="/logout">
+                                        <h5 style="font-family: 'Inter',Arial, sans-serif; color: red; margin-bottom: 515%">Logout</h5>
+                                    </a>
+                                <?php else : ?>
+                                    <a href="/login">
+                                        <h5 style="font-family: 'Inter',Arial, sans-serif; color: #629C87; margin-bottom: 515%">Login</h5>
+                                    </a>
+                                <?php endif ?>
+                            </nav>
                         </div>
                     </div>
                 </div>
