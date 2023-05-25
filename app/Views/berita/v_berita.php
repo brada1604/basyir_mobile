@@ -4,9 +4,9 @@
             <a href="/" class="nav-link text-center">
                 <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/Back.png" alt="SVG Happyku" width="30em" height="30em" />
             </a>
-            <a href="/search">
+            <!-- <a href="/search">
                 <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/search.png" alt="SVG Happyku" width="40em" height="30em" style="color: white;" />
-            </a>
+            </a> -->
         </nav>
         <div>
             <!-- <section class="ftco-section"> -->
