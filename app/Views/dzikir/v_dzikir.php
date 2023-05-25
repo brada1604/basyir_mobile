@@ -89,10 +89,11 @@
 							</button>
 						</center>
 
-						<!-- <p>Clicks: <a id="clicks">0</a></p> -->
+						<!-- <p>Clicks: x<a id=" clicks">0</a></p> -->
 					</div>
 				</body>
 				<br>
+				<h5 class=" text-center" style="font-family: 'Inter',Arial, sans-serif; color: white;">Tekan Untuk Mulai Perhitungan</h5>
 				<br>
 				<br>
 			</section>

@@ -23,7 +23,8 @@ class App extends BaseConfig
      * environments.
      */
 
-    public string $baseURL = 'http://192.168.43.218:8080/';
+    public string $baseURL = 'http://localhost:8080/';
+    // public string $baseURL = 'http://192.168.43.218:8080/';
     // public string $baseURL = 'http://192.168.32.72:8080/';
 
     /**
