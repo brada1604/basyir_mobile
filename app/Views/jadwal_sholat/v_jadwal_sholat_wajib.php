@@ -17,6 +17,17 @@
                     <div class="d-flex align-items-end justify-content-center" style="background-color: white; border-radius: 20px; height: 80px; margin-top: 30px">
                         <div class="text w-100">
                             <nav class=" navbar container">
+                                <h4 style="font-family: 'Inter',Arial, sans-serif; color: #629C87; margin-bottom:15px;">Imsak</h4>
+                                <h4 style="font-family: 'Inter',Arial, sans-serif; color: #629C87; margin-bottom:15px;"><?= $pengingat_imsak; ?></h4>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="col-md-6">
+                    <div class="d-flex align-items-end justify-content-center" style="background-color: white; border-radius: 20px; height: 80px; margin-top: 20px">
+                        <div class="text w-100">
+                            <nav class=" navbar container">
                                 <h4 style="font-family: 'Inter',Arial, sans-serif; color: #629C87; margin-bottom:15px;">Subuh (Fajr)</h4>
                                 <h4 style="font-family: 'Inter',Arial, sans-serif; color: #629C87; margin-bottom:15px;"><?= $pengingat_subuh; ?></h4>
                             </nav>
@@ -58,7 +69,7 @@
                 </div>
                 <!--  -->
                 <div class="col-md-6">
-                    <div class="d-flex align-items-end justify-content-center" style="background-color: white; border-radius: 20px; height: 80px; margin-top: 20px">
+                    <div class="d-flex align-items-end justify-content-center" style="background-color: white; border-radius: 20px; height: 80px; margin-top: 20px;">
                         <div class="text w-100">
                             <nav class=" navbar container">
                                 <h4 style="font-family: 'Inter',Arial, sans-serif; color: #629C87; margin-bottom:15px;">Isya</h4>
@@ -68,7 +79,9 @@
                     </div>
                 </div>
                 <!--  -->
+                <span style="margin-top: 10%;" />
             </div>
         </div>
     </div>
+    <br>
 </body>

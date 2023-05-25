@@ -5,7 +5,7 @@
                 <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/Back.png" alt="SVG Happyku" width="30em" height="30em" />
             </a>
             <div>
-                <a href="/notifikasi"><img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/notification_putih.png" alt="SVG Happyku" width="50em" height="50em" style="color: white;" /></a>
+                <a href="/notifikasi"><img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/notification_putih.png" alt="SVG Happyku" width="35em" height="35em" style="color: white;" /></a>
             </div>
         </nav>
         <div class="container">
@@ -15,13 +15,13 @@
                 </div>
                 <div class="col-md-6">
                     <div class="featured-carousel owl-carousel">
-                        <?php foreach ($getKutipanByStatus as $row) :?>
-                        <div class="d-flex align-items-end justify-content-center" style="background-color: white; border-radius: 20px; ">
-                            <div class="text w-100">
-                                <h4 class="container" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #629C87; "><?= $row->sumber_kutipan; ?></h4>
-                                <h5 class="container" style="font-family: 'Inter',Arial, sans-serif; color: #629C87;"><?= $row->deskripsi_kutipan; ?></h5>
+                        <?php foreach ($getKutipanByStatus as $row) : ?>
+                            <div class="d-flex align-items-end justify-content-center" style="background-color: white; border-radius: 20px; ">
+                                <div class="text w-100">
+                                    <h4 class="container" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #629C87; "><?= $row->sumber_kutipan; ?></h4>
+                                    <h5 class="container" style="font-family: 'Inter',Arial, sans-serif; color: #629C87;"><?= $row->deskripsi_kutipan; ?></h5>
+                                </div>
                             </div>
-                        </div>
                         <?php endforeach; ?>
                     </div>
                 </div>

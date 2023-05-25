@@ -8,14 +8,15 @@
     <title>Home</title>
 </head>
 
-<body>
-    <div class="container" style="background-image: url('/assets/image/home/Background_atas.png'); background-repeat: no-repeat; background-position: center center; background-size: cover; background-color: transparant; box-shadow: none;">
+<body style="background-color: #ffff;">
+    <div class="container" style="background-image: url('/assets/image/home/Background_atas.jpg'); background-repeat: no-repeat; background-position: center; margin-top: -3%">
         <nav class="navbar navbar-expand-lg">
-            <h5 style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;"><?= date('l, d M'); ?> <br>
-                <p id="DisplayClock" class="clock" onload="showTime()"></p>
+            <h5 style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;">
+                <p id="DisplayDate" onload="showDate()" style="margin-top: 15%"></p>
+                <p id="DisplayClock" class="clock" onload="showTime()" style="margin-top: -15%"></p>
             </h5>
             <div>
-                <a href="/notifikasi"><img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/notification_putih.png" alt="SVG Happyku" width="50em" height="50em" style="color: white;" /></a>
+                <a href="/notifikasi"><img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/notification_putih.png" alt="SVG Happyku" width="40em" height="40em" style="color: white;" /></a>
             </div>
         </nav>
 
