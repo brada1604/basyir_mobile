@@ -5,7 +5,7 @@
                 <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/Back.png" alt="SVG Happyku" width="30em" height="30em" />
             </a>
             <a href="/waktu_sholat_sunnah" class="nav-link text-center">
-                <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/next.png" alt="SVG Happyku" width="30em" height="30em" style= "margin-bottom: 10px"/>
+                <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/next.png" alt="SVG Happyku" width="30em" height="30em" style="margin-bottom: 10px" />
             </a>
         </nav>
         <div class="container">
@@ -18,7 +18,7 @@
                         <div class="text w-100">
                             <nav class=" navbar container">
                                 <h4 style="font-family: 'Inter',Arial, sans-serif; color: #629C87; margin-bottom:15px;">Subuh (Fajr)</h4>
-                                <h4 style="font-family: 'Inter',Arial, sans-serif; color: #629C87; margin-bottom:15px;"><?= $pengingat_subuh;?></h4>
+                                <h4 style="font-family: 'Inter',Arial, sans-serif; color: #629C87; margin-bottom:15px;"><?= $pengingat_subuh; ?></h4>
                             </nav>
                         </div>
                     </div>
@@ -29,7 +29,7 @@
                         <div class="text w-100">
                             <nav class=" navbar container">
                                 <h4 style="font-family: 'Inter',Arial, sans-serif; color: #629C87; margin-bottom:15px;">Dzuhur</h4>
-                                <h4 style="font-family: 'Inter',Arial, sans-serif; color: #629C87; margin-bottom:15px;"><?= $pengingat_dzuhur;?></h4>
+                                <h4 style="font-family: 'Inter',Arial, sans-serif; color: #629C87; margin-bottom:15px;"><?= $pengingat_dzuhur; ?></h4>
                             </nav>
                         </div>
                     </div>
@@ -40,7 +40,7 @@
                         <div class="text w-100">
                             <nav class=" navbar container">
                                 <h4 style="font-family: 'Inter',Arial, sans-serif; color: #629C87; margin-bottom:15px;">Ashar</h4>
-                                <h4 style="font-family: 'Inter',Arial, sans-serif; color: #629C87; margin-bottom:15px;"><?= $pengingat_ashar;?></h4>
+                                <h4 style="font-family: 'Inter',Arial, sans-serif; color: #629C87; margin-bottom:15px;"><?= $pengingat_ashar; ?></h4>
                             </nav>
                         </div>
                     </div>
@@ -51,7 +51,7 @@
                         <div class="text w-100">
                             <nav class=" navbar container">
                                 <h4 style="font-family: 'Inter',Arial, sans-serif; color: #629C87; margin-bottom:15px;">Maghrib</h4>
-                                <h4 style="font-family: 'Inter',Arial, sans-serif; color: #629C87; margin-bottom:15px;"><?= $pengingat_maghrib;?></h4>
+                                <h4 style="font-family: 'Inter',Arial, sans-serif; color: #629C87; margin-bottom:15px;"><?= $pengingat_maghrib; ?></h4>
                             </nav>
                         </div>
                     </div>
@@ -62,7 +62,7 @@
                         <div class="text w-100">
                             <nav class=" navbar container">
                                 <h4 style="font-family: 'Inter',Arial, sans-serif; color: #629C87; margin-bottom:15px;">Isya</h4>
-                                <h4 style="font-family: 'Inter',Arial, sans-serif; color: #629C87; margin-bottom:15px;"><?= $pengingat_isya;?></h4>
+                                <h4 style="font-family: 'Inter',Arial, sans-serif; color: #629C87; margin-bottom:15px;"><?= $pengingat_isya; ?></h4>
                             </nav>
                         </div>
                     </div>
