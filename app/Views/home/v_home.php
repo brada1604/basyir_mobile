@@ -117,41 +117,41 @@
     </div>
 
     <div class="wawasan_islami">
-        <section class="ftco-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-15 ">
-                        <nav class="navbar navbar-expand-lg navbar-light">
-                            <a href="/wawasan_islami" class="navbar-brand">
-                                <h4 class="heading-section mb-0" style="color: #629C87;">Wawasan Islami</h4>
-                            </a>
-                        </nav>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="featured-carousel owl-carousel">
-                            <?php
-                            $nomor = 1;
-                            foreach ($getWawasanIslamiLandingPage as $gwil) :
-                            ?>
-                                <div class="item">
-                                    <div class="work">
-                                        <div class="img d-flex align-items-end justify-content-center" style="background-image: url(<?= base_url($gwil->gambar_wawasan_islami); ?>">
-                                            <div class="text w-100">
-                                                <span class="cat"><?= $gwil->nama_kategori_wawasan_islami; ?></span>
-                                                <h3><a href="/wawasan_islami/detail_wawasan_islami/<?= $gwil->id_wawasan_islami; ?>">
-                                                        <p><?= $gwil->judul_wawasan_islami; ?></p>
-                                                    </a></h3>
+        <!-- <section class="ftco-section"> -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-15 ">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a href="/wawasan_islami" class="navbar-brand">
+                            <h4 class="heading-section mb-0" style="color: #629C87;">Wawasan Islami</h4>
+                        </a>
+                    </nav>
+                </div>
+                <div class="col-md-12">
+                    <div class="featured-carousel owl-carousel">
+                        <?php
+                        $nomor = 1;
+                        foreach ($getWawasanIslamiLandingPage as $gwil) :
+                        ?>
+                            <div class="item">
+                                <div class="work">
+                                    <div class="img d-flex align-items-end justify-content-center" style="background-image: url(<?= base_url($gwil->gambar_wawasan_islami); ?>">
+                                        <div class="text w-100">
+                                            <span class="cat"><?= $gwil->nama_kategori_wawasan_islami; ?></span>
+                                            <h3><a href="/wawasan_islami/detail_wawasan_islami/<?= $gwil->id_wawasan_islami; ?>">
+                                                    <p><?= $gwil->judul_wawasan_islami; ?></p>
+                                                </a></h3>
 
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            <?php endforeach; ?>
-                        </div>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+        <!-- </section> -->
     </div>
 </body>
 

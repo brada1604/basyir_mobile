@@ -25,23 +25,25 @@
                             $nomor = 1;
                             foreach ($getBeritaByStatus as $row) :
                             ?>
-                            
+
                                 <div class="card">
                                     <img src="<?= base_url($row->gambar_berita); ?>" alt="Berita" style="width:100%">
                                     <div class="container">
-                                        <a href="/berita/detail_berita/<?= $row->id_berita; ?>"><p><?= $row->judul_berita; ?></p></a>
+                                        <a href="/berita/detail_berita/<?= $row->id_berita; ?>">
+                                            <p><?= $row->judul_berita; ?></p>
+                                        </a>
                                     </div>
                                 </div>
-                            
+
                             <?php endforeach; ?>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <?php foreach ($getKategoriBeritaForm as $gkbf) :?>
-            <!-- </section> -->
-            <section class="ftco-section">
+            <?php foreach ($getKategoriBeritaForm as $gkbf) : ?>
+                <!-- </section> -->
+                <!-- <section class="ftco-section"> -->
                 <div class="container">
                     <div class="row">
                         <div class="col-md-15 ">
@@ -54,24 +56,26 @@
                         <div class="col-md-12">
                             <div class="featured-carousel owl-carousel">
                                 <?php
-                                    $nomor = 1;
-                                    foreach ($getBeritaByStatus as $gbbs) :
+                                $nomor = 1;
+                                foreach ($getBeritaByStatus as $gbbs) :
                                 ?>
-                                        <div class="card">
-                                            <img src="<?= base_url($gbbs->gambar_berita); ?>" alt="Berita" style="width:100%">
-                                            <div class="container">
-                                                <a href="/berita/detail_berita/<?= $gbbs->id_berita; ?>"><p><?= $gbbs->judul_berita; ?></p></a>
-                                            </div>
+                                    <div class="card">
+                                        <img src="<?= base_url($gbbs->gambar_berita); ?>" alt="Berita" style="width:100%">
+                                        <div class="container">
+                                            <a href="/berita/detail_berita/<?= $gbbs->id_berita; ?>">
+                                                <p><?= $gbbs->judul_berita; ?></p>
+                                            </a>
                                         </div>
+                                    </div>
                                 <?php endforeach; ?>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+                <!-- </section> -->
             <?php endforeach; ?>
 
-            
+
         </div>
 
     </div>
