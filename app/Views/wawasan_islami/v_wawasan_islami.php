@@ -9,9 +9,9 @@
             </a>
         </nav>
         <div>
-            <?php foreach ($getKategoriWawasanIslamiForm as $gkwif) :?>
-            <!-- </section> -->
-            <section class="ftco-section">
+            <?php foreach ($getKategoriWawasanIslamiForm as $gkwif) : ?>
+                <!-- </section> -->
+                <!-- <section class="ftco-section"> -->
                 <div class="container">
                     <div class="row">
                         <div class="col-md-15 ">
@@ -24,24 +24,26 @@
                         <div class="col-md-12">
                             <div class="featured-carousel owl-carousel">
                                 <?php
-                                    $nomor = 1;
-                                    foreach ($getWawasanIslamiByStatus as $gwibs) :
+                                $nomor = 1;
+                                foreach ($getWawasanIslamiByStatus as $gwibs) :
                                 ?>
-                                        <div class="card">
+                                    <div class="card">
+                                        <a href="/wawasan_islami/detail_wawasan_islami/<?= $gwibs->id_wawasan_islami; ?>">
                                             <img src="<?= base_url($gwibs->gambar_wawasan_islami); ?>" alt="WawasanIslami" style="width:100%">
                                             <div class="container">
-                                                <a href="/wawasan_islami/detail_wawasan_islami/<?= $gwibs->id_wawasan_islami; ?>"><p><?= $gwibs->judul_wawasan_islami; ?></p></a>
+                                                <p><?= $gwibs->judul_wawasan_islami; ?></p>
                                             </div>
-                                        </div>
+                                        </a>
+                                    </div>
                                 <?php endforeach; ?>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+                <!-- </section> -->
             <?php endforeach; ?>
 
-            
+
         </div>
 
     </div>
