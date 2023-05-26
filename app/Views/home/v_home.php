@@ -20,62 +20,57 @@ if ($jam <= $pengingat_imsak) {
     $waktu_solat_yang_tampil = $pengingat_imsak;
     $selisih = strtotime($pengingat_imsak) - strtotime($jam);
     $selisih_jam   = floor($selisih / (60 * 60));
-    $selisih_menit = $selisih - ( $selisih_jam * (60 * 60) );
+    $selisih_menit = $selisih - ($selisih_jam * (60 * 60));
 
     // echo '<br>'.$selisih_jam;
     // echo '<br>'.floor( $selisih_menit / 60 );
-}
-elseif ($jam <= $pengingat_subuh) {
+} elseif ($jam <= $pengingat_subuh) {
     // echo 'mendekati Subuh';
     $solat_yang_tampil = 'Subuh';
     $waktu_solat_yang_tampil = $pengingat_subuh;
     $selisih = strtotime($pengingat_subuh) - strtotime($jam);
     $selisih_jam   = floor($selisih / (60 * 60));
-    $selisih_menit = $selisih - ( $selisih_jam * (60 * 60) );
+    $selisih_menit = $selisih - ($selisih_jam * (60 * 60));
 
     // echo '<br>'.$selisih_jam;
     // echo '<br>'.floor( $selisih_menit / 60 );
-}
-elseif ($jam <= $pengingat_dzuhur) {
+} elseif ($jam <= $pengingat_dzuhur) {
     // echo 'mendekati Dzuhur';
     $solat_yang_tampil = 'Dzuhur';
     $waktu_solat_yang_tampil = $pengingat_dzuhur;
     $selisih = strtotime($pengingat_dzuhur) - strtotime($jam);
     $selisih_jam   = floor($selisih / (60 * 60));
-    $selisih_menit = $selisih - ( $selisih_jam * (60 * 60) );
+    $selisih_menit = $selisih - ($selisih_jam * (60 * 60));
 
     // echo '<br>'.$selisih_jam;
     // echo '<br>'.floor( $selisih_menit / 60 );
-}
-elseif ($jam <= $pengingat_ashar) {
+} elseif ($jam <= $pengingat_ashar) {
     // echo 'mendekati Ashar';
     $solat_yang_tampil = 'Ashar';
     $waktu_solat_yang_tampil = $pengingat_ashar;
     $selisih = strtotime($pengingat_ashar) - strtotime($jam);
     $selisih_jam   = floor($selisih / (60 * 60));
-    $selisih_menit = $selisih - ( $selisih_jam * (60 * 60) );
+    $selisih_menit = $selisih - ($selisih_jam * (60 * 60));
 
     // echo '<br>'.$selisih_jam;
     // echo '<br>'.floor( $selisih_menit / 60 );
-}
-elseif ($jam <= $pengingat_maghrib) {
+} elseif ($jam <= $pengingat_maghrib) {
     // echo 'mendekati Magrib';
     $solat_yang_tampil = 'Maghrib';
     $waktu_solat_yang_tampil = $pengingat_maghrib;
     $selisih = strtotime($pengingat_maghrib) - strtotime($jam);
     $selisih_jam   = floor($selisih / (60 * 60));
-    $selisih_menit = $selisih - ( $selisih_jam * (60 * 60) );
+    $selisih_menit = $selisih - ($selisih_jam * (60 * 60));
 
     // echo '<br>'.$selisih_jam;
     // echo '<br>'.floor( $selisih_menit / 60 );
-}
-elseif ($jam <= $pengingat_isya) {
+} elseif ($jam <= $pengingat_isya) {
     // echo 'mendekati Isya';
     $solat_yang_tampil = 'Isya';
     $waktu_solat_yang_tampil = $pengingat_isya;
     $selisih = strtotime($pengingat_isya) - strtotime($jam);
     $selisih_jam   = floor($selisih / (60 * 60));
-    $selisih_menit = $selisih - ( $selisih_jam * (60 * 60) );
+    $selisih_menit = $selisih - ($selisih_jam * (60 * 60));
 
     // echo '<br>'.$selisih_jam;
     // echo '<br>'.floor( $selisih_menit / 60 );
@@ -108,10 +103,12 @@ elseif ($jam <= $pengingat_isya) {
 <body style="background-color: #ffff;">
     <div class="container" style="background-image: url('/assets/image/home/Background_atas.jpg'); background-repeat: no-repeat; background-position: center; margin-top: -3%">
         <nav class="navbar navbar-expand-lg">
-            <h5 style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;">
-                <p id="DisplayDate" onload="showDate()" style="margin-top: 15%"></p>
-                <p id="DisplayClock" class="clock" onload="showTime()" style="margin-top: -15%"></p>
-            </h5>
+            <a href="/kalender">
+                <h5 style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;">
+                    <p id="DisplayDate" onload="showDate()" style="margin-top: 15%"></p>
+                    <p id="DisplayClock" class="clock" onload="showTime()" style="margin-top: -15%"></p>
+                </h5>
+            </a>
             <div>
                 <a href="/notifikasi"><img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/notification_putih.png" alt="SVG Happyku" width="40em" height="40em" style="color: white;" /></a>
             </div>
@@ -161,8 +158,10 @@ elseif ($jam <= $pengingat_isya) {
                         <div class="d-flex align-items-end" style="background-image: url('/assets/image/Background.png'); border-radius: 20px; ">
                             <nav class="navbar navbar-dark navbar-expand d-md-none d-lg-none d-xl-none p-0">
                                 <div class="text w-100">
-                                    <h5 class="container" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #ffff; ">Waktu Sholat</h5>
-                                    <h6 class="container" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #ffff;"><?= $solat_yang_tampil ?> <?= $waktu_solat_yang_tampil ?><br> <?= $selisih_jam ?>:<?= floor( $selisih_menit / 60 ) ?> Tersisa</h6>
+                                    <a href="/jadwal_sholat_wajib">
+                                        <h5 class="container" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #ffff; ">Waktu Sholat</h5>
+                                        <h6 class="container" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #ffff;"><?= $solat_yang_tampil ?> <?= $waktu_solat_yang_tampil ?><br> <?= $selisih_jam ?>:<?= floor($selisih_menit / 60) ?> Tersisa</h6>
+                                    </a>
                                     <!-- <h6 style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;">
                                         <p id="CountdownTimer" onload="countDownPrayerTime()" style="margin-top: -15%"></p>
                                     </h6> -->
