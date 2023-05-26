@@ -66,6 +66,7 @@ $routes->get('/broadcast', 'PengaturanBroadcastController::index');
 
 // ROUTE NOTIFIKASI
 $routes->get('/notifikasi', 'NotifikasiController::index');
+$routes->get('/notifikasi/read/(:segment)', 'NotifikasiController::read/$1', ['filter' => 'auth']); // (:segment) = parameter, $1 = parameter pertama yang di ambil
 // ROUTE NOTIFIKASI - END
 
 

@@ -11,10 +11,10 @@
         <div>
           	<table class="table">
 			  	<tbody>
-			  		<?php foreach ($getNotifikasi as $row) :?>
+			  		<?php foreach ($getNotifikasiByIdUserLogin as $row) :?>
 			    	<tr>
 			      		<th scope="row"><img src="<?= base_url();?>/assets/assets-mobile/icon-menu/notification.svg" alt="SVG Happyku" width="25em" height="25em"/></th>
-			    	  	<td><?= $row->pesan_notifikasi?></td>
+			    	  	<td><a href="/notifikasi/read/<?= $row->id_target_notifikasi?>"><?= $row->pesan_notifikasi?></a></td>
 			    	</tr>
 			    	<?php endforeach; ?>
 			    	

@@ -107,6 +107,7 @@ INFO - 2023-05-26 07:46:44 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-05-26 07:46:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-26 07:48:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-26 07:48:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+<<<<<<< Updated upstream
 INFO - 2023-05-26 08:57:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-26 08:58:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2023-05-26 08:58:21 --> Undefined variable $nama_kota
@@ -162,3 +163,303 @@ in APPPATH\Views\jadwal_sholat\v_jadwal_sholat_sunnah.php on line 11.
 10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
 INFO - 2023-05-26 08:58:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-26 08:59:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+=======
+ERROR - 2023-05-26 09:50:36 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_basyir_mobil...', 3306, '', 0)
+#1 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\basyir_mobile\app\Models\BeritaModel.php(76): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 C:\xampp\htdocs\basyir_mobile\app\Controllers\Home.php(15): App\Models\BeritaModel->getBeritaLandingPage()
+#5 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\basyir_mobile\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\basyir_mobile\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\basyir_mobile\app\Models\BeritaModel.php(76): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#3 C:\xampp\htdocs\basyir_mobile\app\Controllers\Home.php(15): App\Models\BeritaModel->getBeritaLandingPage()
+#4 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\basyir_mobile\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\basyir_mobile\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2023-05-26 09:50:36 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\BeritaModel.php(76): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_berita where status_berita = \'2\' ORDER BY created_at desc limit 3')
+ 3 APPPATH\Controllers\Home.php(15): App\Models\BeritaModel->getBeritaLandingPage()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-26 09:50:50 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db_basyir_mobile' in C:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_basyir_mobil...', 3306, '', 0)
+#1 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\basyir_mobile\app\Models\BeritaModel.php(76): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 C:\xampp\htdocs\basyir_mobile\app\Controllers\Home.php(15): App\Models\BeritaModel->getBeritaLandingPage()
+#5 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\basyir_mobile\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\basyir_mobile\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db_basyir_mobile' in C:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\basyir_mobile\app\Models\BeritaModel.php(76): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#3 C:\xampp\htdocs\basyir_mobile\app\Controllers\Home.php(15): App\Models\BeritaModel->getBeritaLandingPage()
+#4 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\basyir_mobile\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\basyir_mobile\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2023-05-26 09:50:50 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'db_basyir_mobile'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\BeritaModel.php(76): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_berita where status_berita = \'2\' ORDER BY created_at desc limit 3')
+ 3 APPPATH\Controllers\Home.php(15): App\Models\BeritaModel->getBeritaLandingPage()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-26 09:50:53 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db_basyir_mobile' in C:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_basyir_mobil...', 3306, '', 0)
+#1 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\basyir_mobile\app\Models\BeritaModel.php(76): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 C:\xampp\htdocs\basyir_mobile\app\Controllers\Home.php(15): App\Models\BeritaModel->getBeritaLandingPage()
+#5 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\basyir_mobile\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\basyir_mobile\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db_basyir_mobile' in C:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\basyir_mobile\app\Models\BeritaModel.php(76): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#3 C:\xampp\htdocs\basyir_mobile\app\Controllers\Home.php(15): App\Models\BeritaModel->getBeritaLandingPage()
+#4 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\basyir_mobile\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\basyir_mobile\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2023-05-26 09:50:53 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'db_basyir_mobile'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\BeritaModel.php(76): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_berita where status_berita = \'2\' ORDER BY created_at desc limit 3')
+ 3 APPPATH\Controllers\Home.php(15): App\Models\BeritaModel->getBeritaLandingPage()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-26 09:50:54 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db_basyir_mobile' in C:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_basyir_mobil...', 3306, '', 0)
+#1 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\basyir_mobile\app\Models\BeritaModel.php(76): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 C:\xampp\htdocs\basyir_mobile\app\Controllers\Home.php(15): App\Models\BeritaModel->getBeritaLandingPage()
+#5 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\basyir_mobile\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\basyir_mobile\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db_basyir_mobile' in C:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\basyir_mobile\app\Models\BeritaModel.php(76): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#3 C:\xampp\htdocs\basyir_mobile\app\Controllers\Home.php(15): App\Models\BeritaModel->getBeritaLandingPage()
+#4 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\basyir_mobile\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\basyir_mobile\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2023-05-26 09:50:54 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'db_basyir_mobile'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\BeritaModel.php(76): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_berita where status_berita = \'2\' ORDER BY created_at desc limit 3')
+ 3 APPPATH\Controllers\Home.php(15): App\Models\BeritaModel->getBeritaLandingPage()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-26 09:50:54 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db_basyir_mobile' in C:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_basyir_mobil...', 3306, '', 0)
+#1 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\basyir_mobile\app\Models\BeritaModel.php(76): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 C:\xampp\htdocs\basyir_mobile\app\Controllers\Home.php(15): App\Models\BeritaModel->getBeritaLandingPage()
+#5 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\basyir_mobile\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\basyir_mobile\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db_basyir_mobile' in C:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\basyir_mobile\app\Models\BeritaModel.php(76): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#3 C:\xampp\htdocs\basyir_mobile\app\Controllers\Home.php(15): App\Models\BeritaModel->getBeritaLandingPage()
+#4 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\basyir_mobile\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\basyir_mobile\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2023-05-26 09:50:54 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'db_basyir_mobile'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\BeritaModel.php(76): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_berita where status_berita = \'2\' ORDER BY created_at desc limit 3')
+ 3 APPPATH\Controllers\Home.php(15): App\Models\BeritaModel->getBeritaLandingPage()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-26 09:50:54 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db_basyir_mobile' in C:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_basyir_mobil...', 3306, '', 0)
+#1 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\basyir_mobile\app\Models\BeritaModel.php(76): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 C:\xampp\htdocs\basyir_mobile\app\Controllers\Home.php(15): App\Models\BeritaModel->getBeritaLandingPage()
+#5 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\basyir_mobile\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\basyir_mobile\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db_basyir_mobile' in C:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\basyir_mobile\app\Models\BeritaModel.php(76): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#3 C:\xampp\htdocs\basyir_mobile\app\Controllers\Home.php(15): App\Models\BeritaModel->getBeritaLandingPage()
+#4 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\basyir_mobile\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\basyir_mobile\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2023-05-26 09:50:54 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'db_basyir_mobile'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\BeritaModel.php(76): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_berita where status_berita = \'2\' ORDER BY created_at desc limit 3')
+ 3 APPPATH\Controllers\Home.php(15): App\Models\BeritaModel->getBeritaLandingPage()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-26 09:50:54 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db_basyir_mobile' in C:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_basyir_mobil...', 3306, '', 0)
+#1 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\basyir_mobile\app\Models\BeritaModel.php(76): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 C:\xampp\htdocs\basyir_mobile\app\Controllers\Home.php(15): App\Models\BeritaModel->getBeritaLandingPage()
+#5 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\basyir_mobile\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\basyir_mobile\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db_basyir_mobile' in C:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\basyir_mobile\app\Models\BeritaModel.php(76): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#3 C:\xampp\htdocs\basyir_mobile\app\Controllers\Home.php(15): App\Models\BeritaModel->getBeritaLandingPage()
+#4 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\basyir_mobile\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\basyir_mobile\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2023-05-26 09:50:54 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'db_basyir_mobile'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\BeritaModel.php(76): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_berita where status_berita = \'2\' ORDER BY created_at desc limit 3')
+ 3 APPPATH\Controllers\Home.php(15): App\Models\BeritaModel->getBeritaLandingPage()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-26 09:52:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 09:52:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-26 10:06:23 --> Undefined variable $model_target_notifikasi
+in APPPATH\Controllers\NotifikasiController.php on line 14.
+ 1 APPPATH\Controllers\NotifikasiController.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $model_target_notifikasi', 'APPPATH\\Controllers\\NotifikasiController.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\NotifikasiController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NotifikasiController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-26 10:06:55 --> Class "App\Models\TargetNotifikasiModel" not found
+in APPPATH\Controllers\NotifikasiController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\NotifikasiController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NotifikasiController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-26 10:07:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:07:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:07:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:07:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:07:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:10:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:10:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:11:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:11:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:11:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:11:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:11:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:11:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:12:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:12:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:13:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:13:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:14:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:14:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:14:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:14:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:14:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+>>>>>>> Stashed changes
