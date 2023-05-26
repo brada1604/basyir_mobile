@@ -75,6 +75,14 @@ if ($jam <= $pengingat_imsak) {
     // echo '<br>'.$selisih_jam;
     // echo '<br>'.floor( $selisih_menit / 60 );
 }
+else{
+    $solat_yang_tampil = 'Imsak';
+    $waktu_solat_yang_tampil = $pengingat_imsak;
+    $selisih_jam   = '0';
+    $selisih_menit = '0';
+}
+
+
 
 
 // echo "<br>--------------------------------------<br>";
@@ -84,10 +92,6 @@ if ($jam <= $pengingat_imsak) {
 // echo '<br>'.floor( $selisih_menit / 60 );
 
 
-// $arr = str_split($jadwal_notifikasi, 1);
-// $tahun = $arr[0].$arr[1].$arr[2].$arr[3];
-
-// echo 'waktu sisa'.date_diff($pengingat_isya, $waktu_sekarang);
 ?>
 
 <!DOCTYPE html>
