@@ -20,7 +20,7 @@
                             <?php } ?>
                             <div class="col-md-12">
                                 <div class="list-group list-group-flush">
-                                    <div class="list-group-item p-3">
+                                    <!-- <div class="list-group-item p-3">
                                         <div class="row align-items-start">
                                             <div class="col-md-2 mb-8pt mb-md-0">
                                                 <div class="media align-items-left">
@@ -29,8 +29,38 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="col mb-8pt mb-md-0"> -->
+                                                <input type="hidden" name="id_user" type="text" class="form-control" value="<?= $session->get('id') ?>" placeholder="<?= $session->get('name'); ?> - <?= $session->get('email'); ?>" readonly />
+                                            <!-- </div>
+                                        </div>
+                                    </div> -->
+
+                                    <!-- <div class="list-group-item p-3">
+                                        <div class="row align-items-start">
+                                            <div class="col-md-2 mb-8pt mb-md-0">
+                                                <div class="media align-items-left">
+                                                    <div class="d-flex flex-column media-body media-middle">
+                                                        <span class="card-title">ID Amalan Yaumi</span>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                                            <!-- <div class="col mb-8pt mb-md-0"> -->
+                                                <input type="hidden" name="id_amalan_yaumi" value="<?= $id_amalan_yaumi ?>" type="text" class="form-control" placeholder="Masukan ID Amalan Yaumi" readonly />
+                                            <!-- </div>
+                                        </div>
+                                    </div> -->
+
+                                    <div class="list-group-item p-3">
+                                        <div class="row align-items-start">
+                                            <div class="col-md-2 mb-8pt mb-md-0">
+                                                <div class="media align-items-left">
+                                                    <div class="d-flex flex-column media-body media-middle">
+                                                        <span class="card-title">Amalan Yaumi</span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="col mb-8pt mb-md-0">
-                                                <input name="id_user" type="text" class="form-control" value="<?= $session->get('id') ?>" placeholder="<?= $session->get('name'); ?> - <?= $session->get('email'); ?>" readonly />
+                                                <input name="judul_amalan_yaumi" value="<?= $judul_amalan_yaumi ?>" type="text" class="form-control" placeholder="Masukan ID Amalan Yaumi" readonly />
                                             </div>
                                         </div>
                                     </div>
@@ -40,12 +70,13 @@
                                             <div class="col-md-2 mb-8pt mb-md-0">
                                                 <div class="media align-items-left">
                                                     <div class="d-flex flex-column media-body media-middle">
-                                                        <span class="card-title">ID Amalan Yaumi</span>
+                                                        <span
+                                                        class="card-title">Jadwal</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col mb-8pt mb-md-0">
-                                                <input name="id_amalan_yaumi" value="<?= $id_amalan_yaumi ?>" type="text" class="form-control" placeholder="Masukan ID Amalan Yaumi" readonly />
+                                                <input type="datetime-local" id="jadwal_notifikasi" name="jadwal_notifikasi" value="<?= old('jadwal_notifikasi') ?>" type="text" class="form-control" placeholder="Masukan Link Notifikasi" required />
                                             </div>
                                         </div>
                                     </div>

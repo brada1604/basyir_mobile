@@ -46,6 +46,7 @@ $routes->post('/rencana_kegiatan/save', 'RencanaKegiatanController::save');
 $routes->get('/rencana_kegiatan/edit', 'RencanaKegiatanController::edit');
 $routes->post('/rencana_kegiatan/update', 'RencanaKegiatanController::update');
 $routes->get('/rencana_kegiatan/delete/(:segment)', 'RencanaKegiatanController::delete/$1', ['filter' => 'auth']); // (:segment) = parameter, $1 = parameter pertama yang di ambil
+$routes->get('/rencana_kegiatan/done/(:segment)', 'RencanaKegiatanController::done/$1', ['filter' => 'auth']); // (:segment) = parameter, $1 = parameter pertama yang di ambil
 //ROUTE RENCANA KEGIATAN - END
 
 //ROUTE BERITA PAGE

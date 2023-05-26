@@ -77,4 +77,10 @@ class RencanaKegiatanModel extends Model
             return $query->getResult(); // return berupa array objek
         }
     }
+
+    public function getRencanaKegiatanByIdUserLogin(){
+        $id_user = session()->get('id');
+        $query = $this->db->query("SELECT tbl_detail_rencana_kegiatan.id_detail_rencana_kegiatan, tbl_detail_rencana_kegiatan.status_detail_rencana_kegiatan, tbl_amalan_yaumi.judul_amalan_yaumi, tbl_rencana_kegiatan.id_user, tbl_detail_rencana_kegiatan.rencana_jadwal, tbl_detail_rencana_kegiatan.realisasi_jadwal FROM tbl_rencana_kegiatan INNER JOIN tbl_detail_rencana_kegiatan ON tbl_detail_rencana_kegiatan.id_rencana_kegiatan = tbl_rencana_kegiatan.id_rencana_kegiatan INNER JOIN tbl_amalan_yaumi ON tbl_rencana_kegiatan.id_amalan_yaumi = tbl_amalan_yaumi.id_amalan_yaumi WHERE tbl_rencana_kegiatan.id_user = '$id_user' ORDER BY tbl_detail_rencana_kegiatan.status_detail_rencana_kegiatan ASC ");
+            return $query->getResult(); // return berupa array objek
+    }
 }

@@ -30,11 +30,18 @@
     <table class="table">
         <tbody>
             <?php $nomor = 1;
-            foreach ($getRencanaKegiatan as $row) : ?>
+            foreach ($getRencanaKegiatanByIdUserLogin as $row) : ?>
                 <tr>
                     <!-- <th scope="row"><?= $nomor++; ?></th> -->
                     <td><?= $row->judul_amalan_yaumi ?></td>
-                    <td><a class="hapus" class="btn btn-danger" href="/rencana_kegiatan/delete/<?= $row->id_rencana_kegiatan; ?>"><button type="button" class="btn btn-danger">Hapus</button></a></td>
+                    <td><?= $row->rencana_jadwal ?></td>
+                    <td><?= $row->realisasi_jadwal ?></td>
+                    <td>
+                        <?php if ($row->status_detail_rencana_kegiatan == 1): ?>
+                            <a class="hapus" class="btn btn-success" href="/rencana_kegiatan/done/<?= $row->id_detail_rencana_kegiatan; ?>"><button type="button" class="btn btn-success">Sudah Dilakukan</button></a>
+                        <?php endif ?>
+                    </td>
+                    <td><a class="hapus" class="btn btn-danger" href="/rencana_kegiatan/delete/<?= $row->id_detail_rencana_kegiatan; ?>"><button type="button" class="btn btn-danger">Delete</button></a></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
