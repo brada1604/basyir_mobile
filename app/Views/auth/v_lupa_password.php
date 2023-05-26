@@ -40,38 +40,21 @@
                             <div class="col-lg-6 mx-auto">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Register User</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Lupa Password!</h1>
                                         <?php if(session()->getFlashdata('msg')):?>
                                             <label style="color: red;"> <?= session()->getFlashdata('msg') ?> </label>
                                         <?php endif;?>
                                     </div>
-                                    <form class="user" action="/user/register_user/save" method="post">
-                                        <div class="form-group">
-                                            <select class="form-control" name="role" required>
-                                                <option value="">-- Pilih Role --</option>
-                                                <option value="2">Kontributor</option>
-                                                <option value="3">Kreator</option>
-                                                <option value="4">User</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="name" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Ketikkan Nama kamu..." required>
-                                        </div>
+                                    <form class="user" action="/user/reset_password" method="post">
                                         <div class="form-group">
                                             <input type="email" name="email" class="form-control form-control-user"
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
                                                 placeholder="Ketikkan email kamu..." required>
                                         </div>
-                                        <div class="form-group">
+                                        <!-- <div class="form-group">
                                             <input type="password" name="password" class="form-control form-control-user"
                                                 id="exampleInputPassword" placeholder="Ketikkan password kamu.." required>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" name="confirm_password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Ketikkan password konfirmasi kamu.." required>
-                                        </div>
+                                        </div> -->
                                         <!-- <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
                                                 <input type="checkbox" class="custom-control-input" id="customCheck">
