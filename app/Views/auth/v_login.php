@@ -73,10 +73,10 @@
                                         </a>
                                         <hr> -->
                                     <div class="text-center">
-                                        <a class="small" href="forgot-password.html">Lupa password?</a>
+                                        <a class="small" href="/lupa_password">Lupa password?</a>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="register.html">Buat akun baru</a>
+                                        <a class="small" href="/register_user">Buat akun baru</a>
                                     </div>
                                 </div>
                             </div>
