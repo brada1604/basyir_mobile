@@ -8,10 +8,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-2 text-center">
-                        <h2 class="heading-section mb-5  bold-text" style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;">Bandung</h2>
-                        <h2 style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;">
-                            <p id="DisplayClock" class="clock" onload="showTime()" style="margin-top: -17%"></p>
-                        </h2>
+                        <h4 style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;">
+                            <p id="DisplayClock" class="clock" onload="showTime()" style="margin-top: 0%"></p>
+                        </h4>
                         <h5 style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;">
                             <p id="DisplayDate" onload="showDate()" style="margin-top: -7%"></p>
                         </h5>

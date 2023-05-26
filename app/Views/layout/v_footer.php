@@ -63,6 +63,58 @@ date_default_timezone_set('Asia/Jakarta');
     showTime();
 </script>
 
+<p id="CountdownTimer"></p>
+
+<script type="text/javascript">
+    function countDownPrayerTime() {
+        // Menggunakan API Kemenag RI untuk mendapatkan jadwal shalat
+        var apiURL = "https://api.banghasan.com/sholat/format/json/jadwal/kota/667/tanggal/";
+        fetch(apiURL)
+            .then(response => response.json())
+            .then(data => {
+                var jadwalShalat = data.jadwal.data;
+
+                // Ambil waktu shalat yang diperlukan dari jadwal shalat
+                var prayerTime = jadwalShalat[0].waktu; // Misalnya, mengambil waktu shalat pertama
+
+                // Konversi waktu shalat menjadi objek Date
+                var prayerDateTime = new Date(prayerTime);
+                var currentDateTime = new Date();
+
+                // Hitung selisih waktu antara waktu shalat dan waktu sekarang
+                var timeDiff = prayerDateTime.getTime() - currentDateTime.getTime();
+                if (timeDiff <= 0) {
+                    // Waktu shalat sudah berlalu, lakukan tindakan sesuai kebutuhan
+                    return;
+                }
+
+                // Hitung jam, menit, dan detik yang tersisa
+                var hours = Math.floor(timeDiff / (1000 * 60 * 60));
+                var minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+                // Format waktu dengan menambahkan leading zero jika diperlukan
+                var formattedTime = (hours < 10 ? "0" + hours : hours) + ":" +
+                    (minutes < 10 ? "0" + minutes : minutes) + ":" +
+                    (seconds < 10 ? "0" + seconds : seconds) + " Waktu Shalat";
+
+                // Tampilkan waktu countdown pada elemen dengan ID "CountdownTimer"
+                document.getElementById("CountdownTimer").innerText = formattedTime;
+                document.getElementById("CountdownTimer").textContent = formattedTime;
+
+                // Update countdown setiap satu detik
+                setTimeout(countDownPrayerTime, 1000);
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    }
+
+    countDownPrayerTime();
+</script>
+
+
+
 </body>
 
 </html>

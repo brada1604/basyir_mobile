@@ -66,6 +66,9 @@
                                 <div class="text w-100">
                                     <h5 class="container" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #ffff; ">Waktu Sholat</h5>
                                     <h6 class="container" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #ffff;">“Dzuhur <br> 00:07:59”</h6>
+                                    <!-- <h6 style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;">
+                                        <p id="CountdownTimer" onload="countDownPrayerTime()" style="margin-top: -15%"></p>
+                                    </h6> -->
                                 </div>
                                 <img src="/assets/assets-mobile/icon-menu/adzan.png" alt="orang adzan" height="100px" style="margin-right: -35%;">
                             </nav>
