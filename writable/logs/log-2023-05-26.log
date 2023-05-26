@@ -463,3 +463,192 @@ INFO - 2023-05-26 10:14:28 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-05-26 10:14:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-26 10:14:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 >>>>>>> Stashed changes
+INFO - 2023-05-26 10:19:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-26 10:19:07 --> mysqli_sql_exception: Unknown column 'status_doa_detail' in 'where clause' in D:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM t...', 0)
+#1 D:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 D:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 D:\xampp\htdocs\basyir_mobile\app\Models\DoaDetailModel.php(68): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 D:\xampp\htdocs\basyir_mobile\app\Controllers\DoaController.php(36): App\Models\DoaDetailModel->getDoaDetailByStatus('2', false)
+#5 D:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(934): App\Controllers\DoaController->index2('2')
+#6 D:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DoaController))
+#7 D:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\basyir_mobile\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\basyir_mobile\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-05-26 10:19:07 --> Unknown column 'status_doa_detail' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Models\DoaDetailModel.php(68): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_doa_detail where id_doa = \'2\' AND status_doa_detail=\'1\' ')
+ 2 APPPATH\Controllers\DoaController.php(36): App\Models\DoaDetailModel->getDoaDetailByStatus('2', false)
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\DoaController->index2('2')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DoaController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-26 10:19:33 --> mysqli_sql_exception: Table 'db_basyir.tbl_kategori_wawasan_islami' doesn't exist in D:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM t...', 0)
+#1 D:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 D:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 D:\xampp\htdocs\basyir_mobile\app\Models\WawasanIslamiModel.php(74): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 D:\xampp\htdocs\basyir_mobile\app\Controllers\Home.php(20): App\Models\WawasanIslamiModel->getWawasanIslamiLandingPage()
+#5 D:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 D:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\basyir_mobile\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\basyir_mobile\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-05-26 10:19:33 --> Table 'db_basyir.tbl_kategori_wawasan_islami' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Models\WawasanIslamiModel.php(74): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_wawasan_islami as a INNER JOIN tbl_user as b on a.id_user = b.id INNER join tbl_kategori_wawasan_islami as c on a.id_kategori_wawasan_islami = c.id_kategori_wawasan_islami where a.status_wawasan_islami = \'2\' ORDER BY a.created_at desc limit 3')
+ 2 APPPATH\Controllers\Home.php(20): App\Models\WawasanIslamiModel->getWawasanIslamiLandingPage()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-26 10:19:38 --> mysqli_sql_exception: Table 'db_basyir.tbl_kategori_wawasan_islami' doesn't exist in D:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM t...', 0)
+#1 D:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 D:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 D:\xampp\htdocs\basyir_mobile\app\Models\WawasanIslamiModel.php(74): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 D:\xampp\htdocs\basyir_mobile\app\Controllers\Home.php(20): App\Models\WawasanIslamiModel->getWawasanIslamiLandingPage()
+#5 D:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 D:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\basyir_mobile\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\basyir_mobile\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-05-26 10:19:38 --> Table 'db_basyir.tbl_kategori_wawasan_islami' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Models\WawasanIslamiModel.php(74): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_wawasan_islami as a INNER JOIN tbl_user as b on a.id_user = b.id INNER join tbl_kategori_wawasan_islami as c on a.id_kategori_wawasan_islami = c.id_kategori_wawasan_islami where a.status_wawasan_islami = \'2\' ORDER BY a.created_at desc limit 3')
+ 2 APPPATH\Controllers\Home.php(20): App\Models\WawasanIslamiModel->getWawasanIslamiLandingPage()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-26 10:19:54 --> mysqli_sql_exception: Table 'db_basyir.tbl_kategori_wawasan_islami' doesn't exist in D:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM t...', 0)
+#1 D:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 D:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 D:\xampp\htdocs\basyir_mobile\app\Models\WawasanIslamiModel.php(74): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 D:\xampp\htdocs\basyir_mobile\app\Controllers\Home.php(20): App\Models\WawasanIslamiModel->getWawasanIslamiLandingPage()
+#5 D:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 D:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\basyir_mobile\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\basyir_mobile\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-05-26 10:19:54 --> Table 'db_basyir.tbl_kategori_wawasan_islami' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Models\WawasanIslamiModel.php(74): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_wawasan_islami as a INNER JOIN tbl_user as b on a.id_user = b.id INNER join tbl_kategori_wawasan_islami as c on a.id_kategori_wawasan_islami = c.id_kategori_wawasan_islami where a.status_wawasan_islami = \'2\' ORDER BY a.created_at desc limit 3')
+ 2 APPPATH\Controllers\Home.php(20): App\Models\WawasanIslamiModel->getWawasanIslamiLandingPage()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-26 10:19:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:19:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-26 10:20:01 --> mysqli_sql_exception: Table 'db_basyir.tbl_kategori_wawasan_islami' doesn't exist in D:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM t...', 0)
+#1 D:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 D:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 D:\xampp\htdocs\basyir_mobile\app\Models\WawasanIslamiModel.php(74): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 D:\xampp\htdocs\basyir_mobile\app\Controllers\Home.php(20): App\Models\WawasanIslamiModel->getWawasanIslamiLandingPage()
+#5 D:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 D:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\basyir_mobile\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\basyir_mobile\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-05-26 10:20:01 --> Table 'db_basyir.tbl_kategori_wawasan_islami' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Models\WawasanIslamiModel.php(74): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_wawasan_islami as a INNER JOIN tbl_user as b on a.id_user = b.id INNER join tbl_kategori_wawasan_islami as c on a.id_kategori_wawasan_islami = c.id_kategori_wawasan_islami where a.status_wawasan_islami = \'2\' ORDER BY a.created_at desc limit 3')
+ 2 APPPATH\Controllers\Home.php(20): App\Models\WawasanIslamiModel->getWawasanIslamiLandingPage()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-26 10:20:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-26 10:20:14 --> mysqli_sql_exception: Table 'db_basyir.tbl_kategori_wawasan_islami' doesn't exist in D:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM t...', 0)
+#1 D:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 D:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 D:\xampp\htdocs\basyir_mobile\app\Models\WawasanIslamiModel.php(74): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 D:\xampp\htdocs\basyir_mobile\app\Controllers\Home.php(20): App\Models\WawasanIslamiModel->getWawasanIslamiLandingPage()
+#5 D:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 D:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\basyir_mobile\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\basyir_mobile\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-05-26 10:20:14 --> Table 'db_basyir.tbl_kategori_wawasan_islami' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Models\WawasanIslamiModel.php(74): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_wawasan_islami as a INNER JOIN tbl_user as b on a.id_user = b.id INNER join tbl_kategori_wawasan_islami as c on a.id_kategori_wawasan_islami = c.id_kategori_wawasan_islami where a.status_wawasan_islami = \'2\' ORDER BY a.created_at desc limit 3')
+ 2 APPPATH\Controllers\Home.php(20): App\Models\WawasanIslamiModel->getWawasanIslamiLandingPage()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-26 10:20:30 --> mysqli_sql_exception: Table 'db_basyir.tbl_kategori_wawasan_islami' doesn't exist in D:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM t...', 0)
+#1 D:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 D:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 D:\xampp\htdocs\basyir_mobile\app\Models\WawasanIslamiModel.php(74): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 D:\xampp\htdocs\basyir_mobile\app\Controllers\Home.php(20): App\Models\WawasanIslamiModel->getWawasanIslamiLandingPage()
+#5 D:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 D:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\basyir_mobile\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\basyir_mobile\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-05-26 10:20:30 --> Table 'db_basyir.tbl_kategori_wawasan_islami' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Models\WawasanIslamiModel.php(74): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_wawasan_islami as a INNER JOIN tbl_user as b on a.id_user = b.id INNER join tbl_kategori_wawasan_islami as c on a.id_kategori_wawasan_islami = c.id_kategori_wawasan_islami where a.status_wawasan_islami = \'2\' ORDER BY a.created_at desc limit 3')
+ 2 APPPATH\Controllers\Home.php(20): App\Models\WawasanIslamiModel->getWawasanIslamiLandingPage()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-26 10:20:34 --> mysqli_sql_exception: Table 'db_basyir.tbl_kategori_wawasan_islami' doesn't exist in D:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM t...', 0)
+#1 D:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 D:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 D:\xampp\htdocs\basyir_mobile\app\Models\WawasanIslamiModel.php(74): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 D:\xampp\htdocs\basyir_mobile\app\Controllers\Home.php(20): App\Models\WawasanIslamiModel->getWawasanIslamiLandingPage()
+#5 D:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 D:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\basyir_mobile\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\basyir_mobile\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-05-26 10:20:34 --> Table 'db_basyir.tbl_kategori_wawasan_islami' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Models\WawasanIslamiModel.php(74): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_wawasan_islami as a INNER JOIN tbl_user as b on a.id_user = b.id INNER join tbl_kategori_wawasan_islami as c on a.id_kategori_wawasan_islami = c.id_kategori_wawasan_islami where a.status_wawasan_islami = \'2\' ORDER BY a.created_at desc limit 3')
+ 2 APPPATH\Controllers\Home.php(20): App\Models\WawasanIslamiModel->getWawasanIslamiLandingPage()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-26 10:21:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:25:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:25:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:38:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:38:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:38:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:38:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:39:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
