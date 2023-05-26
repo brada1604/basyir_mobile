@@ -18,32 +18,37 @@
         <br>
         <br>
     </div>
-    <table class="table">
-        <tbody>
-            <tr>
-                <td><?= $session->get('name') ?> : </td>
-                <td><?= $session->get('email') ?></td>
-            </tr>
-        </tbody>
-    </table>
 
-    <table class="table">
-        <tbody>
-            <?php $nomor = 1;
-            foreach ($getRencanaKegiatanByIdUserLogin as $row) : ?>
-                <tr>
-                    <!-- <th scope="row"><?= $nomor++; ?></th> -->
-                    <td><?= $row->judul_amalan_yaumi ?></td>
-                    <td><?= $row->rencana_jadwal ?></td>
-                    <td><?= $row->realisasi_jadwal ?></td>
-                    <td>
-                        <?php if ($row->status_detail_rencana_kegiatan == 1): ?>
-                            <a class="hapus" class="btn btn-success" href="/rencana_kegiatan/done/<?= $row->id_detail_rencana_kegiatan; ?>"><button type="button" class="btn btn-success">Sudah Dilakukan</button></a>
+    <tr>
+        <h4 class="container" style="font-family: 'Inter',Arial, sans-serif; color: #629C87;">
+            <?= $session->get('name') ?> : 
+            &nbsp <?= $session->get('email') ?>
+        </h4>
+    </tr>
+    <?php $nomor = 1;
+    foreach ($getRencanaKegiatanByIdUserLogin as $row) : ?>
+        <div class="col-md-6">
+            <div class=" d-flex align-items-end justify-content-center" style="background-image: url('/assets/image/Background.png'); border-radius: 20px; ">
+                <div class="text-center w-100">
+                    <h4 style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;"><?= $row->judul_amalan_yaumi ?><h4>
+                        <h6 style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;"><?= $row->rencana_jadwal ?></h6>
+                        <h6 style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;"><?= $row->realisasi_jadwal ?></h6>
+                        <nav class="navbar-item">
+                            <h6><?php if ($row->status_detail_rencana_kegiatan == 1): ?>
+                            <a class="hapus" class="btn btn-success" href="/rencana_kegiatan/done/<?= $row->id_detail_rencana_kegiatan; ?>">
+                                <button type="button" class="btn btn-success">Sudah Dilakukan</button>
+                            </a>
                         <?php endif ?>
-                    </td>
-                    <td><a class="hapus" class="btn btn-danger" href="/rencana_kegiatan/delete/<?= $row->id_detail_rencana_kegiatan; ?>"><button type="button" class="btn btn-danger">Delete</button></a></td>
-                </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
+                        <a class="hapus" class="btn btn-danger" href="/rencana_kegiatan/delete/<?= $row->id_detail_rencana_kegiatan; ?>">
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </a>
+                    </h6>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <br>
+    <?php endforeach; ?>s
+
+
 </body>
