@@ -20,9 +20,10 @@
                                 </div>
                             </div>
                         <?php endforeach; ?>
-                    </div>  
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <h6 class="text-center" style="font-family: 'Inter',Arial, sans-serif; color: white; margin-top: 20px;">Geser Untuk Lihat Lainnya</h6>
 </body>
