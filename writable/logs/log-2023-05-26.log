@@ -703,3 +703,27 @@ INFO - 2023-05-26 10:47:40 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-05-26 10:15:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-26 10:38:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 >>>>>>> Stashed changes
+CRITICAL - 2023-05-26 18:01:22 --> A non-numeric value encountered
+in APPPATH\Views\home\v_home.php on line 14.
+ 1 APPPATH\Views\home\v_home.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Views\\home\\v_home.php', 14)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\home\\v_home.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('home/v_home', [], true)
+ 5 APPPATH\Controllers\Home.php(56): view('home/v_home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-26 18:02:44 --> date_diff(): Argument #1 ($baseObject) must be of type DateTimeInterface, string given
+in APPPATH\Views\home\v_home.php on line 14.
+ 1 APPPATH\Views\home\v_home.php(14): date_diff('18:59', '18:02')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\home\\v_home.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('home/v_home', [], true)
+ 5 APPPATH\Controllers\Home.php(56): view('home/v_home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

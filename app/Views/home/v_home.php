@@ -1,3 +1,100 @@
+<?php
+date_default_timezone_set('Asia/Jakarta');
+?>
+<?php
+$jam = date('H:i'); // Tanggal hari ini
+$jam_sekarang = date('H'); // Tanggal hari ini
+$menit_sekarang = date('i'); // Tanggal hari ini
+// echo '<br>jam sekarang '.$jam_sekarang;
+// echo '<br>menit sekarang '.$menit_sekarang;
+// echo '<br>Imsak '.$pengingat_imsak;
+// echo '<br>Subuh '.$pengingat_subuh;
+// echo '<br>Dzuhur '.$pengingat_dzuhur;
+// echo '<br>Ashar '.$pengingat_ashar;
+// echo '<br>Magrib '.$pengingat_maghrib;
+// echo '<br>Isya '.$pengingat_isya;
+
+if ($jam <= $pengingat_imsak) {
+    // echo 'mendekati Imsak';
+    $solat_yang_tampil = 'Imsak';
+    $waktu_solat_yang_tampil = $pengingat_imsak;
+    $selisih = strtotime($pengingat_imsak) - strtotime($jam);
+    $selisih_jam   = floor($selisih / (60 * 60));
+    $selisih_menit = $selisih - ( $selisih_jam * (60 * 60) );
+
+    // echo '<br>'.$selisih_jam;
+    // echo '<br>'.floor( $selisih_menit / 60 );
+}
+elseif ($jam <= $pengingat_subuh) {
+    // echo 'mendekati Subuh';
+    $solat_yang_tampil = 'Subuh';
+    $waktu_solat_yang_tampil = $pengingat_subuh;
+    $selisih = strtotime($pengingat_subuh) - strtotime($jam);
+    $selisih_jam   = floor($selisih / (60 * 60));
+    $selisih_menit = $selisih - ( $selisih_jam * (60 * 60) );
+
+    // echo '<br>'.$selisih_jam;
+    // echo '<br>'.floor( $selisih_menit / 60 );
+}
+elseif ($jam <= $pengingat_dzuhur) {
+    // echo 'mendekati Dzuhur';
+    $solat_yang_tampil = 'Dzuhur';
+    $waktu_solat_yang_tampil = $pengingat_dzuhur;
+    $selisih = strtotime($pengingat_dzuhur) - strtotime($jam);
+    $selisih_jam   = floor($selisih / (60 * 60));
+    $selisih_menit = $selisih - ( $selisih_jam * (60 * 60) );
+
+    // echo '<br>'.$selisih_jam;
+    // echo '<br>'.floor( $selisih_menit / 60 );
+}
+elseif ($jam <= $pengingat_ashar) {
+    // echo 'mendekati Ashar';
+    $solat_yang_tampil = 'Ashar';
+    $waktu_solat_yang_tampil = $pengingat_ashar;
+    $selisih = strtotime($pengingat_ashar) - strtotime($jam);
+    $selisih_jam   = floor($selisih / (60 * 60));
+    $selisih_menit = $selisih - ( $selisih_jam * (60 * 60) );
+
+    // echo '<br>'.$selisih_jam;
+    // echo '<br>'.floor( $selisih_menit / 60 );
+}
+elseif ($jam <= $pengingat_maghrib) {
+    // echo 'mendekati Magrib';
+    $solat_yang_tampil = 'Maghrib';
+    $waktu_solat_yang_tampil = $pengingat_maghrib;
+    $selisih = strtotime($pengingat_maghrib) - strtotime($jam);
+    $selisih_jam   = floor($selisih / (60 * 60));
+    $selisih_menit = $selisih - ( $selisih_jam * (60 * 60) );
+
+    // echo '<br>'.$selisih_jam;
+    // echo '<br>'.floor( $selisih_menit / 60 );
+}
+elseif ($jam <= $pengingat_isya) {
+    // echo 'mendekati Isya';
+    $solat_yang_tampil = 'Isya';
+    $waktu_solat_yang_tampil = $pengingat_isya;
+    $selisih = strtotime($pengingat_isya) - strtotime($jam);
+    $selisih_jam   = floor($selisih / (60 * 60));
+    $selisih_menit = $selisih - ( $selisih_jam * (60 * 60) );
+
+    // echo '<br>'.$selisih_jam;
+    // echo '<br>'.floor( $selisih_menit / 60 );
+}
+
+
+// echo "<br>--------------------------------------<br>";
+// echo $solat_yang_tampil.'<br>';
+// echo $waktu_solat_yang_tampil.'<br>';
+// echo '<br>'.$selisih_jam;
+// echo '<br>'.floor( $selisih_menit / 60 );
+
+
+// $arr = str_split($jadwal_notifikasi, 1);
+// $tahun = $arr[0].$arr[1].$arr[2].$arr[3];
+
+// echo 'waktu sisa'.date_diff($pengingat_isya, $waktu_sekarang);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,7 +162,7 @@
                             <nav class="navbar navbar-dark navbar-expand d-md-none d-lg-none d-xl-none p-0">
                                 <div class="text w-100">
                                     <h5 class="container" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #ffff; ">Waktu Sholat</h5>
-                                    <h6 class="container" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #ffff;">“Dzuhur <br> 00:07:59”</h6>
+                                    <h6 class="container" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #ffff;"><?= $solat_yang_tampil ?> <?= $waktu_solat_yang_tampil ?><br> <?= $selisih_jam ?>:<?= floor( $selisih_menit / 60 ) ?> Tersisa</h6>
                                     <!-- <h6 style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;">
                                         <p id="CountdownTimer" onload="countDownPrayerTime()" style="margin-top: -15%"></p>
                                     </h6> -->
