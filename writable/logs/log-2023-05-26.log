@@ -652,3 +652,49 @@ INFO - 2023-05-26 10:38:45 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-05-26 10:38:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-26 10:38:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-26 10:39:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:44:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-26 10:44:44 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db_basyir_mobile' in C:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_basyir_mobil...', 3306, '', 0)
+#1 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\basyir_mobile\app\Models\TargetNotifikasiModel.php(70): CodeIgniter\Database\BaseConnection->query('SELECT tbl_targ...')
+#4 C:\xampp\htdocs\basyir_mobile\app\Controllers\NotifikasiController.php(15): App\Models\TargetNotifikasiModel->getNotifikasiByIdUserLoginMobile()
+#5 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(934): App\Controllers\NotifikasiController->index()
+#6 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NotifikasiController))
+#7 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\basyir_mobile\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\basyir_mobile\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db_basyir_mobile' in C:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\basyir_mobile\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\basyir_mobile\app\Models\TargetNotifikasiModel.php(70): CodeIgniter\Database\BaseConnection->query('SELECT tbl_targ...')
+#3 C:\xampp\htdocs\basyir_mobile\app\Controllers\NotifikasiController.php(15): App\Models\TargetNotifikasiModel->getNotifikasiByIdUserLoginMobile()
+#4 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(934): App\Controllers\NotifikasiController->index()
+#5 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NotifikasiController))
+#6 C:\xampp\htdocs\basyir_mobile\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\basyir_mobile\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\basyir_mobile\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2023-05-26 10:44:44 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'db_basyir_mobile'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\TargetNotifikasiModel.php(70): CodeIgniter\Database\BaseConnection->query('SELECT tbl_target_notifikasi.id_target_notifikasi, tbl_target_notifikasi.jenis_notifikasi, tbl_notifikasi.pesan_notifikasi, tbl_notifikasi.judul_notifikasi, tbl_notifikasi.created_at FROM tbl_target_notifikasi INNER JOIN tbl_notifikasi ON tbl_target_notifikasi.id_notifikasi = tbl_notifikasi.id_notifikasi WHERE tbl_target_notifikasi.id_user = \'\' AND tbl_target_notifikasi.status_notifikasi = 1 AND tbl_target_notifikasi.jenis_notifikasi = 1 ORDER BY tbl_notifikasi.created_at DESC ')
+ 3 APPPATH\Controllers\NotifikasiController.php(15): App\Models\TargetNotifikasiModel->getNotifikasiByIdUserLoginMobile()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\NotifikasiController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NotifikasiController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-26 10:45:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:46:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:46:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:46:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
