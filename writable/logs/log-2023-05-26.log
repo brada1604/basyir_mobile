@@ -463,6 +463,7 @@ INFO - 2023-05-26 10:14:28 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-05-26 10:14:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-26 10:14:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 >>>>>>> Stashed changes
+<<<<<<< Updated upstream
 INFO - 2023-05-26 10:19:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 ERROR - 2023-05-26 10:19:07 --> mysqli_sql_exception: Unknown column 'status_doa_detail' in 'where clause' in D:\xampp\htdocs\basyir_mobile\system\Database\MySQLi\Connection.php:295
 Stack trace:
@@ -698,3 +699,7 @@ INFO - 2023-05-26 10:46:37 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-05-26 10:46:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-26 10:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-26 10:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+=======
+INFO - 2023-05-26 10:15:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-26 10:38:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+>>>>>>> Stashed changes
