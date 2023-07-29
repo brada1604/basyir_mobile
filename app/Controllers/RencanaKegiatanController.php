@@ -105,6 +105,8 @@ class RencanaKegiatanController extends BaseController
                 'keterangan_kegiatan' => $this->request->getVar('keterangan_kegiatan'),
             ];
 
+            $id_amalan_yaumi = $this->request->getVar('id_amalan_yaumi');
+
             $model_rencana_kegiatan->save($data1);
 
             $jadwal_notifikasi = $this->request->getVar('jadwal_notifikasi');
@@ -134,11 +136,20 @@ class RencanaKegiatanController extends BaseController
 
             // NOTIFIKASI
             $model_notifikasi_model = new NotifikasiModel();
-            $data3 = [
-                'judul_notifikasi' => 'Yuk Lakukan Rencana Ibadahmu',
-                'pesan_notifikasi' => $judul_amalan_yaumi,
-                'link_tujuan_notifikasi' => base_url('/rencana_kegiatan')
-            ];
+            if ($id_amalan_yaumi == 1) {
+                $data3 = [
+                    'judul_notifikasi' => 'Yuk Lakukan Rencana Ibadahmu',
+                    'pesan_notifikasi' => $this->request->getVar('keterangan_kegiatan'),
+                    'link_tujuan_notifikasi' => base_url('/rencana_kegiatan')
+                ];
+            }
+            else {
+                $data3 = [
+                    'judul_notifikasi' => 'Yuk Lakukan Rencana Ibadahmu',
+                    'pesan_notifikasi' => $judul_amalan_yaumi,
+                    'link_tujuan_notifikasi' => base_url('/rencana_kegiatan')
+                ];
+            }
 
             $model_notifikasi_model->save($data3);
             $id_notifikasi_last = $model_notifikasi_model->insertID();
@@ -252,6 +263,8 @@ class RencanaKegiatanController extends BaseController
         }
 
         $model_detail_rencana_kegiatan->delete($id);
+
+        $model_rencana_kegiatan->delete($id_rencana_kegiatan);
         echo '<script>
                 alert("Selamat! Berhasil Menghapus Data Rencana kegiatan");
                 window.location="' . base_url('/rencana_kegiatan') . '"

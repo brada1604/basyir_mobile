@@ -1162,30 +1162,48 @@ WARNING - 2023-07-29 08:56:06 --> [DEPRECATED] Creation of dynamic property App\
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 09:03:05 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+WARNING - 2023-07-29 08:57:18 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 09:04:32 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+WARNING - 2023-07-29 08:58:10 --> [DEPRECATED] Creation of dynamic property App\Controllers\KutipanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 09:04:59 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+WARNING - 2023-07-29 09:34:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 09:05:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 09:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 09:34:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 09:06:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
@@ -1724,11 +1742,28 @@ in APPPATH\Views\berita\v_berita.php on line 22.
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
 WARNING - 2023-07-29 10:24:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 09:34:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-29 09:34:40 --> Undefined variable $id_amalan_yaumi
+in APPPATH\Views\rencana_kegiatan\add.php on line 48.
+ 1 APPPATH\Views\rencana_kegiatan\add.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_amalan_yaumi', 'APPPATH\\Views\\rencana_kegiatan\\add.php', 48)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\rencana_kegiatan\\add.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('rencana_kegiatan/add', [], true)
+ 5 APPPATH\Controllers\RencanaKegiatanController.php(164): view('rencana_kegiatan/add', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RencanaKegiatanController->save()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RencanaKegiatanController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2023-07-29 09:35:13 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 CRITICAL - 2023-07-29 10:24:45 --> Undefined variable $getBeritaLandingPage
 in APPPATH\Views\berita\v_berita.php on line 22.
  1 APPPATH\Views\berita\v_berita.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $getBeritaLandingPage', 'APPPATH\\Views\\berita\\v_berita.php', 22)
@@ -1742,258 +1777,651 @@ in APPPATH\Views\berita\v_berita.php on line 22.
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
 WARNING - 2023-07-29 10:25:43 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 09:35:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 09:35:16 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2023-07-29 09:35:19 --> [DEPRECATED] Creation of dynamic property App\Controllers\MenuLainnyaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2023-07-29 09:35:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\AmalanYaumiController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-29 09:35:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 09:35:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-29 09:35:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 09:35:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-29 09:35:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-29 09:35:27 --> Undefined variable $id_amalan_yaumi
+in APPPATH\Views\rencana_kegiatan\add.php on line 48.
+ 1 APPPATH\Views\rencana_kegiatan\add.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_amalan_yaumi', 'APPPATH\\Views\\rencana_kegiatan\\add.php', 48)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\rencana_kegiatan\\add.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('rencana_kegiatan/add', [], true)
+ 5 APPPATH\Controllers\RencanaKegiatanController.php(164): view('rencana_kegiatan/add', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RencanaKegiatanController->save()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RencanaKegiatanController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-29 09:35:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 09:35:42 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 10:26:59 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+WARNING - 2023-07-29 09:35:43 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 10:27:19 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 09:35:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 09:37:29 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 10:28:59 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 09:37:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:37:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 09:37:29 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 10:30:02 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 09:37:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 09:37:49 --> [DEPRECATED] Creation of dynamic property App\Controllers\AuthController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 10:30:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 09:37:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 09:38:01 --> [DEPRECATED] Creation of dynamic property App\Controllers\AuthController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 10:31:01 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 09:38:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 09:38:01 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 10:31:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 09:38:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 09:38:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 10:31:48 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 09:38:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 09:38:10 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 10:31:53 --> [DEPRECATED] Creation of dynamic property App\Controllers\KutipanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+WARNING - 2023-07-29 09:38:14 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 10:31:56 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 09:38:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 09:38:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 10:40:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 09:38:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:38:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 09:38:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 10:43:19 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+WARNING - 2023-07-29 09:38:31 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 10:43:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+WARNING - 2023-07-29 09:38:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\MenuLainnyaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 10:44:18 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+WARNING - 2023-07-29 09:38:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\AmalanYaumiController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 10:46:36 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 09:38:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 09:38:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 10:48:04 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 09:38:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 09:38:48 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 10:54:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 09:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 09:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 09:38:48 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 10:55:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 09:38:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 09:38:53 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 10:56:41 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 09:38:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 09:38:55 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 10:56:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+WARNING - 2023-07-29 09:39:51 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 10:56:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+WARNING - 2023-07-29 09:39:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\KutipanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 10:57:14 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 09:52:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 09:52:19 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 10:57:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 09:52:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 09:52:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 10:57:52 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+WARNING - 2023-07-29 10:50:07 --> [DEPRECATED] Creation of dynamic property App\Controllers\KutipanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 10:58:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 10:50:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 10:50:09 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 10:58:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 10:50:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 10:50:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 10:58:43 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 10:50:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 10:50:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 10:58:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 10:50:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 10:50:41 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 10:59:07 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 10:51:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 10:51:16 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 10:59:14 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 10:52:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 10:52:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 10:59:51 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 10:52:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 10:52:34 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 11:00:13 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 10:53:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 10:53:29 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 11:01:12 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+WARNING - 2023-07-29 10:53:31 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 11:02:49 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 10:53:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 10:53:41 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 11:03:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\BeritaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 10:53:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 10:53:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 10:53:41 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 11:03:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 10:54:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 10:54:01 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 11:04:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 10:54:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 10:54:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 11:04:16 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 10:55:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 10:55:06 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 11:04:31 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 10:55:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 10:55:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 11:04:38 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 10:55:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 10:55:17 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 11:04:52 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 10:55:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 10:55:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+<<<<<<< Updated upstream
 WARNING - 2023-07-29 11:05:10 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+=======
+INFO - 2023-07-29 10:55:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 10:55:30 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-29 10:55:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 10:55:30 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-29 10:56:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 10:56:13 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2023-07-29 10:56:16 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-29 10:56:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 10:56:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-29 10:56:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 10:56:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 10:56:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-29 10:57:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 10:57:03 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-29 10:57:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 10:57:04 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-29 10:58:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 10:58:12 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2023-07-29 11:10:04 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-29 11:10:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 11:10:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-29 11:10:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 11:10:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 11:10:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2023-07-29 11:14:17 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-29 11:14:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 11:14:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-29 11:14:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 11:14:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 11:14:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2023-07-29 11:14:43 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2023-07-29 11:14:46 --> [DEPRECATED] Creation of dynamic property App\Controllers\MenuLainnyaController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+WARNING - 2023-07-29 11:14:48 --> [DEPRECATED] Creation of dynamic property App\Controllers\AmalanYaumiController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-29 11:14:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 11:14:50 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-29 11:14:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 11:14:55 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-29 11:14:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-29 11:14:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-29 11:14:55 --> [DEPRECATED] Creation of dynamic property App\Controllers\RencanaKegiatanController::$email is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+>>>>>>> Stashed changes
  1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
