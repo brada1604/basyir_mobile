@@ -11,7 +11,7 @@
                     <h2 class="heading-section mb-5  bold-text" style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;">Pengaturan</h2>
                 </div>
                 <div class="col-md-6">
-                    <div class="d-flex align-items-end justify-content-center" style="background-color: white; border-radius: 20px; height: 550px;">
+                    <div class="d-flex align-items-end justify-content-center" style="background-color: white; border-radius: 20px; height: 550px; margin-bottom: 100px;">
                         <div class="text w-100">
                             <nav class=" navbar container">
                                 <h5 style="font-family: 'Inter',Arial, sans-serif; color: #629C87;">Aktifkan Notifikasi</h5>
