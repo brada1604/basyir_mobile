@@ -2,8 +2,17 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Tambah Rencana Kegiatan</h1>
-
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h1 class="h3 mb-2 text-gray-800 text-center">Tambah Rencana Ibadah Harian</h1>
+                    </div>
+                    <div class="d-flex flex-column align-items-center mb-4">
+                        <div class="text-black-400 fw-semibold fs-8">
+                            bingung mau cari amalan apa?
+                            <a href="http://localhost:8080/amalan_yaumi" class="link-primary fw-bold">
+                                Klik disini
+                            </a>
+                        </div>
+                    </div>
                     <form action="<?= base_url(); ?>/rencana_kegiatan/save" method="post" enctype="multipart/form-data">
 
                         <div class="row card-group-row">
@@ -103,7 +112,10 @@
 
                         <div class="row">
                             <div class="col align-items-right">
-                                <button type="submit" class="btn btn-dark">Simpan</button>
+                                <button type="submit" class="btn btn-primary">Simpan</button>
+                                <a href="http://localhost:8080/rencana_kegiatan" class="btn btn-secondary">
+                                    <i class="bi bi-arrow-left btn-danger"></i> Kembali
+                                </a>
                             </div>
                         </div>
 

@@ -15,19 +15,22 @@
         <div class="col-md-2 text-center">
             <h2 class="heading-section mb-5  bold-text" style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;">List Kegiatan</h2>
         </div>
-        <br>
-        <br>
+            <br>
+        </div>
+        <tr>
+        <div class="container mb-12">
+        <div class="col-12 text-center">
+            <h4 style="font-family: 'Inter', Arial, sans-serif; color: #629C87;">
+                Haloo, <?= $session->get('name') ?> ! 
+                <!-- &nbsp <?= $session->get('email') ?> -->
+            </h4>
+        </div>
+        </div>
     </div>
-
-    <tr>
-        <h4 class="container" style="font-family: 'Inter',Arial, sans-serif; color: #629C87;">
-            <?= $session->get('name') ?> : 
-            &nbsp <?= $session->get('email') ?>
-        </h4>
     </tr>
     <?php $nomor = 1;
     foreach ($getRencanaKegiatanByIdUserLogin as $row) : ?>
-        <div class="col-md-6">
+        <div class="col-md-6 mb-4">
             <div class=" d-flex align-items-end justify-content-center" style="background-image: url('/assets/image/Background.png'); border-radius: 20px; ">
                 <div class="text-center w-100">
                     <h4 style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;"><?php if ($row->id_amalan_yaumi == 1): ?> <?= $row->keterangan_kegiatan ?><?php else: ?> <?= $row->judul_amalan_yaumi ?><?php endif ?><h4>
