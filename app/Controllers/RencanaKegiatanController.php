@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\DetailRencanaKegiatanModel;
 use App\Models\RencanaKegiatanModel;
+use App\Models\RekapKegiatanModel;
 use App\Models\AmalanYaumiModel;
 use App\Models\NotifikasiModel;
 use App\Models\TargetNotifikasiModel;
@@ -69,6 +70,34 @@ class RencanaKegiatanController extends BaseController
         if ($this->validate($rules)) {
             // RENCANA KEGIATAN
             $model_rencana_kegiatan = new RencanaKegiatanModel();
+            $model_rekap_kegiatan = new RekapKegiatanModel();
+
+            $data_cek_rekap = [
+                'id_user' => $this->request->getVar('id_user'),
+                'id_amalan_yaumi' => $this->request->getVar('id_amalan_yaumi')
+            ];
+
+            $cek_rekap = $model_rekap_kegiatan->getWhere($data_cek_rekap)->getResult();
+
+            if ($cek_rekap) {
+                $data_rekap = [
+                    'total_belum_dilakukan' => $cek_rekap[0]->total_belum_dilakukan + 1
+                ];
+
+                $model_rekap_kegiatan->update($cek_rekap[0]->id_rekap_kegiatan, $data_rekap);
+            }
+            else {
+                echo "insert";
+
+                $data_rekap = [
+                    'id_user' => $this->request->getVar('id_user'),
+                    'id_amalan_yaumi' => $this->request->getVar('id_amalan_yaumi'),
+                    'total_dilakukan' => 0,
+                    'total_belum_dilakukan' => 1
+                ];
+
+                $model_rekap_kegiatan->save($data_rekap);
+            }
 
             $data1 = [
                 'id_user' => $this->request->getVar('id_user'),
@@ -188,6 +217,7 @@ class RencanaKegiatanController extends BaseController
     public function delete($id)
     {
         $model = new DetailRencanaKegiatanModel;
+
         $model->delete($id);
         echo '<script>
                 alert("Selamat! Berhasil Menghapus Data Rencana kegiatan");
@@ -197,13 +227,39 @@ class RencanaKegiatanController extends BaseController
 
     public function done($id)
     {
-        $model = new DetailRencanaKegiatanModel;
+        $model_detail_rencana_kegiatan = new DetailRencanaKegiatanModel;
+        $id_detail_rencana_kegiatan = $id;
+        $cek_detail_rencana_kegiatan = $model_detail_rencana_kegiatan->getWhere(['id_detail_rencana_kegiatan' => $id])->getResult();
+
+        $model_rencana_kegiatan = new RencanaKegiatanModel;
+        $id_rencana_kegiatan = $cek_detail_rencana_kegiatan[0]->id_rencana_kegiatan;
+        $cek_rencana_kegiatan = $model_rencana_kegiatan->getWhere(['id_rencana_kegiatan' => $id_rencana_kegiatan])->getResult();
+
+
+        $model_rekap_kegiatan = new RekapKegiatanModel();
+
+        $data_cek_rekap = [
+            'id_user' => $cek_rencana_kegiatan[0]->id_user,
+            'id_amalan_yaumi' => $cek_rencana_kegiatan[0]->id_amalan_yaumi
+        ];
+
+        $cek_rekap = $model_rekap_kegiatan->getWhere($data_cek_rekap)->getResult();
+
+        if ($cek_rekap) {
+            $data_rekap = [
+                'total_belum_dilakukan' => $cek_rekap[0]->total_belum_dilakukan - 1,
+                'total_dilakukan' => $cek_rekap[0]->total_dilakukan + 1
+            ];
+
+            $model_rekap_kegiatan->update($cek_rekap[0]->id_rekap_kegiatan, $data_rekap);
+        }
+
         $data = [
             'realisasi_jadwal' => date('Y-m-d H:i:s'),
             'status_detail_rencana_kegiatan' => 2
         ];
 
-        $model->update($id, $data);
+        $model_detail_rencana_kegiatan->update($id, $data);
         echo '<script>
                 alert("Selamat! Berhasil Mengubah Data Rencana kegiatan");
                 window.location="' . base_url('/rencana_kegiatan') . '"
