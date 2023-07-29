@@ -159,14 +159,14 @@ else{
     <div class="container">
         <br>
         <br>
-        <div class="container">
+        <div class="container d-flex justify-content-center">
             <div class="row">
                 <div id="carouselExampleControls" class="carousel slide d-flex justify-content-center" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="col-md-12">
                             <!-- Card 1 -->
-                                <div class="card" style="background-image: url('/assets/image/Background.png'); border-radius: 20px; width: 18rem;">
+                                <div class="card shadow" style="background-image: url('/assets/image/Background.png'); border-radius: 20px; width: 18rem;">
                                     <nav class="navbar navbar-dark navbar-expand d-md-none d-lg-none d-xl-none p-0">
                                         <div class="text w-100">
                                             <a href="/jadwal_sholat_wajib">
@@ -183,7 +183,7 @@ else{
                             <div class="col-md-12">
                                 <!-- Card 2 -->
                                 <?php foreach ($getKutipanLandingPage as $gklp) : ?>
-                                    <div class=" d-flex align-items-end justify-content-center" style="background-image: url('/assets/image/Background.png'); border-radius: 20px; ">
+                                    <div class=" d-flex align-items-end justify-content-center shadow" style="background-image: url('/assets/image/Background.png'); border-radius: 20px; ">
                                         <div class="text w-100">
                                             <h4 class="container" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #ffff; "><?= $gklp->sumber_kutipan; ?></h4>
                                             <h5 class="container" style="font-family: 'Inter',Arial, sans-serif; color: #ffff;"><?= $gklp->deskripsi_kutipan; ?></h5>
@@ -198,7 +198,7 @@ else{
         </div>
     </div>
 
-    <div class="container">
+    <div class="container-sm">
         <br>
         <nav class="navbar navbar-expand-lg navbar-light">
             <a href="/berita" class="navbar-brand">
@@ -206,24 +206,24 @@ else{
             </a>
         </nav>
         <div id="carouselExampleControls" class="carousel slide d-flex justify-content-center" data-ride="carousel">
-            <div class="carousel-inner">
+            <div class="carousel-inner" style="border-radius: 10px; padding: 12px;">
                 <?php $count = 0; ?>
                 <?php foreach ($getBeritaLandingPage as $gblp) : ?>
-                    <div class="carousel-item<?= $count === 0 ? ' active' : ''; ?>">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="card">
-                                    <img src="<?= base_url($gblp->gambar_berita); ?>" class="card-img-top" alt="Berita">
-                                    <div class="card-body">
-                                        <nav class="navbar navbar-dark navbar-expand d-md-none d-lg-none d-xl-none p-0">
-                                            <a href="/berita/detail_berita/<?= $gblp->id_berita; ?>" style="text-decoration: none; color: #000;">
-                                                <p class="card-title" style="color: #629C87;"><?= $gblp->judul_berita; ?></p>
-                                            </a>
-                                        </nav>
-                                    </div>
+                    <div class="carousel-item<?= $count === 0 ? ' active' : ''; ?>" style="height: 200px;">
+                    <div class="row h-100">
+                        <div class="col-sm-12">
+                            <div class="card h-10 shadow" style="border-radius: 10px; padding: 3px;">
+                                <img src="<?= base_url($gblp->gambar_berita); ?>" class="card-img-top img-fluid card-image" alt="Berita" style="width: 350px; height: 100px">
+                                <div class="card-body">
+                                    <nav class="navbar navbar-dark navbar-expand d-md-none d-lg-none d-xl-none p-0">
+                                        <a href="/berita/detail_berita/<?= $gblp->id_berita; ?>" class="text-decoration-none text-dark">
+                                            <p class="card-title d-inline" style="color: #629C87;"><?= $gblp->judul_berita; ?></p>
+                                        </a>
+                                    </nav>
                                 </div>
                             </div>
                         </div>
+                    </div>
                     </div>
                     <?php $count++; ?>
                 <?php endforeach; ?>
@@ -233,8 +233,6 @@ else{
 
 
     <div class="container" style="margin-bottom: 100px;">
-        <!-- <section class="ftco-section"> -->
-        <br>
         <nav class="navbar navbar-expand-lg navbar-light">
             <a href="/wawasan_islami" class="navbar-brand">
                 <h4 class="heading-section mb-0" style="color: #629C87;">Wawasan Islami</h4>
@@ -255,8 +253,8 @@ else{
                                             <div class="text w-100">
                                                 <span class="cat"><?= $gwil->nama_kategori_wawasan_islami; ?></span>
                                                 <h3><a href="/wawasan_islami/detail_wawasan_islami/<?= $gwil->id_wawasan_islami; ?>">
-                                                        <p><?= $gwil->judul_wawasan_islami; ?></p>
-                                                    </a></h3>
+                                                    <p><?= $gwil->judul_wawasan_islami; ?></p>
+                                                </a></h3>
                                             </div>
                                         </div>
                                     </div>
@@ -270,23 +268,6 @@ else{
                 ?>
             </div>
         </div>
-        <script>
-            $(document).ready(function () {
-                var owl = $('#carouselExampleControls .carousel-inner');
-                owl.owlCarousel({
-                    items: 1, // Jumlah slide yang ditampilkan secara bersamaan
-                    dots: true, // Menampilkan dots
-                    onInitialized: updateDotsPosition, // Panggil fungsi updateDotsPosition saat carousel diinisialisasi
-                    onTranslated: updateDotsPosition // Panggil fungsi updateDotsPosition saat slide berubah
-                });
-
-                function updateDotsPosition(event) {
-                    // Memperbarui posisi dots saat slide berubah
-                    $('.owl-dots').css('left', owl.find('.owl-stage-outer').css('padding-left'));
-                }
-            });
-        </script>
-        <!-- </section> -->
     </div>
 </body>
 

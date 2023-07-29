@@ -11,7 +11,7 @@
                     <h2 class="heading-section mb-5  bold-text" style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;">Pengaturan</h2>
                 </div>
                 <div class="col-md-6">
-                <div class="d-flex align-items-center justify-content-center" style="background-color: #f8f9fa; height: 550px; border-radius: 20px;">
+                <div class="d-flex align-items-center justify-content-center" style="background-color: #f8f9fa; height: 550px; border-radius: 20px; margin-bottom: 100px;">
                     <div class="container">
                         <nav class=" navbar navbar-expand-lg navbar-light" style="margin-top: -200px; margin-left: -10px;">
                             <h5 style="font-family: 'Inter', Arial, sans-serif; color: #629C87;">Izinkan Untuk Melakukan Broadcast Email</h5>
