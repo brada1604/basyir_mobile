@@ -155,155 +155,139 @@ else{
 
     <div class="container">
         <br>
-        <!-- <div class="container">
+        <br>
+        <div class="container">
             <div class="row">
-                <div class="col-md-6"> -->
-                    <!-- <div class="featured-carousel owl-carousel">
-                        <div class="d-flex align-items-end" style="background-image: url('/assets/image/Background.png'); border-radius: 20px; ">
-                            <nav class="navbar navbar-dark navbar-expand d-md-none d-lg-none d-xl-none p-0">
-                                <div class="text w-100">
-                                    <a href="/jadwal_sholat_wajib">
-                                        <h5 class="container" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #ffff; ">Waktu Sholat</h5>
-                                        <h6 class="container" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #ffff;"><?= $solat_yang_tampil ?> <?= $waktu_solat_yang_tampil ?><br> <?= $selisih_jam ?>:<?= floor($selisih_menit / 60) ?> Tersisa</h6>
-                                    </a>
-                                </div>
-                                <img src="/assets/assets-mobile/icon-menu/adzan.png" alt="orang adzan" height="100px" style="margin-right: -35%;">
-                            </nav>
-                        </div>
-                        <?php foreach ($getKutipanLandingPage as $gklp) : ?>
-                            <div class=" d-flex align-items-end justify-content-center" style="background-image: url('/assets/image/Background.png'); border-radius: 20px; ">
-                                <div class="text w-100">
-                                    <h4 class="container" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #ffff; "><?= $gklp->sumber_kutipan; ?></h4>
-                                    <h5 class="container" style="font-family: 'Inter',Arial, sans-serif; color: #ffff;"><?= $gklp->deskripsi_kutipan; ?></h5>
+                <div id="carouselExampleControls" class="carousel slide d-flex justify-content-center" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="col-md-12">
+                            <!-- Card 1 -->
+                                <div class="card" style="background-image: url('/assets/image/Background.png'); border-radius: 20px; width: 20rem;">
+                                    <nav class="navbar navbar-dark navbar-expand d-md-none d-lg-none d-xl-none p-0">
+                                        <div class="text w-100">
+                                            <a href="/jadwal_sholat_wajib">
+                                                <h5 class="container card-title" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #ffff; ">Waktu Sholat</h5>
+                                                <h6 class="container card-text" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #ffff; "><?= $solat_yang_tampil ?> <?= $waktu_solat_yang_tampil ?><br> <?= $selisih_jam ?>:<?= floor($selisih_menit / 60) ?> Tersisa</h6>
+                                            </a>
+                                        </div>
+                                        <img src="/assets/assets-mobile/icon-menu/adzan.png" alt="orang adzan" height="100px">
+                                    </nav>
                                 </div>
                             </div>
-                        <?php endforeach; ?>
-                    </div> -->  
-                    <div class="container">
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-12">
+                                <!-- Card 2 -->
+                                <?php foreach ($getKutipanLandingPage as $gklp) : ?>
+                                    <div class=" d-flex align-items-end justify-content-center" style="background-image: url('/assets/image/Background.png'); border-radius: 20px; ">
+                                        <div class="text w-100">
+                                            <h4 class="container" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #ffff; "><?= $gklp->sumber_kutipan; ?></h4>
+                                            <h5 class="container" style="font-family: 'Inter',Arial, sans-serif; color: #ffff;"><?= $gklp->deskripsi_kutipan; ?></h5>
+                                        </div>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- <section class="ftco-section"> -->
+        <br>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a href="/berita" class="navbar-brand">
+                <h4 class="heading-section mb-0" style="color: #629C87;">Berita Terkini</h4>
+            </a>
+        </nav>
+        <div id="carouselExampleControls" class="carousel slide d-flex justify-content-center" data-ride="carousel">
+            <div class="carousel-inner">
+                <?php $count = 0; ?>
+                <?php foreach ($getBeritaLandingPage as $gblp) : ?>
+                    <div class="carousel-item<?= $count === 0 ? ' active' : ''; ?>">
                         <div class="row">
-                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <div class="col-md-6">
-                                        <!-- Card 1 -->
-                                            <div class="card" style="background-image: url('/assets/image/Background.png'); border-radius: 20px; width: 18rem;">
-                                                <nav class="navbar navbar-dark navbar-expand d-md-none d-lg-none d-xl-none p-0">
-                                                    <div class="text w-100">
-                                                        <a href="/jadwal_sholat_wajib">
-                                                            <h5 class="container card-title" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #ffff; ">Waktu Sholat</h5>
-                                                            <h6 class="container card-text" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #ffff; "><?= $solat_yang_tampil ?> <?= $waktu_solat_yang_tampil ?><br> <?= $selisih_jam ?>:<?= floor($selisih_menit / 60) ?> Tersisa</h6>
-                                                        </a>
-                                                    </div>
-                                                    <img src="/assets/assets-mobile/icon-menu/adzan.png" alt="orang adzan" height="100px">
-                                                </nav>
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <img src="<?= base_url($gblp->gambar_berita); ?>" class="card-img-top" alt="Berita">
+                                    <div class="card-body">
+                                        <nav class="navbar navbar-dark navbar-expand d-md-none d-lg-none d-xl-none p-0">
+                                            <a href="/berita/detail_berita/<?= $gblp->id_berita; ?>" style="text-decoration: none; color: #000;">
+                                                <p class="container card-title"><?= $gblp->judul_berita; ?></p>
+                                            </a>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <?php $count++; ?>
+                <?php endforeach; ?>
+            </div>
+            <!-- </section> -->
+        </div>
+    </div>
+
+
+    <div class="container" style="margin-bottom: 100px;">
+        <!-- <section class="ftco-section"> -->
+        <br>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a href="/wawasan_islami" class="navbar-brand">
+                <h4 class="heading-section mb-0" style="color: #629C87;">Wawasan Islami</h4>
+            </a>
+        </nav>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <?php
+                $nomor = 1;
+                foreach ($getWawasanIslamiLandingPage as $gwil) :
+                ?>
+                    <div class="carousel-item<?= $nomor === 1 ? ' active' : ''; ?>">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="item">
+                                    <div class="work">
+                                        <div class="img d-flex align-items-end justify-content-center" style="background-image: url(<?= base_url($gwil->gambar_wawasan_islami); ?>);">
+                                            <div class="text w-100">
+                                                <span class="cat"><?= $gwil->nama_kategori_wawasan_islami; ?></span>
+                                                <h3><a href="/wawasan_islami/detail_wawasan_islami/<?= $gwil->id_wawasan_islami; ?>">
+                                                        <p><?= $gwil->judul_wawasan_islami; ?></p>
+                                                    </a></h3>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="carousel-item">
-                                        <div class="col-md-6">
-                                            <!-- Card 2 -->
-                                            <?php foreach ($getKutipanLandingPage as $gklp) : ?>
-                                                    <div class=" d-flex align-items-end justify-content-center" style="background-image: url('/assets/image/Background.png'); border-radius: 20px; ">
-                                                        <div class="text w-100">
-                                                            <h4 class="container" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #ffff; "><?= $gklp->sumber_kutipan; ?></h4>
-                                                                <h5 class="container" style="font-family: 'Inter',Arial, sans-serif; color: #ffff;"><?= $gklp->deskripsi_kutipan; ?></h5>
-                                                            </div>
-                                                </div>
-                                            <?php endforeach; ?>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                <!-- </div>
-            </div>
-        </div> -->
-    </div>
-
-    <div>
-        <!-- <section class="ftco-section"> -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-15">
-                    <nav class="navbar navbar-expand-lg navbar-light">
-                        <a href="/berita" class="navbar-brand">
-                            <h4 class="heading-section mb-0" style="color: #629C87;">Berita Terkini</h4>
-                        </a>
-                    </nav>
-                </div>
-                <div class="col-md-12">
-                    <div class="featured-carousel owl-carousel">
-                        <?php foreach ($getBeritaLandingPage as $gblp) : ?>
-                            <div class="card" style="width: 18rem;">
-                                <img src="<?= base_url($gblp->gambar_berita); ?>" class="card-img-top" alt="Berita">
-                                <div class="card-body">
-                                    <a href="/berita/detail_berita/<?= $gblp->id_berita; ?>" style="text-decoration: none; color: #000;">
-                                        <p class="card-text"><?= $gblp->judul_berita; ?></p>
-                                    </a>
-                                </div>
-                            </div>
-                        <?php endforeach; ?>
-                    </div>
-                </div>
+                    <?php
+                    $nomor++;
+                endforeach;
+                ?>
             </div>
         </div>
-        <!-- </section> -->
-    </div>
+        <script>
+            $(document).ready(function () {
+                var owl = $('#carouselExampleControls .carousel-inner');
+                owl.owlCarousel({
+                    items: 1, // Jumlah slide yang ditampilkan secara bersamaan
+                    dots: true, // Menampilkan dots
+                    onInitialized: updateDotsPosition, // Panggil fungsi updateDotsPosition saat carousel diinisialisasi
+                    onTranslated: updateDotsPosition // Panggil fungsi updateDotsPosition saat slide berubah
+                });
 
-    <div class="wawasan_islami">
-        <!-- <section class="ftco-section"> -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-15 ">
-                    <nav class="navbar navbar-expand-lg navbar-light">
-                        <a href="/wawasan_islami" class="navbar-brand">
-                            <h4 class="heading-section mb-0" style="color: #629C87;">Wawasan Islami</h4>
-                        </a>
-                    </nav>
-                </div>
-                <div class="col-md-12">
-                    <div class="featured-carousel owl-carousel">
-                        <?php
-                        $nomor = 1;
-                        foreach ($getWawasanIslamiLandingPage as $gwil) :
-                        ?>
-                            <div class="item">
-                                <div class="work">
-                                    <div class="img d-flex align-items-end justify-content-center" style="background-image: url(<?= base_url($gwil->gambar_wawasan_islami); ?>">
-                                        <div class="text w-100">
-                                            <span class="cat"><?= $gwil->nama_kategori_wawasan_islami; ?></span>
-                                            <h3><a href="/wawasan_islami/detail_wawasan_islami/<?= $gwil->id_wawasan_islami; ?>">
-                                                    <p><?= $gwil->judul_wawasan_islami; ?></p>
-                                                </a></h3>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php endforeach; ?>
-                    </div>
-                    <script>
-                        $(document).ready(function () {
-                            var owl = $('.featured-carousel');
-                            owl.owlCarousel({
-                                items: 1, // Jumlah slide yang ditampilkan secara bersamaan
-                                dots: true, // Menampilkan dots
-                                onInitialized: updateDotsPosition, // Panggil fungsi updateDotsPosition saat carousel diinisialisasi
-                                onTranslated: updateDotsPosition // Panggil fungsi updateDotsPosition saat slide berubah
-                            });
-
-                            function updateDotsPosition(event) {
-                                // Memperbarui posisi dots saat slide berubah
-                                $('.owl-dots').css('left', owl.find('.owl-stage-outer').css('padding-left'));
-                            }
-                        });
-                    </script>
-                </div>
-            </div>
-        </div>
+                function updateDotsPosition(event) {
+                    // Memperbarui posisi dots saat slide berubah
+                    $('.owl-dots').css('left', owl.find('.owl-stage-outer').css('padding-left'));
+                }
+            });
+        </script>
         <!-- </section> -->
     </div>
 </body>
+
 
 </html>
