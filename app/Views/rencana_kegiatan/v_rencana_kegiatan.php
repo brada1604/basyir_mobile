@@ -4,7 +4,7 @@
             <a href="/" class="nav-link text-center" style="margin-top: 60px;">
                 <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/Back.png" alt="SVG Happyku" width="30em" height="30em" />
             </a>
-            <a href="/amalan_yaumi" style="margin-top: 60px; margin-right:-150px;">
+            <a href="/rencana_kegiatan/add/1" style="margin-top: 60px; margin-right:-150px;">
                 <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/tambah.png" alt="SVG Happyku" width="30em" height="30em" style="color: white;" />
             </a>
             <a href="#" style="margin-top: 60px">
@@ -30,7 +30,7 @@
         <div class="col-md-6">
             <div class=" d-flex align-items-end justify-content-center" style="background-image: url('/assets/image/Background.png'); border-radius: 20px; ">
                 <div class="text-center w-100">
-                    <h4 style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;"><?= $row->judul_amalan_yaumi ?><h4>
+                    <h4 style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;"><?php if ($row->id_amalan_yaumi == 1): ?> <?= $row->keterangan_kegiatan ?><?php else: ?> <?= $row->judul_amalan_yaumi ?><?php endif ?><h4>
                         <h6 style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;"><?= $row->rencana_jadwal ?></h6>
                         <h6 style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;"><?= $row->realisasi_jadwal ?></h6>
                         <nav class="navbar-item">

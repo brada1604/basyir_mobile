@@ -65,6 +65,23 @@
                                         </div>
                                     </div>
 
+                                    <?php if ($id_amalan_yaumi == 1): ?>   
+                                        <div class="list-group-item p-3">
+                                            <div class="row align-items-start">
+                                                <div class="col-md-2 mb-8pt mb-md-0">
+                                                    <div class="media align-items-left">
+                                                        <div class="d-flex flex-column media-body media-middle">
+                                                            <span class="card-title">Keterangan Kegiatan</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col mb-8pt mb-md-0">
+                                                    <input name="keterangan_kegiatan" type="text" class="form-control" placeholder="Masukan rencana kegiatan ibadah kamu" required />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php endif ?>
+
                                     <div class="list-group-item p-3">
                                         <div class="row align-items-start">
                                             <div class="col-md-2 mb-8pt mb-md-0">

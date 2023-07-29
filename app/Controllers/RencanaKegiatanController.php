@@ -73,6 +73,7 @@ class RencanaKegiatanController extends BaseController
             $data1 = [
                 'id_user' => $this->request->getVar('id_user'),
                 'id_amalan_yaumi' => $this->request->getVar('id_amalan_yaumi'),
+                'keterangan_kegiatan' => $this->request->getVar('keterangan_kegiatan'),
             ];
 
             $model_rencana_kegiatan->save($data1);

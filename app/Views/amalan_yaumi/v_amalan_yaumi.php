@@ -13,12 +13,14 @@
                 <div class="col-md-6">
                     <div class="featured-carousel owl-carousel">
                         <?php foreach ($getAmalanYaumiByStatus as $row) : ?>
-                            <div class="d-flex align-items-end justify-content-center" style="background-color: white; border-radius: 20px;">
-                                <div class="text w-100">
-                                    <h4 class="container" style="font-family: 'Inter',Arial, sans-serif; color: #629C87; font-weight: bold;"><a href="/rencana_kegiatan/add/<?= $row->id_amalan_yaumi ?>"><?= $row->judul_amalan_yaumi ?></a></h4>
-                                    <h5 class="container" style="font-family: 'Inter',Arial, sans-serif; color: #629C87;"><?= $row->konten_amalan_yaumi ?></h5>
+                            <?php if ($row->id_amalan_yaumi != 1): ?> <!-- untuk default amalan yaumi -->
+                                <div class="d-flex align-items-end justify-content-center" style="background-color: white; border-radius: 20px;">
+                                    <div class="text w-100">
+                                        <h4 class="container" style="font-family: 'Inter',Arial, sans-serif; color: #629C87; font-weight: bold;"><a href="/rencana_kegiatan/add/<?= $row->id_amalan_yaumi ?>"><?= $row->judul_amalan_yaumi ?></a></h4>
+                                        <h5 class="container" style="font-family: 'Inter',Arial, sans-serif; color: #629C87;"><?= $row->konten_amalan_yaumi ?></h5>
+                                    </div>
                                 </div>
-                            </div>
+                            <?php endif ?>
                         <?php endforeach; ?>
                     </div>
                 </div>
