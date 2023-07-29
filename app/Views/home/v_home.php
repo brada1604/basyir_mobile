@@ -105,52 +105,55 @@ else{
 </head>
 
 <body style="background-color: #ffff;">
-    <div class="container" style="background-image: url('/assets/image/home/Background_atas.jpg'); background-repeat: no-repeat; background-position: center; margin-top: -3%">
-        <nav class="navbar navbar-expand-lg">
-            <a href="/kalender">
-                <h5 style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;">
-                    <p id="DisplayDate" onload="showDate()" style="margin-top: 15%"></p>
-                    <p id="DisplayClock" class="clock" onload="showTime()" style="margin-top: -15%"></p>
-                </h5>
+<div class="container" style="background-image: url('/assets/image/home/Background_atas.jpg'); background-repeat: no-repeat; background-position: center; margin-top: -3%">
+    <nav class="navbar navbar-expand-lg">
+        <a href="/kalender">
+            <h5 style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;">
+                <p id="DisplayDate" onload="showDate()" style="margin-top: 15%"></p>
+                <p id="DisplayClock" class="clock" onload="showTime()" style="margin-top: -15%"></p>
+            </h5>
+        </a>
+        <div>
+            <a href="/notifikasi">
+                <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/notification_putih.png" alt="SVG Happyku" width="40em" height="40em" style="color: white;" />
             </a>
-            <div>
-                <a href="/notifikasi"><img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/notification_putih.png" alt="SVG Happyku" width="40em" height="40em" style="color: white;" /></a>
-            </div>
-        </nav>
-
-        <!-- Menu Navbar -->
-        <br>
-        <div class="container">
-            <nav class="navbar navbar-dark navbar-expand border-top border-bottom border-left border-right d-md-none d-lg-none d-xl-none p-0" style="border-top-left-radius: 2rem !important; border-top-right-radius: 2rem !important; border-bottom-left-radius: 2rem !important; border-bottom-right-radius: 2rem !important; background: white;">
-                <ul class="navbar-nav nav-justified w-100">
-                    <li class="nav-item">
-                        <a href="/jadwal_sholat_wajib" class="nav-link text-center">
-                            <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/prayer-mat.png" alt="SVG Happyku" width="60em" height="60em" />
-                            <!-- <span class="small d-block" style="color:#000000">Beranda</span> -->
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/dzikir" class="nav-link text-center">
-                            <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/tasbih.png" alt="SVG Happyku" width="60em" height="60em" />
-                            <!-- <span class="small d-block" style="color:#000000">Kutipan</span> -->
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/doa_harian" class="nav-link text-center">
-                            <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/dua.png" alt="SVG Happyku" width="60em" height="60em" />
-                            <!-- <span class="small d-block" style="color:#000000">Berita</span> -->
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/menu_lainnya" class="nav-link text-center">
-                            <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/more.png" alt="SVG Happyku" width="60em" height="60em" />
-                            <!-- <span class="small d-block" style="color:#000000">Berita</span> -->
-                        </a>
-                    </li>
-                </ul>
-            </nav>
         </div>
+    </nav>
+
+    <!-- Menu Navbar -->
+    <br>
+    <div class="container">
+        <nav class="navbar navbar-dark navbar-expand border-top border-bottom border-left border-right d-md-none d-lg-none d-xl-none p-0" style="border-top-left-radius: 2rem !important; border-top-right-radius: 2rem !important; border-bottom-left-radius: 2rem !important; border-bottom-right-radius: 2rem !important; background: white;">
+            <ul class="navbar-nav nav-justified w-100">
+                <li class="nav-item">
+                    <a href="/jadwal_sholat_wajib" class="nav-link text-center">
+                        <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/prayer-mat.png" alt="SVG Happyku" width="60em" height="60em" />
+                        <!-- <span class="small d-block" style="color:#000000">Beranda</span> -->
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/dzikir" class="nav-link text-center">
+                        <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/tasbih.png" alt="SVG Happyku" width="60em" height="60em" />
+                        <!-- <span class="small d-block" style="color:#000000">Kutipan</span> -->
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/doa_harian" class="nav-link text-center">
+                        <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/dua.png" alt="SVG Happyku" width="60em" height="60em" />
+                        <!-- <span class="small d-block" style="color:#000000">Berita</span> -->
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/menu_lainnya" class="nav-link text-center">
+                        <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/more.png" alt="SVG Happyku" width="60em" height="60em" />
+                        <!-- <span class="small d-block" style="color:#000000">Berita</span> -->
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </div>
+</div>
+
 
 
     <div class="container">
@@ -163,7 +166,7 @@ else{
                         <div class="carousel-item active">
                             <div class="col-md-12">
                             <!-- Card 1 -->
-                                <div class="card" style="background-image: url('/assets/image/Background.png'); border-radius: 20px; width: 20rem;">
+                                <div class="card" style="background-image: url('/assets/image/Background.png'); border-radius: 20px; width: 18rem;">
                                     <nav class="navbar navbar-dark navbar-expand d-md-none d-lg-none d-xl-none p-0">
                                         <div class="text w-100">
                                             <a href="/jadwal_sholat_wajib">
@@ -196,7 +199,6 @@ else{
     </div>
 
     <div class="container">
-        <!-- <section class="ftco-section"> -->
         <br>
         <nav class="navbar navbar-expand-lg navbar-light">
             <a href="/berita" class="navbar-brand">
@@ -215,7 +217,7 @@ else{
                                     <div class="card-body">
                                         <nav class="navbar navbar-dark navbar-expand d-md-none d-lg-none d-xl-none p-0">
                                             <a href="/berita/detail_berita/<?= $gblp->id_berita; ?>" style="text-decoration: none; color: #000;">
-                                                <p class="container card-title"><?= $gblp->judul_berita; ?></p>
+                                                <p class="card-title" style="color: #629C87;"><?= $gblp->judul_berita; ?></p>
                                             </a>
                                         </nav>
                                     </div>
@@ -226,7 +228,6 @@ else{
                     <?php $count++; ?>
                 <?php endforeach; ?>
             </div>
-            <!-- </section> -->
         </div>
     </div>
 
