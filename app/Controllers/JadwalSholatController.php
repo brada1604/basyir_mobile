@@ -27,7 +27,7 @@ class JadwalSholatController extends BaseController
         $response = curl_exec($ch); // Eksekusi permintaan HTTP
         curl_close($ch); // Tutup koneksi CURL
 
-        $data_jadwal = json_decode($response); // proses decode JSON
+        $data_jadwal = json_decode($response); // proses decode JSONssf
 
         $data['pengingat_imsak'] = $data_jadwal->jadwal->data->imsak;
         $data['pengingat_subuh'] = $data_jadwal->jadwal->data->subuh;

@@ -18,3 +18,4 @@ application/logs/*
 /vendor/
 app/Config/Routes.php
 writable/logs/log-2023-05-21.log
+writable/logs/log-2023-07-27.log

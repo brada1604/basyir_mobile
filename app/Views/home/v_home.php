@@ -153,12 +153,12 @@ else{
     </div>
 
 
-    <div>
+    <div class="container">
         <br>
-        <div class="container">
+        <!-- <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="featured-carousel owl-carousel">
+                <div class="col-md-6"> -->
+                    <!-- <div class="featured-carousel owl-carousel">
                         <div class="d-flex align-items-end" style="background-image: url('/assets/image/Background.png'); border-radius: 20px; ">
                             <nav class="navbar navbar-dark navbar-expand d-md-none d-lg-none d-xl-none p-0">
                                 <div class="text w-100">
@@ -166,9 +166,6 @@ else{
                                         <h5 class="container" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #ffff; ">Waktu Sholat</h5>
                                         <h6 class="container" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #ffff;"><?= $solat_yang_tampil ?> <?= $waktu_solat_yang_tampil ?><br> <?= $selisih_jam ?>:<?= floor($selisih_menit / 60) ?> Tersisa</h6>
                                     </a>
-                                    <!-- <h6 style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;">
-                                        <p id="CountdownTimer" onload="countDownPrayerTime()" style="margin-top: -15%"></p>
-                                    </h6> -->
                                 </div>
                                 <img src="/assets/assets-mobile/icon-menu/adzan.png" alt="orang adzan" height="100px" style="margin-right: -35%;">
                             </nav>
@@ -181,10 +178,47 @@ else{
                                 </div>
                             </div>
                         <?php endforeach; ?>
+                    </div> -->  
+                    <div class="container">
+                        <div class="row">
+                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="col-md-6">
+                                        <!-- Card 1 -->
+                                            <div class="card" style="background-image: url('/assets/image/Background.png'); border-radius: 20px; width: 18rem;">
+                                                <nav class="navbar navbar-dark navbar-expand d-md-none d-lg-none d-xl-none p-0">
+                                                    <div class="text w-100">
+                                                        <a href="/jadwal_sholat_wajib">
+                                                            <h5 class="container card-title" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #ffff; ">Waktu Sholat</h5>
+                                                            <h6 class="container card-text" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #ffff; "><?= $solat_yang_tampil ?> <?= $waktu_solat_yang_tampil ?><br> <?= $selisih_jam ?>:<?= floor($selisih_menit / 60) ?> Tersisa</h6>
+                                                        </a>
+                                                    </div>
+                                                    <img src="/assets/assets-mobile/icon-menu/adzan.png" alt="orang adzan" height="100px">
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="col-md-6">
+                                            <!-- Card 2 -->
+                                            <?php foreach ($getKutipanLandingPage as $gklp) : ?>
+                                                    <div class=" d-flex align-items-end justify-content-center" style="background-image: url('/assets/image/Background.png'); border-radius: 20px; ">
+                                                        <div class="text w-100">
+                                                            <h4 class="container" style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #ffff; "><?= $gklp->sumber_kutipan; ?></h4>
+                                                                <h5 class="container" style="font-family: 'Inter',Arial, sans-serif; color: #ffff;"><?= $gklp->deskripsi_kutipan; ?></h5>
+                                                            </div>
+                                                </div>
+                                            <?php endforeach; ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                <!-- </div>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <div>
@@ -200,15 +234,12 @@ else{
                 </div>
                 <div class="col-md-12">
                     <div class="featured-carousel owl-carousel">
-                        <?php
-                        $nomor = 1;
-                        foreach ($getBeritaLandingPage as $gblp) :
-                        ?>
-                            <div class="card">
-                                <img src="<?= base_url($gblp->gambar_berita); ?>" alt="Berita" style="width:100%;">
-                                <div class="container">
-                                    <a href="/berita/detail_berita/<?= $gblp->id_berita; ?>">
-                                        <p><?= $gblp->judul_berita; ?></p>
+                        <?php foreach ($getBeritaLandingPage as $gblp) : ?>
+                            <div class="card" style="width: 18rem;">
+                                <img src="<?= base_url($gblp->gambar_berita); ?>" class="card-img-top" alt="Berita">
+                                <div class="card-body">
+                                    <a href="/berita/detail_berita/<?= $gblp->id_berita; ?>" style="text-decoration: none; color: #000;">
+                                        <p class="card-text"><?= $gblp->judul_berita; ?></p>
                                     </a>
                                 </div>
                             </div>
@@ -252,6 +283,22 @@ else{
                             </div>
                         <?php endforeach; ?>
                     </div>
+                    <script>
+                        $(document).ready(function () {
+                            var owl = $('.featured-carousel');
+                            owl.owlCarousel({
+                                items: 1, // Jumlah slide yang ditampilkan secara bersamaan
+                                dots: true, // Menampilkan dots
+                                onInitialized: updateDotsPosition, // Panggil fungsi updateDotsPosition saat carousel diinisialisasi
+                                onTranslated: updateDotsPosition // Panggil fungsi updateDotsPosition saat slide berubah
+                            });
+
+                            function updateDotsPosition(event) {
+                                // Memperbarui posisi dots saat slide berubah
+                                $('.owl-dots').css('left', owl.find('.owl-stage-outer').css('padding-left'));
+                            }
+                        });
+                    </script>
                 </div>
             </div>
         </div>

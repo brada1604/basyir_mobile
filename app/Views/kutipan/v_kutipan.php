@@ -29,12 +29,12 @@
         </div>
     </div>
     <h6 class="text-center" style="font-family: 'Inter',Arial, sans-serif; color: white; margin-top: 20px;">Geser Untuk Lihat Lainnya</h6>
-    <nav class="navbar" style="margin-top: 200px;">
+    <nav class="navbar" style="margin-top: 150px;">
         <div>
             <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/buku_kiri.png" alt="Buku Kiri" width="195em" height="180em" style="margin-left: -17px; " />
         </div>
         <div>
-            <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/buku_kanan.png" alt="Buku Kanan" width="195em" height="175em" style="margin-right: -17px;" />
+            <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/buku_kanan.png" alt="Buku Kanan" width="165em" height="175em" style="margin-right: -17px;" />
         </div>
     </nav>
 </body>

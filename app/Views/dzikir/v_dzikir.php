@@ -37,7 +37,7 @@
 							</nav>
 							<nav class=" navbar container">
 								<tr>
-									<td style="font-size: 1.5em;">Hamdallah</td>
+									<td style="font-size: 1.5em;">Tahmid</td>
 									<td style="font-size: 1.7em; text-align: right;">
 										<h3>اَلْحَمْدُ لِلهِ</h3>
 									</td>
