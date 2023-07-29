@@ -216,9 +216,42 @@ class RencanaKegiatanController extends BaseController
 
     public function delete($id)
     {
-        $model = new DetailRencanaKegiatanModel;
+        $model_detail_rencana_kegiatan = new DetailRencanaKegiatanModel;
 
-        $model->delete($id);
+        $id_detail_rencana_kegiatan = $id;
+        $cek_detail_rencana_kegiatan = $model_detail_rencana_kegiatan->getWhere(['id_detail_rencana_kegiatan' => $id])->getResult();
+
+        $status_detail_rencana_kegiatan = $cek_detail_rencana_kegiatan[0]->status_detail_rencana_kegiatan;
+
+        $model_rencana_kegiatan = new RencanaKegiatanModel;
+        $id_rencana_kegiatan = $cek_detail_rencana_kegiatan[0]->id_rencana_kegiatan;
+        $cek_rencana_kegiatan = $model_rencana_kegiatan->getWhere(['id_rencana_kegiatan' => $id_rencana_kegiatan])->getResult();
+
+        $model_rekap_kegiatan = new RekapKegiatanModel();
+
+        $data_cek_rekap = [
+            'id_user' => $cek_rencana_kegiatan[0]->id_user,
+            'id_amalan_yaumi' => $cek_rencana_kegiatan[0]->id_amalan_yaumi
+        ];
+
+        $cek_rekap = $model_rekap_kegiatan->getWhere($data_cek_rekap)->getResult();
+
+        if ($cek_rekap) {
+            if ($status_detail_rencana_kegiatan == 1) { //belum dilakukan
+                $data_rekap = [
+                    'total_belum_dilakukan' => $cek_rekap[0]->total_belum_dilakukan - 1
+                ];
+            }
+            else{
+                $data_rekap = [
+                    'total_dilakukan' => $cek_rekap[0]->total_dilakukan - 1
+                ];
+            }
+
+            $model_rekap_kegiatan->update($cek_rekap[0]->id_rekap_kegiatan, $data_rekap);
+        }
+
+        $model_detail_rencana_kegiatan->delete($id);
         echo '<script>
                 alert("Selamat! Berhasil Menghapus Data Rencana kegiatan");
                 window.location="' . base_url('/rencana_kegiatan') . '"
