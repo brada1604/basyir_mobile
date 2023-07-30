@@ -18,14 +18,14 @@
                     </a>
                 </nav>
                 <div id="carouselExampleControls" class="carousel slide d-flex justify-content-center" data-ride="carousel">
-                    <div class="carousel-inner">
+                    <div class="carousel-inner" style="border-radius: 10px; padding: 12px;">
                         <?php $count = 0; ?>
                         <?php foreach ($getBeritaByStatus as $gblp) : ?>
                             <div class="carousel-item<?= $count === 0 ? ' active' : ''; ?>">
                                 <div class="row h-100">
                                     <div class="col-md-12">
                                         <div class="card h-10 shadow" style="border-radius: 10px; padding: 3px;">
-                                            <img src="<?= base_url($gblp->gambar_berita); ?>" class="card-img-top" alt="Berita" style="width: 350px; height: 100px">
+                                            <img src="<?= base_url($gblp->gambar_berita); ?>" class="card-img-top img-fluid card-image " alt="Berita" style="width: 350px; height: 100px">
                                             <div class="card-body">
                                                 <nav class="navbar navbar-dark navbar-expand d-md-none d-lg-none d-xl-none p-0">
                                                     <a href="/berita/detail_berita/<?= $gblp->id_berita; ?>" style="text-decoration: none; color: #000;">
@@ -45,44 +45,44 @@
         </div>
 
 
-        <?php foreach ($getKategoriBeritaForm as $gkbf) : ?>
-            <div class="container" style="margin-bottom: 100px;">
-                <div class="row">
-                        <nav class="navbar navbar-expand-lg navbar-light">
-                            <a href="/berita" class="navbar-brand">
-                                <h4 class="heading-section mb-0" style="color: white;"><?= $gkbf->nama_kategori_berita; ?></h4>
-                            </a>
-                        </nav>
-                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <?php
-                            $nomor = 1;
-                            foreach ($getBeritaByStatus as $gbbs) :
-                                ?>
-                                <div class="carousel-item<?= $nomor === 1 ? ' active' : ''; ?>">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="card">
-                                                <img src="<?= base_url($gbbs->gambar_berita); ?>" alt="Berita" style="width:100%">
-                                                <div class="container">
-                                                    <a href="/berita/detail_berita/<?= $gbbs->id_berita; ?>">
-                                                        <p class=card-title><?= $gbbs->judul_berita; ?></p>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
+   <div class="container" style="margin-bottom: 100px;">
+    <?php foreach ($getKategoriBeritaForm as $gkbf) : ?>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a href="/berita" class="navbar-brand">
+                <br>
+                <h4 class="heading-section mb-0" style="color: white;"><?= $gkbf->nama_kategori_berita; ?></h4>
+            </a>
+        </nav>
+        <div id="carouselExampleControls" class="carousel slide d-flex" data-ride="carousel">
+            <div class="carousel-inner" style="border-radius: 10px; padding: 12px;">
+                <?php
+                $nomor = 0; // Initialize $nomor to 0
+                foreach ($getBeritaByStatus as $gbbs) :
+                ?>
+                    <div class="carousel-item<?= $nomor === 0 ? ' active' : ''; ?>" style="height: 200px;">
+                        <div class="row h-100">
+                            <div class="col-sm-12">
+                                <div class="card h-100 shadow" style="border-radius: 10px; padding: 3px;">
+                                    <img src="<?= base_url($gbbs->gambar_berita); ?>" alt="Berita" class="card-img-top img-fluid card-image" style="width: 350px; height: 100px;">
+                                    <div class="card-body">
+                                        <nav class="navbar navbar-dark navbar-expand d-md-none d-lg-none d-xl-none p-0">
+                                            <a href="/berita/detail_berita/<?= $gbbs->id_berita; ?>" class="text-decoration-none text-dark">
+                                                <p class="card-title d-inline" style="color: #629C87;"><?= $gbbs->judul_berita; ?></p>
+                                            </a>
+                                        </nav>
                                     </div>
                                 </div>
-                            <?php endforeach; ?>
+                            </div>
                         </div>
                     </div>
-                </div>
+                <?php
+                    $nomor++; // Increment $nomor to show the next carousel item
+                endforeach;
+                ?>
             </div>
-        <?php endforeach; ?>
-
-
         </div>
+    <?php endforeach; ?>
+</div>
 
     </div>
-
 </body>

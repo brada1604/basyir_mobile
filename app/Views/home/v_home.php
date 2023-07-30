@@ -233,6 +233,7 @@ else{
 
 
     <div class="container" style="margin-bottom: 100px;">
+        <br>
         <nav class="navbar navbar-expand-lg navbar-light">
             <a href="/wawasan_islami" class="navbar-brand">
                 <h4 class="heading-section mb-0" style="color: #629C87;">Wawasan Islami</h4>
