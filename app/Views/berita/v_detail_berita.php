@@ -5,7 +5,7 @@
                 <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/Back.png" alt="SVG Happyku" width="30em" height="30em" />
             </a>
         </nav>
-        <div class="container">
+        <div class="container" style="margin-bottom: 100px;">
             <div class="row">
                 <div class="col-md-2 text-center">
                     <h2 class="heading-section mb-5  bold-text" style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;">Detail Berita</h2>

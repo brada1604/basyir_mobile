@@ -1,6 +1,6 @@
 <body style="background-image: url('/assets/image/Background.png');  background-position: center; background-size: cover;">
     <div class="container">
-        <div class="row"> 
+        <!-- <div class="row">  -->
             <nav class=" navbar navbar-expand-lg navbar-light" style="margin-top: 20px;">
                 <a href="/" class="nav-link text-center">
                     <img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/Back.png" alt="SVG Happyku" width="30em" height="30em" />
@@ -41,11 +41,11 @@
                         <?php endforeach; ?>
                     </div>
                 </div>
-            </div>
+            </di    v>
         </div>
 
 
-   <div class="container" style="margin-bottom: 100px;">
+   <div class="container-sm" style="margin-bottom: 100px;">
     <?php foreach ($getKategoriBeritaForm as $gkbf) : ?>
         <nav class="navbar navbar-expand-lg navbar-light">
             <a href="/berita" class="navbar-brand">
@@ -53,7 +53,7 @@
                 <h4 class="heading-section mb-0" style="color: white;"><?= $gkbf->nama_kategori_berita; ?></h4>
             </a>
         </nav>
-        <div id="carouselExampleControls" class="carousel slide d-flex" data-ride="carousel">
+        <div id="carouselExampleControls" class="carousel slide d-flex justify-content-center" data-ride="carousel">
             <div class="carousel-inner" style="border-radius: 10px; padding: 12px;">
                 <?php
                 $nomor = 0; // Initialize $nomor to 0
@@ -62,7 +62,7 @@
                     <div class="carousel-item<?= $nomor === 0 ? ' active' : ''; ?>" style="height: 200px;">
                         <div class="row h-100">
                             <div class="col-sm-12">
-                                <div class="card h-100 shadow" style="border-radius: 10px; padding: 3px;">
+                                <div class="card h-10 shadow" style="border-radius: 10px; padding: 3px;">
                                     <img src="<?= base_url($gbbs->gambar_berita); ?>" alt="Berita" class="card-img-top img-fluid card-image" style="width: 350px; height: 100px;">
                                     <div class="card-body">
                                         <nav class="navbar navbar-dark navbar-expand d-md-none d-lg-none d-xl-none p-0">
