@@ -19,10 +19,10 @@
                                 <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
                                 <label class="form-check-label" for="flexSwitchCheckChecked">Ya, saya izinkan</label>
                             </div>
-                            <h5 style="font-family: 'Inter', Arial, sans-serif; color: #629C87; margin-top: 10px;">Masukkan Nomor Whatsapp Anda</h5>
+                            <!-- <h5 style="font-family: 'Inter', Arial, sans-serif; color: #629C87; margin-top: 10px;">Masukkan Nomor Whatsapp Anda</h5>
                             <div class="form-check form-switch form-check-inline">
                                 <input type="number" class="form-control" id="whatsappNumber" style="font-family: 'Inter', Arial, sans-serif; color: #629C87; font-weight: bold;">
-                            </div>
+                            </div> -->
                         </nav>
                     </div>
                 </div>
