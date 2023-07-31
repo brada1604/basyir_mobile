@@ -9,11 +9,12 @@ class JadwalSholatController extends BaseController
     public function jadwal_sholat_wajib()
     {
         // API JADWAL SHOLAT WAJIB
-        $data['nama_kota'] = 'KOTA BANDUNG'; // Default Kota
+        $data['nama_kota'] = 'KOTA SURABAYA'; // Default Kota
 
         // Setting API Jadwal Solat
         $today = date('Y-m-d'); // Tanggal hari ini
-        $id_kota = 703; // KOTA BANDUNG
+        // $id_kota = 703; // KOTA BANDUNG
+        $id_kota = 770; // Kota Surabaya
 
         $url = 'https://api.banghasan.com/sholat/format/json/jadwal/kota/' . $id_kota . '/tanggal/' . $today; // URL API eksternal yang ingin diambil datanya
 
