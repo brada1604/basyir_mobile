@@ -123,7 +123,7 @@ else{
     <!-- Menu Navbar -->
     <br>
     <div class="container">
-        <nav class="navbar navbar-dark navbar-expand border-top border-bottom border-left border-right d-md-none d-lg-none d-xl-none p-0" style="border-top-left-radius: 2rem !important; border-top-right-radius: 2rem !important; border-bottom-left-radius: 2rem !important; border-bottom-right-radius: 2rem !important; background: white;">
+        <nav class="navbar navbar-dark navbar-expand border-top border-bottom border-left border-right d-md-none d-lg-none d-xl-none p-0 shadow" style="border-top-left-radius: 2rem !important; border-top-right-radius: 2rem !important; border-bottom-left-radius: 2rem !important; border-bottom-right-radius: 2rem !important; background: white;">
             <ul class="navbar-nav nav-justified w-100">
                 <li class="nav-item">
                     <a href="/jadwal_sholat_wajib" class="nav-link text-center">
