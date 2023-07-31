@@ -27,7 +27,7 @@ class Home extends BaseController
 
         // Setting API Jadwal Solat
         $today = date('Y-m-d'); // Tanggal hari ini
-        $id_kota = 703; // KOTA BANDUNG
+        $id_kota = 770; // KOTA BANDUNG
 
         $url = 'https://api.banghasan.com/sholat/format/json/jadwal/kota/' . $id_kota . '/tanggal/' . $today; // URL API eksternal yang ingin diambil datanya
 
@@ -127,7 +127,7 @@ class Home extends BaseController
 
     public function index3()
     {
-        $data['nama_kota'] = 'KOTA BANDUNG';
+        $data['nama_kota'] = 'KOTA SURABAYA';
         $model_berita = new BeritaModel;
         $model_wawasan_islami = new WawasanIslamiModel;
 
@@ -136,7 +136,7 @@ class Home extends BaseController
 
         // Setting API Jadwal Solat
         $today = date('Y-m-d');
-        $id_kota = 703; // Kota bandung
+        $id_kota = 770; // Kota bandung
 
         $url = 'https://api.banghasan.com/sholat/format/json/jadwal/kota/' . $id_kota . '/tanggal/' . $today; // URL API eksternal yang ingin diambil datanya
 

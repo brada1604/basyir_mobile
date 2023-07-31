@@ -273,6 +273,7 @@ class RencanaKegiatanController extends BaseController
 
     public function done($id)
     {
+        date_default_timezone_set('Asia/Jakarta');
         $model_detail_rencana_kegiatan = new DetailRencanaKegiatanModel;
         $id_detail_rencana_kegiatan = $id;
         $cek_detail_rencana_kegiatan = $model_detail_rencana_kegiatan->getWhere(['id_detail_rencana_kegiatan' => $id])->getResult();

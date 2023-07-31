@@ -8,7 +8,7 @@
                     <div class="d-flex flex-column align-items-center mb-4">
                         <div class="text-black-400 fw-semibold fs-8">
                             bingung mau cari amalan apa?
-                            <a href="http://localhost:8080/amalan_yaumi" class="link-primary fw-bold">
+                            <a href="/amalan_yaumi" class="link-primary fw-bold">
                                 Klik disini
                             </a>
                         </div>
