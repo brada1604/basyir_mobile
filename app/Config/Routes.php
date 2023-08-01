@@ -135,6 +135,9 @@ $routes->get('/onesignal', 'OneSignalController::index');
 $routes->get('/onesignal/push/(:segment)/(:segment)/(:segment)', 'OneSignalController::send_message/$1/$2/$3');
 
 
+// CRONJOB
+$routes->get('/cronjob_rencana_kegiatan', 'CronjobController::index');
+
 // ROUTE LANDING PAGE
 // $routes->get('/welcome', 'welcome::index');
 

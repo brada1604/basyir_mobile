@@ -83,4 +83,9 @@ class RencanaKegiatanModel extends Model
         $query = $this->db->query("SELECT tbl_detail_rencana_kegiatan.id_detail_rencana_kegiatan, tbl_rencana_kegiatan.id_amalan_yaumi, tbl_rencana_kegiatan.keterangan_kegiatan, tbl_detail_rencana_kegiatan.status_detail_rencana_kegiatan, tbl_amalan_yaumi.judul_amalan_yaumi, tbl_rencana_kegiatan.id_user, tbl_detail_rencana_kegiatan.rencana_jadwal, tbl_detail_rencana_kegiatan.realisasi_jadwal FROM tbl_rencana_kegiatan INNER JOIN tbl_detail_rencana_kegiatan ON tbl_detail_rencana_kegiatan.id_rencana_kegiatan = tbl_rencana_kegiatan.id_rencana_kegiatan INNER JOIN tbl_amalan_yaumi ON tbl_rencana_kegiatan.id_amalan_yaumi = tbl_amalan_yaumi.id_amalan_yaumi WHERE tbl_rencana_kegiatan.id_user = '$id_user' AND tbl_rencana_kegiatan.status_rencana_kegiatan = '1' ORDER BY tbl_detail_rencana_kegiatan.status_detail_rencana_kegiatan ASC ");
             return $query->getResult(); // return berupa array objek
     }
+
+    public function CheckPerencanaanIbadahForJob(){
+        $query = $this->db->query("SELECT b.keterangan_kegiatan, c.judul_amalan_yaumi, a.* FROM tbl_detail_rencana_kegiatan AS a INNER JOIN tbl_rencana_kegiatan AS b ON a.id_rencana_kegiatan = b.id_rencana_kegiatan  INNER JOIN tbl_amalan_yaumi AS c on b.id_amalan_yaumi = c.id_amalan_yaumi WHERE a.is_reminder = '0'  AND a.rencana_jadwal <= concat( CURRENT_DATE, ' ', CURRENT_TIME )");
+        return $query->getResult(); // return berupa array objek
+    }
 }
