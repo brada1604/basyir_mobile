@@ -67,7 +67,7 @@ class TargetNotifikasiModel extends Model
     {
         $id_user = session()->get('id');
         // Manual atau Query Builder
-        $query = $this->db->query("SELECT tbl_target_notifikasi.id_target_notifikasi, tbl_target_notifikasi.jenis_notifikasi, tbl_notifikasi.pesan_notifikasi, tbl_notifikasi.judul_notifikasi, tbl_notifikasi.created_at FROM tbl_target_notifikasi INNER JOIN tbl_notifikasi ON tbl_target_notifikasi.id_notifikasi = tbl_notifikasi.id_notifikasi WHERE tbl_target_notifikasi.id_user = '$id_user' AND tbl_target_notifikasi.status_notifikasi = 1 AND tbl_target_notifikasi.jenis_notifikasi = 1 ORDER BY tbl_notifikasi.created_at DESC ");
+        $query = $this->db->query("SELECT tbl_target_notifikasi.jadwal_notifikasi, tbl_target_notifikasi.id_target_notifikasi, tbl_target_notifikasi.jenis_notifikasi, tbl_notifikasi.pesan_notifikasi, tbl_notifikasi.judul_notifikasi, tbl_notifikasi.created_at FROM tbl_target_notifikasi INNER JOIN tbl_notifikasi ON tbl_target_notifikasi.id_notifikasi = tbl_notifikasi.id_notifikasi WHERE tbl_target_notifikasi.id_user = '$id_user' AND tbl_target_notifikasi.status_notifikasi = 1 AND tbl_target_notifikasi.jenis_notifikasi = 1 ORDER BY tbl_notifikasi.created_at DESC ");
         return $query->getResult(); // return berupa array objek
     }
 
