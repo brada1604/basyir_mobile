@@ -163,9 +163,9 @@ class RencanaKegiatanController extends BaseController
             ];
             $model_target_notifikasi->save($data4);
 
+            return redirect()->to('/onesignal/push/Yuk Lakukan Rencana Ibadahmu/'.$data3['pesan_notifikasi'].'/rencana_kegiatan');
 
-
-            return redirect()->to('/rencana_kegiatan');
+            // return redirect()->to('/rencana_kegiatan');
         } else {
             $data['validation'] = $this->validator;
             $data['title'] = 'Data Rencana Kegiatan';

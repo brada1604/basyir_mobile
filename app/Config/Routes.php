@@ -130,6 +130,11 @@ $routes->get('/register_user/', 'UserController::register_user'); // untuk menam
 $routes->post('/user/register_user/save', 'UserController::save_register'); // untuk mencari data berdasarkan variable tertentu
 
 
+// ROUTE ONE SIGNAL
+$routes->get('/onesignal', 'OneSignalController::index');
+$routes->get('/onesignal/push/(:segment)/(:segment)/(:segment)', 'OneSignalController::send_message/$1/$2/$3');
+
+
 // ROUTE LANDING PAGE
 // $routes->get('/welcome', 'welcome::index');
 
