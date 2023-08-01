@@ -102,32 +102,6 @@ else{
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    
-    <!-- <style>
-        #loader {
-            border: 12px solid #f3f3f3;
-            border-radius: 50%;
-            border-top: 12px solid #444444;
-            width: 70px;
-            height: 70px;
-            animation: spin 1s linear infinite;
-        }
- 
-        .center {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-        }
- 
-        @keyframes spin {
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-    </style> -->
 </head>
 
 <body style="background-color: #ffff;">
@@ -137,7 +111,7 @@ else{
         <a href="/kalender">
             <h5 style="font-family: 'Inter',Arial, sans-serif; color: white; font-weight: bold;">
                 <p id="DisplayDate" onload="showDate()" style="margin-top: 15%"></p>
-                <p id="DisplayClock" class="clock" onload="showTime()" style="margin-top: -15%"></p>
+                <p id="DisplayClock" class="clock" onload="showTime()" style="margin-top: -12%"></p>
             </h5>
         </a>
         <div>

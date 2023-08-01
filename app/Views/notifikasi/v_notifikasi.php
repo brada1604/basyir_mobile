@@ -21,7 +21,7 @@
                                     <?php foreach ($getNotifikasiByIdUserLogin as $row) : ?>
                                         <tr>
                                             <th scope="row"><img src="<?= base_url(); ?>/assets/assets-mobile/icon-menu/notification.svg" alt="SVG Happyku" width="25em" height="25em" /></th>
-                                            <td><a href="/notifikasi/read/<?= $row->id_target_notifikasi ?>"><?= $row->pesan_notifikasi ?> <?= $row->jadwal_notifikasi ?></a></td>
+                                            <td><a style="font-family: 'Inter',Arial, sans-serif; font-weight: bold; color: #629C87;" href="/notifikasi/read/<?= $row->id_target_notifikasi ?>"><?= $row->pesan_notifikasi ?> | <?= $row->jadwal_notifikasi ?></a></td>
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>
