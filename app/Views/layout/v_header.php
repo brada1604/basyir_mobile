@@ -11,7 +11,7 @@
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        
+            
         <link rel="stylesheet" href="<?= base_url();?>/assets/assets-mobile/carousel-03/css/owl.carousel.min.css">
         <link rel="stylesheet" href="<?= base_url();?>/assets/assets-mobile/carousel-03/css/owl.theme.default.min.css">
         <link rel="stylesheet" href="<?= base_url();?>/assets/assets-mobile/carousel-03/css/style.css">
@@ -20,30 +20,30 @@
     
         <link rel="stylesheet" href="<?= base_url();?>/assets/assets-mobile/calendar-08/css/style.css">
         <style>
-        #loader {
-            border: 12px solid #f3f3f3;
-            border-radius: 50%;
-            border-top: 12px solid #444444;
-            width: 70px;
-            height: 70px;
-            animation: spin 1s linear infinite;
-        }
- 
-        .center {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-        }
- 
-        @keyframes spin {
-            100% {
-                transform: rotate(360deg);
+            #loader {
+                border: 12px solid #f3f3f3;
+                border-radius: 50%;
+                border-top: 12px solid #444444;
+                width: 70px;
+                height: 70px;
+                animation: spin 1s linear infinite;
             }
-        }
-    </style>
+
+            .center {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+
+            @keyframes spin {
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
     </head>
 
     <body>
